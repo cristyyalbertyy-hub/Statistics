@@ -11,6 +11,7 @@ const TABS: { id: ContentTab; label: string; icon: string }[] = [
 
 interface ContentPanelProps {
   selection: LeafSelection | null
+  onBackToHome: () => void
 }
 
 interface QuestionnaireData {
@@ -18,7 +19,7 @@ interface QuestionnaireData {
   questions: { id: string; text: string; options: string[] }[]
 }
 
-export function ContentPanel({ selection }: ContentPanelProps) {
+export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
   const [activeTab, setActiveTab] = useState<ContentTab>('video')
   const [assetExists, setAssetExists] = useState<boolean | null>(null)
   const [questionnaire, setQuestionnaire] = useState<QuestionnaireData | null>(null)
@@ -95,6 +96,10 @@ export function ContentPanel({ selection }: ContentPanelProps) {
   return (
     <div className="content-panel">
       <header className="content-header">
+        <button type="button" className="back-home-btn" onClick={onBackToHome}>
+          <span className="back-home-icon" aria-hidden="true">←</span>
+          Back to overview
+        </button>
         <nav className="breadcrumb" aria-label="Breadcrumb">
           {selection.path.map((segment, i) => (
             <span key={`${segment}-${i}`}>

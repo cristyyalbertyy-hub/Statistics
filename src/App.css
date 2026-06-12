@@ -259,6 +259,32 @@
   margin-bottom: 1.5rem;
 }
 
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.back-home-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.back-home-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .breadcrumb {
   font-size: 0.8rem;
   color: var(--text-muted);

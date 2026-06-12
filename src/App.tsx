@@ -27,7 +27,7 @@ function App() {
         </nav>
       </aside>
       <main className="main">
-        <ContentPanel selection={selection} />
+        <ContentPanel selection={selection} onBackToHome={() => setSelection(null)} />
       </main>
     </div>
   )
