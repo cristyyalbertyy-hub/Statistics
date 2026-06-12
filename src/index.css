@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-root: #0a0c10;
+  --bg-sidebar: #12151c;
+  --bg-panel: #161a22;
+  --bg-elevated: #1e2430;
+  --bg-hover: #252c3a;
+  --border: #2a3344;
+  --border-accent: #4a6fa5;
+  --text-primary: #eef1f6;
+  --text-secondary: #9aa8be;
+  --text-muted: #6b7a92;
+  --accent: #7ba3d4;
+  --accent-soft: rgba(123, 163, 212, 0.15);
+  --accent-glow: rgba(123, 163, 212, 0.35);
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Source Sans 3', system-ui, sans-serif;
+  --sidebar-width: 340px;
+  --radius: 10px;
+  --transition: 0.2s ease;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-root);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+code {
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+  font-size: 0.85em;
+  background: var(--bg-elevated);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}

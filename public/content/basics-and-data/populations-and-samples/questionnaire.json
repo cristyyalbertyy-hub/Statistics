@@ -1,0 +1,35 @@
+{
+  "title": "Populations and Samples — Self-Assessment",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is the primary purpose of drawing a random sample from a population?",
+      "options": [
+        "To include every member of the population",
+        "To obtain a representative subset for inference",
+        "To guarantee the sample mean equals the population mean",
+        "To eliminate the need for statistical analysis"
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Which statement best describes a population in medical statistics?",
+      "options": [
+        "Only patients currently in hospital",
+        "The entire group of individuals relevant to the research question",
+        "Any group of 100 or more subjects",
+        "The sample plus all excluded participants"
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Sampling error refers to:",
+      "options": [
+        "Mistakes made during data entry",
+        "The difference between a sample statistic and the population parameter due to chance",
+        "Bias introduced by non-random selection",
+        "Errors in the measurement instrument"
+      ]
+    }
+  ]
+}
