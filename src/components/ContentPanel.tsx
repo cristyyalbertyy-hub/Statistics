@@ -67,6 +67,11 @@ export function ContentPanel({ selection }: ContentPanelProps) {
     return (
       <div className="content-panel empty">
         <div className="welcome-card">
+          <img
+            src="/M_S_I.png"
+            alt={`${SYLLABUS_TITLE} overview`}
+            className="welcome-infographic"
+          />
           <h1>{SYLLABUS_TITLE}</h1>
           <p>
             Select a topic from the sidebar to access the video lecture, podcast,
