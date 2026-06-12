@@ -99,16 +99,6 @@ export const syllabus: SyllabusNode[] = [
       { id: 'quantitative-result-presentation', title: 'Quantitative Result Presentation' },
     ],
   },
-  {
-    id: 'assessment',
-    title: 'Assessment',
-    children: [
-      { id: 'multiple-choice-questions', title: 'Multiple Choice Questions' },
-      { id: 'short-essay-exercises', title: 'Short Essay and Exercises' },
-      { id: 'literature-review-analysis', title: 'Literature Review Analysis' },
-      { id: 'oral-exam-communication-skills', title: 'Oral Exam / Communication Skills' },
-    ],
-  },
 ]
 
 export function buildLeafId(chapterId: string, leafId: string): string {
