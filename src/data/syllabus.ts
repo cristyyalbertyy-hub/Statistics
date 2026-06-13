@@ -8,24 +8,8 @@ export const syllabus: SyllabusNode[] = [
     title: 'Basics and Data',
     children: [
       { id: 'populations-and-samples', title: 'Populations and Samples' },
-      {
-        id: 'variable-types',
-        title: 'Variable Types',
-        children: [
-          { id: 'numerical', title: 'Numerical' },
-          { id: 'categorical-binary-ordinal', title: 'Categorical (Binary/Ordinal)' },
-          { id: 'rates', title: 'Rates' },
-        ],
-      },
-      {
-        id: 'data-display',
-        title: 'Data Display',
-        children: [
-          { id: 'frequencies-and-histograms', title: 'Frequencies and Histograms' },
-          { id: 'cumulative-distributions', title: 'Cumulative Distributions' },
-          { id: 'quantiles-and-percentiles', title: 'Quantiles and Percentiles' },
-        ],
-      },
+      { id: 'variable-types', title: 'Variable Types' },
+      { id: 'data-display', title: 'Data Display' },
     ],
   },
   {
@@ -89,28 +73,31 @@ export const syllabus: SyllabusNode[] = [
       { id: 'causal-inference-studies', title: 'Causal Inference and Studies' },
     ],
   },
-  {
-    id: 'learning-objectives',
-    title: 'Learning Objectives',
-    children: [
-      { id: 'scientific-medical-paper-structure', title: 'Scientific Medical Paper Structure' },
-      { id: 'critical-appraisal-reading', title: 'Critical Appraisal Reading' },
-      { id: 'systematic-literature-management', title: 'Systematic Literature Management' },
-      { id: 'quantitative-result-presentation', title: 'Quantitative Result Presentation' },
-    ],
-  },
 ]
+
+const CONTENT_PREFIX: Record<string, string> = {
+  'basics-and-data/populations-and-samples': 'BD_PS',
+  'basics-and-data/variable-types': 'BD_VT',
+  'basics-and-data/data-display': 'BD_DD',
+}
 
 export function buildLeafId(chapterId: string, leafId: string): string {
   return `${chapterId}/${leafId}`
 }
 
 export function getContentPath(leafKey: string, type: 'video' | 'podcast' | 'infographic' | 'questionnaire'): string {
-  const extensions = {
-    video: 'mp4',
-    podcast: 'mp3',
-    infographic: 'svg',
-    questionnaire: 'json',
+  const prefix = CONTENT_PREFIX[leafKey]
+  const suffix = { video: 'V', podcast: 'P', infographic: 'I', questionnaire: 'Q' }[type]
+  const ext = { video: 'mp4', podcast: 'm4a', infographic: 'png', questionnaire: 'csv' }[type]
+
+  if (prefix) {
+    return `/content/${leafKey}/${prefix}_${suffix}.${ext}`
   }
-  return `/content/${leafKey}/${type}.${extensions[type]}`
+
+  return `/content/${leafKey}/${type}.${ext}`
+}
+
+export function getContentFileHint(leafKey: string): string {
+  const prefix = CONTENT_PREFIX[leafKey] ?? '{PREFIX}'
+  return `{PREFIX}_V.mp4, {PREFIX}_P.m4a, {PREFIX}_I.png, {PREFIX}_Q.csv`.replace(/\{PREFIX\}/g, prefix)
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { ContentTab, LeafSelection } from '../types'
-import { getContentPath, SYLLABUS_TITLE } from '../data/syllabus'
+import { getContentFileHint, getContentPath, SYLLABUS_TITLE } from '../data/syllabus'
+import { parseQuestionnaireCsv, type QuestionnaireItem } from '../utils/questionnaire'
 
 const TABS: { id: ContentTab; label: string; icon: string }[] = [
   { id: 'video', label: 'Video', icon: '▶' },
@@ -14,15 +15,10 @@ interface ContentPanelProps {
   onBackToHome: () => void
 }
 
-interface QuestionnaireData {
-  title: string
-  questions: { id: string; text: string; options: string[] }[]
-}
-
 export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
   const [activeTab, setActiveTab] = useState<ContentTab>('video')
   const [assetExists, setAssetExists] = useState<boolean | null>(null)
-  const [questionnaire, setQuestionnaire] = useState<QuestionnaireData | null>(null)
+  const [questionnaire, setQuestionnaire] = useState<QuestionnaireItem[] | null>(null)
 
   useEffect(() => {
     setActiveTab('video')
@@ -48,9 +44,9 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
 
     if (activeTab === 'questionnaire') {
       fetch(path)
-        .then((res) => (res.ok ? res.json() : null))
-        .then((data) => {
-          if (!cancelled) setQuestionnaire(data)
+        .then((res) => (res.ok ? res.text() : null))
+        .then((text) => {
+          if (!cancelled) setQuestionnaire(text ? parseQuestionnaireCsv(text) : null)
         })
         .catch(() => {
           if (!cancelled) setQuestionnaire(null)
@@ -139,7 +135,7 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
         )}
         {activeTab === 'questionnaire' && (
           <QuestionnaireContent
-            data={questionnaire}
+            items={questionnaire}
             exists={assetExists}
             title={selection.title}
             leafId={selection.leafId}
@@ -152,6 +148,8 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
 
 function Placeholder({ type, title, leafId }: { type: string; title: string; leafId?: string }) {
   const folder = leafId ? `public/content/${leafId}/` : 'public/content/{chapter}/{topic}/'
+  const hint = leafId ? getContentFileHint(leafId) : '{PREFIX}_V.mp4, {PREFIX}_P.m4a, {PREFIX}_I.png, {PREFIX}_Q.csv'
+
   return (
     <div className="content-placeholder">
       <div className="placeholder-icon">{type[0]}</div>
@@ -159,7 +157,7 @@ function Placeholder({ type, title, leafId }: { type: string; title: string; lea
       <p>
         Add your {type.toLowerCase()} file for <strong>{title}</strong> to:
       </p>
-      <code>{folder}{type.toLowerCase()}.{type === 'Video' ? 'mp4' : type === 'Podcast' ? 'mp3' : type === 'Infographic' ? 'svg' : 'json'}</code>
+      <code>{folder}{hint}</code>
     </div>
   )
 }
@@ -227,64 +225,53 @@ function InfographicContent({
 }
 
 function QuestionnaireContent({
-  data,
+  items,
   exists,
   title,
   leafId,
 }: {
-  data: QuestionnaireData | null
+  items: QuestionnaireItem[] | null
   exists: boolean | null
   title: string
   leafId: string
 }) {
-  const [answers, setAnswers] = useState<Record<string, number>>({})
-  const [submitted, setSubmitted] = useState(false)
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
-    setAnswers({})
-    setSubmitted(false)
+    setRevealed({})
   }, [leafId])
 
   if (exists === false) return <Placeholder type="Questionnaire" title={title} leafId={leafId} />
-  if (exists === null || !data) return <div className="loading">Loading…</div>
+  if (exists === null || !items) return <div className="loading">Loading…</div>
 
   return (
-    <form
-      className="questionnaire"
-      onSubmit={(e) => {
-        e.preventDefault()
-        setSubmitted(true)
-      }}
-    >
-      <h2>{data.title}</h2>
-      {data.questions.map((q, qi) => (
-        <fieldset key={q.id} className="question-block">
-          <legend>
-            {qi + 1}. {q.text}
-          </legend>
-          {q.options.map((option, oi) => (
-            <label key={option} className="option-label">
-              <input
-                type="radio"
-                name={q.id}
-                value={oi}
-                checked={answers[q.id] === oi}
-                onChange={() => setAnswers((prev) => ({ ...prev, [q.id]: oi }))}
-                required
-              />
-              {option}
-            </label>
-          ))}
-        </fieldset>
-      ))}
-      <button type="submit" className="submit-btn">
-        Submit answers
-      </button>
-      {submitted && (
-        <p className="submit-confirmation" role="status">
-          Thank you! Your responses have been recorded locally for review.
-        </p>
-      )}
-    </form>
+    <div className="questionnaire">
+      <h2>{title} — Questionnaire</h2>
+      <p className="questionnaire-intro">
+        Review each question, then reveal the answer to check your understanding.
+      </p>
+      <ol className="question-list">
+        {items.map((item, index) => (
+          <li key={item.id} className="question-block">
+            <p className="question-text">
+              <span className="question-number">{index + 1}.</span> {item.question}
+            </p>
+            <button
+              type="button"
+              className="reveal-btn"
+              aria-expanded={revealed[item.id] ?? false}
+              onClick={() => setRevealed((prev) => ({ ...prev, [item.id]: !prev[item.id] }))}
+            >
+              {revealed[item.id] ? 'Hide answer' : 'Reveal answer'}
+            </button>
+            {revealed[item.id] && (
+              <p className="answer-text" role="region" aria-label={`Answer to question ${index + 1}`}>
+                {item.answer}
+              </p>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
   )
 }

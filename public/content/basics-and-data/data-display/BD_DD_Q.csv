@@ -1,0 +1,25 @@
+"When constructing a histogram with unequal grouping intervals, what property of the rectangles must be proportional to the frequencies?",The area of the rectangles.
+"In a histogram where interval widths are not uniform, how is the height of each rectangle calculated?",The height is the frequency divided by the width of the interval.
+What does a steep gradient in a cumulative frequency curve indicate about the distribution of values?,It indicates a high concentration of values in that specific range.
+"In a cumulative frequency distribution, what is represented by a shallow gradient?",It represents a range where the data values are sparse.
+What is the mathematical formula for the position of the $k^{th}$ percentile in a distribution with $n$ observations?,$\frac{k \times (n+1)}{100}$
+Which measure of spread is calculated as the difference between the $75^{th}$ and $25^{th}$ percentiles?,The interquartile range.
+Why is the interquartile range often preferred over the range for describing the spread of a large sample?,It is more stable and less sensitive to extreme values or outliers.
+"In a box and whiskers plot, what do the 'whiskers' represent?",The full extent of the data from the minimum to the maximum values.
+Which specific quantiles divide a dataset into five equally-sized groups?,Quintiles.
+A distribution where the upper tail is significantly longer than the lower tail is described as _____.,Positively skewed (or skewed to the right).
+"For any perfectly symmetrical distribution, what is the value of the coefficient of skewness?",$0$
+What does the presence of a bimodal frequency distribution typically indicate about the sample?,It suggests the data are a mixture of two separate underlying distributions.
+How is the median calculated for a dataset with an even number of observations?,By taking the average of the two middle observations.
+"In a cumulative frequency curve, at what percentage intersection is the lower quartile estimated?",$25\%$
+What is the defining characteristic of a 'uniform' frequency distribution?,All values across the range have approximately the same frequency.
+Which graphical method is preferred for comparing two or more frequency distributions on a single diagram?,A frequency polygon.
+What is the formula for the position of the upper quartile in a set of $n$ ordered observations?,$\frac{3 \times (n+1)}{4}$
+"In a box and whiskers plot, the horizontal line inside the box represents the _____.",Median.
+Which type of variable requires the formation of groups or intervals to create a frequency distribution?,Continuous numerical variables.
+How is 'relative frequency' defined in the context of categorical data?,The proportion or percentage of the total number of individuals in a specific category.
+What is the recommended number of groups to use when forming a frequency distribution for a numerical variable?,Between $5$ and $20$ groups.
+"When tallying data by hand, what is the term for the groups of five marks used to facilitate counting?",Five-bar gates.
+"In a pie chart, what property of the sectors is proportional to the frequencies of the categories?",The area of the sectors.
+What is the difference between a bar chart and a histogram regarding the display of variables?,"Bar charts display categorical variables, while histograms display numerical variables."
+What is the result of the formula $m_{4} / m_{2}^{2}$ minus $3$ in statistical moments?,The coefficient of kurtosis.

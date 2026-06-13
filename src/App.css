@@ -450,57 +450,61 @@
 .questionnaire h2 {
   font-family: var(--serif);
   font-size: 1.2rem;
-  margin: 0 0 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.questionnaire-intro {
+  color: var(--text-secondary);
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+}
+
+.question-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .question-block {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
-.question-block legend {
+.question-text {
+  margin: 0 0 0.75rem;
+  line-height: 1.55;
+}
+
+.question-number {
   font-weight: 600;
-  padding: 0 0.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.option-label {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.4rem 0;
-  color: var(--text-secondary);
-  cursor: pointer;
-}
-
-.option-label:hover {
-  color: var(--text-primary);
-}
-
-.option-label input {
-  accent-color: var(--accent);
-}
-
-.submit-btn {
-  margin-top: 0.5rem;
-  padding: 0.65rem 1.5rem;
-  font-weight: 600;
-  color: var(--bg-root);
-  background: var(--accent);
-  border-radius: var(--radius);
-  transition: opacity var(--transition);
-}
-
-.submit-btn:hover {
-  opacity: 0.9;
-}
-
-.submit-confirmation {
-  margin-top: 1rem;
   color: var(--accent);
-  font-size: 0.9rem;
+}
+
+.reveal-btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius);
+  transition: background var(--transition), opacity var(--transition);
+}
+
+.reveal-btn:hover {
+  background: rgba(123, 163, 212, 0.25);
+}
+
+.answer-text {
+  margin: 0.85rem 0 0;
+  padding: 0.75rem 0.9rem;
+  background: var(--bg-elevated);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--text-primary);
+  line-height: 1.55;
 }
 
 /* ── Responsive ── */
