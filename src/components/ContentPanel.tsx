@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react'
 import type { ContentTab, LeafSelection } from '../types'
-import { getContentFileHint, getContentPath, SYLLABUS_TITLE } from '../data/syllabus'
+import {
+  getContentFileHint,
+  getContentFolder,
+  getContentPath,
+  getExtraVideoPath,
+  getInfographicTextPath,
+  SYLLABUS_TITLE,
+} from '../data/syllabus'
 import { parseQuestionnaireCsv, type QuestionnaireItem } from '../utils/questionnaire'
 
 const TABS: { id: ContentTab; label: string; icon: string }[] = [
@@ -125,13 +132,23 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
 
       <div className="content-body" role="tabpanel">
         {activeTab === 'video' && (
-          <VideoContent path={contentPath} exists={assetExists} title={selection.title} />
+          <VideoContent
+            path={contentPath}
+            leafId={selection.leafId}
+            exists={assetExists}
+            title={selection.title}
+          />
         )}
         {activeTab === 'podcast' && (
           <PodcastContent path={contentPath} exists={assetExists} title={selection.title} />
         )}
         {activeTab === 'infographic' && (
-          <InfographicContent path={contentPath} exists={assetExists} title={selection.title} />
+          <InfographicContent
+            path={contentPath}
+            leafId={selection.leafId}
+            exists={assetExists}
+            title={selection.title}
+          />
         )}
         {activeTab === 'questionnaire' && (
           <QuestionnaireContent
@@ -147,7 +164,7 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
 }
 
 function Placeholder({ type, title, leafId }: { type: string; title: string; leafId?: string }) {
-  const folder = leafId ? `public/content/${leafId}/` : 'public/content/{chapter}/{topic}/'
+  const folder = leafId ? getContentFolder(leafId) : 'public/content/{chapter}/{topic}/'
   const hint = leafId ? getContentFileHint(leafId) : '{PREFIX}_V.mp4, {PREFIX}_P.m4a, {PREFIX}_I.png, {PREFIX}_Q.csv'
 
   return (
@@ -164,21 +181,47 @@ function Placeholder({ type, title, leafId }: { type: string; title: string; lea
 
 function VideoContent({
   path,
+  leafId,
   exists,
   title,
 }: {
   path: string
+  leafId: string
   exists: boolean | null
   title: string
 }) {
+  const [extraExists, setExtraExists] = useState<boolean>(false)
+  const extraPath = getExtraVideoPath(leafId)
+
+  useEffect(() => {
+    let cancelled = false
+
+    fetch(extraPath, { method: 'HEAD' })
+      .then((res) => {
+        if (!cancelled) setExtraExists(res.ok)
+      })
+      .catch(() => {
+        if (!cancelled) setExtraExists(false)
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [extraPath])
+
   if (exists === false) return <Placeholder type="Video" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
 
   return (
-    <div className="media-wrapper">
+    <div className={`media-wrapper${extraExists ? ' video-stack' : ''}`}>
       <video controls src={path} className="video-player">
         Your browser does not support the video tag.
       </video>
+      {extraExists && (
+        <video controls src={extraPath} className="video-player">
+          Your browser does not support the video tag.
+        </video>
+      )}
     </div>
   )
 }
@@ -207,19 +250,46 @@ function PodcastContent({
 
 function InfographicContent({
   path,
+  leafId,
   exists,
   title,
 }: {
   path: string
+  leafId: string
   exists: boolean | null
   title: string
 }) {
+  const [captionText, setCaptionText] = useState<string | null>(null)
+  const textPath = getInfographicTextPath(leafId)
+
+  useEffect(() => {
+    let cancelled = false
+
+    fetch(textPath)
+      .then((res) => (res.ok ? res.text() : null))
+      .then((text) => {
+        if (!cancelled) setCaptionText(text)
+      })
+      .catch(() => {
+        if (!cancelled) setCaptionText(null)
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [textPath])
+
   if (exists === false) return <Placeholder type="Infographic" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
 
   return (
     <div className="infographic-wrapper">
       <img src={path} alt={`Infographic: ${title}`} className="infographic-img" />
+      {captionText && (
+        <div className="infographic-text" role="note">
+          {captionText}
+        </div>
+      )}
     </div>
   )
 }

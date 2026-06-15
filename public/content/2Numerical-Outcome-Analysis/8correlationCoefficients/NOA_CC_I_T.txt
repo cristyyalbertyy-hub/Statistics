@@ -1,0 +1,21 @@
+UNDERSTANDING CORRELATION COEFFICIENTS
+
+This infographic provides a visual guide to interpretation:
+
+THE CONCEPT: Correlation (often denoted by the symbol r or ρ) measures how closely two distinct data sets move in relation to each other, using data collected from independent samples.
+
+KEY GOAL: The goal is to determine if one variable's changes correspond with changes in another, enabling researchers to draw inferences about data relationships.
+
+HOW CORRELATION WORKS
+The value always falls on a scale from -1.0 to +1.0.
+
+POSITIVE CORRELATION (+r): As one variable increases, the other also increases. A perfect positive correlation (+1.0) creates a straight, upward line with minimal scatter.
+
+ZERO CORRELATION (0): There is no discernible linear relationship. Data points appear completely scattered with no predictable pattern.
+
+NEGATIVE CORRELATION (-r): As one variable increases, the other decreases. A perfect negative correlation (-1.0) creates a straight, downward line with minimal scatter.
+
+INTERPRETING RESULTS
+The decision point often involves comparing the p-value against a significance level (α, such as 0.05) to reject the null hypothesis of no correlation. A smaller Standard Error (SE) indicates greater confidence in the correlation coefficient estimate.
+
+This infographic is a precise and reliable tool for visual data exploration, critical appraisals, and applied tests in medical research and evidence-based practice

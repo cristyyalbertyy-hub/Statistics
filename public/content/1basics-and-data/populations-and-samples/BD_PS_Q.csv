@@ -1,0 +1,24 @@
+What specific term describes the phenomenon where different samples drawn from the same population yield varying results due to chance?,Sampling variation.
+"Which statistical concept refers to the entire group of interest, including potential future members, about which an investigator wishes to make inferences?",The target population.
+The hypothetical frequency distribution that would be formed by the means of an infinite number of independent samples of size $n$ is the _____.,Sampling distribution of the mean.
+Which measure quantifies the precision with which the sample mean estimates the population mean?,Standard error of the mean.
+Formula: Theoretical standard error of the sample mean ($\bar{x}$),$s.e. = \frac{\sigma}{\sqrt{n}}$
+"In statistical notation, which Greek letters are used to represent the mean and standard deviation of a population?",$\mu$ (mu) and $\sigma$ (sigma).
+How does the role of the standard deviation differ from that of the standard error?,"The standard deviation measures variability within the population, while the standard error measures the variability of the sample estimate."
+"Why do rare events, such as HIV infection, require larger population sizes for the calculation of health indices?",To ensure that the resulting rates are statistically stable and not overly influenced by small fluctuations in counts.
+What is the minimum population size recommended for aggregating zip code data to create a stable community health profile?,"$25,000$."
+"If the underlying population distribution is non-normal, what is the minimum sample size typically required for the sampling distribution of the mean to approximate normality?",$n = 15$.
+Formula: Standard error of a population proportion ($\pi$),$s.e.(p) = \sqrt{\frac{\pi(1 - \pi)}{n}}$
+A _____ expresses how many standard deviations a specific value is located from the population mean.,Z-score.
+"What is the consequence of a sample being non-representative of the target population, such as using only student volunteers to evaluate a general vaccine?",The findings lack general applicability and are restricted to the specific sub-population studied.
+Which probability distribution is the basis for describing the sampling distribution of a proportion?,The binomial distribution.
+How is the 'Standardised Mortality Ratio' ($SMR$) defined?,The ratio of the observed number of deaths to the number of deaths expected if the study population had the age-sex specific rates of a standard population.
+"In frequentist statistics, model parameters like the population risk ratio are treated as _____.",Fixed but unknown quantities.
+What is the effect of increasing the sample size ($n$) on the standard error of the mean?,The standard error decreases in proportion to the square root of $n$.
+"In longitudinal studies, the total time during which individuals are disease-free and under observation is known as the _____.",Person-years-at-risk (pyar).
+"Which type of sampling involves taking a random sample from a sampling frame at regular, fixed intervals after a random starting point?",Systematic sampling.
+The ratio of between-cluster variance to total variance in a clustered study design is known as the _____.,Intraclass correlation coefficient (ICC).
+How does the 'standard population' function within the process of direct standardisation?,It provides a fixed age-sex structure to which the specific rates of different study populations are applied for comparison.
+Formula: Standardised Mortality Ratio ($SMR$),$SMR = \frac{\sum d_i}{\sum E_i}$
+"In the context of binary outcomes, the number of subjects who experience an event ($d$) divided by the total sample size ($n$) is the _____.",Sample proportion ($p$).
+What does a 95% confidence interval indicate about the population mean?,"It provides a range of values within which we are 95% confident the true population mean lies, given the observed sample variation."

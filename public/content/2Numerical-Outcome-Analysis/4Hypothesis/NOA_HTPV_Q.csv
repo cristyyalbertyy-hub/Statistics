@@ -1,0 +1,40 @@
+"In statistical inference, what is the 'null hypothesis' ($H_{0}$)?",The postulate that there is no difference between groups or no association between variables in the population.
+What does a $P$-value represent in the context of a hypothesis test?,"The probability of obtaining a result as extreme as, or more extreme than, the one observed if the null hypothesis were true."
+"How should a very small $P$-value (e.g., $P < 0.001$) be interpreted regarding the null hypothesis?",It provides very strong evidence against the null hypothesis.
+"True or False: A large $P$-value (e.g., $P > 0.1$) proves that the null hypothesis is true.","False; it simply means the data provide no evidence against the null hypothesis, often due to sampling variation."
+Which test statistic is calculated by dividing an estimate by its standard error ($z = \text{estimate} / \text{s.e.}$)?,The $z$-score or standard normal deviate.
+What is the primary difference between a one-sided and a two-sided $P$-value?,A two-sided $P$-value includes the probability of a difference of the same size occurring in either direction from the null value.
+Why is it recommended to report precise $P$-values rather than just 'statistically significant' or 'not significant'?,Precise values allow for a better assessment of the strength of evidence rather than relying on an arbitrary threshold like $0.05$.
+"If a $95\%$ confidence interval for a mean difference excludes the null value of $0$, what can be inferred about the $P$-value?",The $P$-value must be less than $0.05$.
+What defines a 'Type I error' in hypothesis testing?,Rejecting the null hypothesis when it is in fact true in the population.
+What defines a 'Type II error' in hypothesis testing?,Failing to reject the null hypothesis when it is in fact false in the population.
+The probability of achieving a statistically significant result if a real effect exists is known as the _____ of the study.,Power
+How does increasing the sample size typically affect the $P$-value for a fixed population difference?,It increases the test statistic and decreases the $P$-value.
+Which statistical test is appropriate for comparing the means of two independent groups when the sample size is small?,The unpaired $t$-test.
+What is the formula for the degrees of freedom ($d.f.$) in an unpaired $t$-test comparing two groups of sizes $n_{1}$ and $n_{0}$?,$d.f. = n_{1} + n_{0} - 2$.
+Under what circumstance should a 'paired $t$-test' be used instead of an unpaired one?,When the data consist of pairs of observations made on the same individuals or matched subjects.
+The _____ test is the standard method for assessing associations between categorical variables in a contingency table.,Chi-squared ($\chi^{2}$)
+What is the degrees of freedom ($d.f.$) for a $2 \times 2$ contingency table in a chi-squared test?,$1$.
+"Which test is used to compare proportions in paired binary data, such as a study comparing two different diagnostic methods on the same subjects?",McNemar's chi-squared test.
+"When comparing proportions between two groups, the $z$-test is valid provided that both $n\pi$ and $n(1-\pi)$ are at least _____.",$10$.
+"In Analysis of Variance (ANOVA), what does the $F$-test assess?",The null hypothesis that the means of several groups are all equal.
+What is the null hypothesis when testing a correlation coefficient ($r$)?,The true population correlation coefficient is zero.
+Which formal test is used to evaluate the null hypothesis that a dataset follows a normal distribution?,The Shapiro–Wilk test.
+What is a 'Wald test' in the context of regression modelling?,A hypothesis test based on dividing a regression coefficient by its standard error to derive a $z$-statistic.
+The _____ test is often preferred over the Wald test for assessing the significance of variables in complex regression models.,Likelihood ratio
+"In a Mantel–Haenszel analysis, what does the $\chi^{2}_{MH}$ statistic test?",The null hypothesis that the common odds ratio (or rate ratio) across all strata is equal to $1$.
+Concept: $P$-value threshold for significance.,Definition: An arbitrary value (usually $0.05$) used to decide whether to reject the null hypothesis.
+Why is the medical importance of an effect distinct from its statistical significance?,A very large sample can produce a significant $P$-value for a difference that is too small to be clinically relevant.
+The _____ test is a non-parametric alternative to the unpaired $t$-test used for comparing medians.,Wilcoxon rank sum
+What is the 'score test' (also known as the Mantel-Cox test) in survival analysis used for?,Comparing survival patterns between two or more groups (the log-rank test).
+"When conducting multiple hypothesis tests on the same data, what happens to the risk of a false-positive result?","It increases significantly, as one in twenty tests will result in $P < 0.05$ by chance alone."
+"In a $2 \times 2$ table where the expected frequency in any cell is very small, which test provides an exact $P$-value?",Fisher’s exact test.
+What does a $P$-value of $0.05$ indicate about the probability of a Type I error if the null hypothesis is true?,There is a $5\%$ chance of incorrectly rejecting the null hypothesis.
+How is the $z$-statistic for comparing a sample proportion ($p$) to a null proportion ($\pi$) calculated?,$z = (p - \pi) / \sqrt{\pi(1 - \pi) / n}$.
+What is the purpose of the '$\chi^{2}$ test for trend'?,To assess whether there is a linear increase or decrease in proportions across ordered exposure categories.
+"In a Bayesian framework, what is the equivalent of a frequentist $P$-value for assessing if a drug is effective?","Direct probability statements about the parameter, such as the probability that the treatment effect is greater than zero."
+Why should researchers decide on groupings for variables before performing a statistical analysis?,To avoid 'data dredging' or picking the grouping that yields the smallest $P$-value by chance.
+How many degrees of freedom are associated with a paired $t$-test of $n$ pairs?,$n - 1$.
+"True or False: If the power of a study is $50\%$, there is a $50\%$ chance of failing to detect a real effect (Type II error).",True.
+"In the context of the standard normal distribution, what $z$-value corresponds to a two-sided $P$-value of $0.05$?",$1.96$.
+Which test statistic is mathematically equivalent to the square of the $z$-statistic from a comparison of two proportions?,The chi-squared statistic ($\chi^{2}$) with $1$ degree of freedom.

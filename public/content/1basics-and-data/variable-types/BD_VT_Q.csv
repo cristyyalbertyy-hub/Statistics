@@ -1,0 +1,65 @@
+"In medical statistics, what characterises a 'numerical variable'?","It is a quantitative measurement, such as height or blood pressure."
+How is a 'continuous numerical variable' defined?,It is a measurement on a continuous scale that can take any value within a range.
+What is the primary difference between a continuous and a 'discrete numerical variable'?,"Discrete variables take only a limited number of distinct values, usually whole numbers."
+Categorical variables are also known by what alternative term?,Qualitative variables.
+A 'binary variable' is a specific type of categorical variable with how many possible values?,Two.
+What defines an 'ordered categorical' (or ordinal) variable?,"Categories that are non-numerical but possess a natural, meaningful sequence or ranking."
+Social class is frequently used as an example of which variable type?,Ordered categorical (ordinal) variable.
+"In longitudinal studies, what does a 'rate' measure?",The frequency of occurrence of a disease or event over a specified period of time.
+What are 'derived variables' in the context of statistical analysis?,New variables created by calculating or categorising values from the original recorded data.
+"If a researcher groups 'age' into ten-year intervals, what type of variable is created?",An ordered categorical variable.
+What is the purpose of an 'outcome variable' in a study?,It is the primary focus of attention whose variation or occurrence the investigator seeks to understand.
+"In an experiment, the 'exposure variable' is also commonly referred to by what name?",Independent variable (or $x$-variable).
+"In a clinical trial, which variable usually represents the 'exposure'?",The treatment group allocation.
+How is 'Low Birthweight' (LBW) typically treated as a derived variable if defined as weight below $2500\text{ g}$?,As a binary variable.
+What is the convention for plotting 'outcome' and 'exposure' variables on a scatter plot?,The outcome variable determines the vertical position and the exposure variable determines the horizontal position.
+"In clustering analysis, what defines an 'interval attribute'?",A continuous linear scale divided into equal intervals.
+How does a 'nominal attribute' differ from an 'ordinal attribute' in clustering analysis?,"Nominal attributes have multiple states with no inherent order, while ordinal attributes have a meaningful sequence."
+"In clustering, what happens to an 'interval attribute' when it moves up one level in its concept hierarchy?",It becomes an ordinal attribute.
+What is the result of the 'ascent' of a nominal attribute in its concept hierarchy?,It remains a nominal attribute.
+"According to the 'ascent of attributes' property, what happens to the distance between objects when a nominal attribute ascends?",The distance remains identical or decreases.
+"In healthcare informatics, what does 'alphanumeric data' encompass?","A combination of both letters and numbers, such as patient names or medical record numbers."
+Recorded electrocardiograms and radiographs are examples of which type of data in healthcare?,Image data.
+What is the statistical definition of a 'rate' ($\\lambda$)?,The number of events ($d$) divided by the total person-years of observation ($T$).
+Formula: Rate of event occurrence,$\lambda = \frac{d}{T}$
+What unit is typically used to measure the denominator in the calculation of a rate?,Person-years-at-risk (pyar).
+How does a 'mortality rate' differ from an 'incidence rate'?,"An incidence rate refers to new disease cases, while a mortality rate refers specifically to deaths."
+What is the relationship between 'risk' and 'rate' when the rate ($\\lambda$) is very small?,Risk up to time $t \approx \lambda t$.
+Why is 'risk' considered a measure with an implicit rather than explicit time element?,Because risk increases with the period of observation but is calculated relative to the number at risk at the start.
+"In the context of rates, what does 'person-years-at-risk' represent?",The sum of the individual periods that each person in the study was under observation and free of the event.
+What is the formula for the 'standard error of a rate'?,$\text{s.e. (rate)} = \frac{\sqrt{d}}{T}$
+"In longitudinal studies, what measure is used to compare the rates of two groups?",Rate ratio (or hazard ratio).
+Formula: Rate Ratio,$\text{Rate Ratio} = \frac{\lambda_1}{\lambda_0} = \frac{d_1/T_1}{d_0/T_0}$
+What is the 'rate difference'?,The absolute difference between the rates of the exposed and unexposed groups ($\lambda_1 - \lambda_0$).
+Which regression model is typically used for the analysis of 'rates'?,Poisson regression.
+"In Poisson regression, what is the 'offset' term used to represent?",The total exposure time (person-years) for the individual or group.
+"When comparing 'risk ratio', 'odds ratio', and 'rate ratio', under what condition are they approximately equal?",When the outcome of interest is rare.
+What is the primary advantage of using a 'rate' over a 'risk' in studies with incomplete follow-up?,Rates explicitly account for differing lengths of individual follow-up time.
+A 'dichotomous' variable is another name for which type of variable?,Binary variable.
+"In medical statistics, what are 'indicator variables'?",Binary variables (coded 0 or 1) used in regression to represent levels of a categorical exposure.
+What type of outcome variable is required to perform 'linear regression'?,A numerical outcome variable.
+What type of outcome variable is required to perform 'logistic regression'?,A binary outcome variable.
+"When an outcome has more than two unordered categories, which regression extension is used?",Multinomial (polychotomous) logistic regression.
+"When an outcome has more than two categories with a natural sequence, which regression extension is used?",Ordinal logistic regression.
+"In 'indirect standardisation', what does the 'Standardised Mortality Ratio' (SMR) represent?",The ratio of the observed number of deaths to the expected number of deaths based on standard population rates.
+Formula: Standardised Mortality Ratio (SMR),$\text{SMR} = \frac{\text{observed deaths}}{\text{expected deaths}}$
+What does a 'hazard ratio' compare in survival analysis?,The risk of an event occurring in one group compared to another at any specific point in time.
+Which specific data type is used for animations and moving graphics in health professional training?,Video data.
+What characterises 'audio data' in a clinical setting?,"Sounds, noises, or tones, such as monitor alerts or taped heart sounds."
+The number of episodes of diarrhoea a child has in a year is an example of which variable type?,Discrete numerical variable.
+"In a $2 \times 2$ table, which variable type is typically represented in both the rows and columns?",Binary variables.
+Why is 'body mass index' (BMI) classified as a derived variable?,It is calculated using a person's weight and the square of their height.
+"In the analysis of 'rates', what does the Poisson distribution describe?",The sampling distribution of the number of events occurring in a given total observation time.
+What defines the 'incidence density' of an outcome?,"It is another term for the incidence rate, relating events to person-time."
+"If a study follows 500 children for 2 years, how many 'child-years' of observation are contributed?","1,000 child-years."
+"For a 'rare outcome', the rate is approximately equal to what value per unit time?",The risk per unit time.
+What is the purpose of 'stratification' in the analysis of categorical variables?,To control for confounding by examining the association within separate levels of a third variable.
+"In healthcare informatics, data like heart sounds and lung sounds are classified as _____.",Audio data
+A numerical variable that can only take whole numbers is called a _____ variable.,Discrete
+"In clustering, the ascent of a binary attribute does not need to be defined because its governing higher concept is _____.",Any
+The measure of the number of new events per person per unit time is known as the _____.,Rate (or $\lambda$)
+"In a study of smoking and lung cancer, smoking status is the _____ variable.",Exposure (or Independent)
+The _____ variable is the focus of the study whose occurrence we seek to understand.,Outcome (or Dependent)
+Standard errors for rate ratios are calculated on the _____ scale.,Logarithm (or log)
+"When all subjects in a cohort eventually experience the outcome, the _____ ratio will eventually reach 1.",Risk
+Categorical variables with more than two categories that have no natural order are called _____.,Nominal variables

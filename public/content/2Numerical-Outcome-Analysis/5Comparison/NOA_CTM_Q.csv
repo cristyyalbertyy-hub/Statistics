@@ -1,0 +1,35 @@
+Define the 'null hypothesis' in the context of comparing two population means.,The null hypothesis states that the true difference between the two population means is zero.
+What does the sampling distribution of the difference between two means ($\bar{x}_1 - \bar{x}_0$) represent?,It represents the spread of values expected if a large number of samples were taken from the same population.
+How is the degrees of freedom ($d.f.$) calculated for an unpaired (two-sample) $t$-test?,The degrees of freedom is calculated as $n_1 + n_0 - 2$.
+Formula: What is the standard error of the difference between two independent means when the population standard deviations ($\sigma$) are known?,$s.e. = \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_0^2}{n_0}}$.
+"In medical statistics, what sample size for independent groups is generally considered 'large' enough to use the normal distribution instead of the $t$-distribution?",A sample size of greater than $30$ is generally considered large.
+"When comparing two small samples, what assumption must be made about the population standard deviations to use a standard $t$-test?",It must be assumed that the two population standard deviations are equal.
+What is the purpose of calculating a 'pooled' estimate of the standard deviation ($s$) in an unpaired $t$-test?,It provides a single common estimate of the population standard deviation by combining information from both samples.
+Formula: How is the standard error of the difference between means calculated when using a pooled standard deviation ($s$)?,$s.e. = s \sqrt{\frac{1}{n_1} + \frac{1}{n_0}}$.
+What is the primary difference between the $t$-distribution and the standard normal distribution?,The $t$-distribution is more spread out and has longer tails compared to the normal distribution.
+The _____ measures how many standard errors the observed difference between means is from the null value of zero.,test statistic ($z$ or $t$)
+Define the term '$P$-value' in the context of a hypothesis test comparing two means.,It is the probability of recording a difference at least as large as the one observed if there were no real effect in the population.
+How does the width of a $95\%$ confidence interval for the difference between two means relate to the sample size?,The width of the confidence interval decreases as the sample size increases.
+"If a $95\%$ confidence interval for the difference between two means does not include zero, what can be inferred about the $P$-value?",The $P$-value must be less than $0.05$.
+Why might a researcher use a 'two-sided' $P$-value rather than a one-sided one?,To account for the possibility that the observed difference could have occurred in either direction.
+"When a study uses 'paired measurements' (such as before-and-after tests on the same person), what specific values are analysed?",The analysis is based on the set of differences between each pair of observations.
+How is the degrees of freedom ($d.f.$) determined for a paired $t$-test involving $n$ pairs?,The degrees of freedom is $n - 1$.
+What is the formula for the test statistic ($t$) in a paired $t$-test?,"$t = \frac{\bar{x}}{s.e.}$, where $\bar{x}$ is the mean of the paired differences."
+Cloze: A paired study design is often more _____ than an unpaired design because it accounts for between-patient variability.,efficient
+At what threshold of difference between sample standard deviations ($s_1$ and $s_0$) should the standard $t$-test typically be avoided?,It should be avoided if one standard deviation is more than twice as large as the other.
+Which non-parametric test is used as an alternative to the unpaired $t$-test when data are not normally distributed?,The Wilcoxon rank sum test (or Mann-Whitney U-test).
+Which non-parametric test is the counterpart to the paired $t$-test?,The Wilcoxon signed rank test.
+"In a Wilcoxon rank sum test, what is the first step in the ranking process?",Rank the values of the outcome from both groups combined in ascending order.
+What determines the 'Geometric Mean' when reporting results on the original scale after log-transformation?,The Geometric Mean is the antilog (exponent) of the mean of the log-transformed values.
+"Cloze: The _____ theorem suggests that for sample sizes of 15 or more, the sample mean is likely to be normally distributed regardless of the population distribution.",central limit
+"When comparing two rates, what measure is typically used to calculate a confidence interval if a direct difference isn't used?",The rate ratio ($RR$) and its associated error factor ($EF$).
+How does the $t$-distribution change as the number of degrees of freedom increases?,It becomes increasingly similar to the standard normal distribution.
+What is 'sampling variation'?,It is the chance variation in results that occurs because we observe only a sample of the population.
+"In a Wilcoxon signed rank test, which differences are excluded before ranking?",Any paired differences that are equal to zero are excluded.
+What is the 'Reference Range' in contrast to a 'Confidence Interval'?,"A reference range contains $95\%$ of individual observations, while a confidence interval contains the range of plausible values for the population mean."
+Why is it important to clearly label standard deviations ($SD$) and standard errors ($SE$) in tables of results?,Because they are frequently confused but represent different concepts of variability.
+"In an unpaired $t$-test, which sample contributes more to the pooled standard deviation estimate?",The larger sample contributes more weight to the pooled estimate.
+"Cloze: When the $P$-value is very small (e.g., $P < 0.001$), it provides _____ evidence against the null hypothesis.",very strong
+"Term: Two-way Analysis of Variance. Back: Definition: A statistical method used when data are classified in two ways, such as by age-group and sex.","A statistical method used when data are classified in two ways, such as by age-group and sex."
+What is 'standardisation' used for in medical statistics?,It is used to produce comparable measures between populations by adjusting for confounders like age and sex.
+What is the relationship between the F-test in a one-way ANOVA and the unpaired $t$-test when there are only two groups?,The F-statistic is equal to the square of the $t$-statistic ($F = t^2$).

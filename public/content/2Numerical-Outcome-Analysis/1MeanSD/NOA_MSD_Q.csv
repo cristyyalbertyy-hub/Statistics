@@ -1,0 +1,60 @@
+"In biomedical statistics, what is the 'arithmetic mean'?",It is the sum of the observations divided by the number of observations.
+Formula: Arithmetic Mean ($\bar{x}$),$\bar{x} = \frac{\sum x}{n}$
+What measure of average is defined as the value that divides an ordered distribution in half?,The median.
+How is the median calculated if the number of observations ($n$) is even?,It is the average of the two middle observations in an ordered list.
+"In a dataset, what does the 'mode' represent?",The value that occurs most frequently.
+Why is it impossible to average simple deviations from the mean $(x - \bar{x})$ to measure variation?,The average of these deviations will always be zero.
+What is the statistical term for the average of the squared deviations from the mean?,Variance ($s^2$).
+Formula: Sample Variance ($s^2$),$s^2 = \frac{\sum (x - \bar{x})^2}{n - 1}$
+The _____ is defined as the square root of the variance.,Standard deviation ($s$)
+Formula: Standard Deviation ($s$),$s = \sqrt{\frac{\sum (x - \bar{x})^2}{n - 1}}$
+Alternative Formula: Standard Deviation ($s$),$s = \sqrt{\frac{\sum x^2 - (\sum x)^2 / n}{n - 1}}$
+What does the standard deviation (s.d.) indicate about a population?,It measures the amount of variability or spread in the population values.
+Approximately what percentage of observations in a normal distribution lie within one standard deviation of the mean?,70%
+Approximately what percentage of observations in a normal distribution lie within two standard deviations of the mean?,95%
+How does adding a constant to every observation affect the sample mean?,The mean is increased by that same constant amount.
+How does adding a constant to every observation affect the standard deviation?,The standard deviation remains unaffected.
+"If every observation in a dataset is multiplied by a constant, what happens to the standard deviation?",The standard deviation is multiplied by that same constant.
+What greek letter is commonly used to denote the population mean?,$\mu$ (mu)
+What greek letter is commonly used to denote the population standard deviation?,$\sigma$ (sigma)
+What is 'sampling variation'?,The difference between a sample estimate (like the mean) and the true population value due to chance.
+The standard deviation of the sampling distribution of the means is known as the _____.,Standard error (s.e.)
+Concept: Standard Error of the Mean,Definition: A measure of the precision with which the population mean is estimated by the sample mean.
+Formula: Standard Error of the Mean ($s.e.$),$s.e. = \frac{s}{\sqrt{n}}$
+How does increasing the sample size ($n$) affect the standard error of the mean?,"It decreases the standard error, leading to a more precise estimate."
+"In a report, what specifically should the standard deviation (s.d.) be used to describe?",The variability between individuals in a sample or population.
+"In a report, what specifically should the standard error (s.e.) be used to describe?",The uncertainty or precision associated with an estimated mean.
+Under what condition is the sample standard deviation ($s$) used to calculate the standard error?,When the population standard deviation ($\sigma$) is unknown.
+"According to the source, why is it vital to clearly label s.d. and s.e. in results tables?",Because they are frequently confused with one another.
+Concept: Reference Range,"Definition: A range derived from the mean and standard deviation that covers a specified percentage (e.g., 95%) of the population values."
+How does a 95% reference range differ from a 95% confidence interval?,"A reference range describes individual values, while a confidence interval describes the likely range of the population mean."
+Formula: 95% Reference Range,Mean $\pm$ 1.96 s.d.
+Formula: 95% Confidence Interval for a Mean,Mean $\pm$ 1.96 s.e.
+What is the 'geometric mean'?,The antilog (or exponential) of the mean of log-transformed values.
+"In the calculation of variance, what is represented by the term $(n - 1)$?",The degrees of freedom.
+What measure of variation is calculated by subtracting the lower quartile from the upper quartile?,The interquartile range (IQR).
+Term: $z$-score (Standard Normal Deviate),Definition: The number of standard deviations an observation is away from the mean.
+Formula: $z$-score,$z = \frac{x - \mu}{\sigma}$
+Why is the mean used as the central measure for a normal distribution?,Because the distribution is symmetrical about the mean.
+The precision of a sample mean estimate depends on the sample size and the _____.,Variation in the population (standard deviation)
+How does the width of a 95% confidence interval change if the standard error increases?,The confidence interval becomes wider.
+"If a dataset is positively skewed, which measure of central tendency is typically higher: the mean or the median?",The mean.
+How is the 'Standard Error of the difference between two means' related to individual variances?,It is the square root of the sum of the variances of the two means.
+The standard error for a number of occurrences in a Poisson distribution is estimated by the square root of the _____.,Observed number of events ($\sqrt{d}$)
+Formula: Standard Error of a Rate ($\lambda = d/T$),$s.e.(rate) = \frac{\sqrt{d}}{T}$
+What is 'Robust Standard Error'?,A standard error calculated from the actual distribution of the dataset rather than an assumed probability model.
+"In a funnel plot for meta-analysis, what is commonly plotted against the effect estimate to detect bias?",The standard error.
+How is the standard error of a standardized rate calculated?,$\frac{1}{\sum w_i} \sqrt{\sum \frac{w_i^2 d_i}{(pyar_i)^2}}$
+What is the purpose of 'Standardisation' in statistics?,To compare rates between populations with different age or sex structures by using a common reference.
+Concept: Sampling Distribution,Definition: The frequency distribution of sample means (or other estimates) derived from many independent samples of the same size.
+"If the standard deviation of blood pressure is $9.4$ mmHg, what is the standard error for a sample size of $100$?",$0.94$ mmHg ($9.4 / \sqrt{100}$)
+Does the standard deviation of a sample change systematically as the sample size increases?,"No, it remains a stable estimate of the population standard deviation regardless of $n$."
+What is the relationship between the variance and the standard deviation?,The standard deviation is the square root of the variance.
+Which measure is more sensitive to extreme values (outliers): the mean or the median?,The mean.
+The _____ is the value that appears at the $50^{th}$ percentile.,Median
+"In the standard normal distribution, what are the values for the mean and the standard deviation?",Mean = 0; Standard Deviation = 1.
+Concept: $P$-value,"Definition: The probability of obtaining a result at least as extreme as the one observed, assuming the null hypothesis is true."
+How is a test statistic typically calculated using an estimate and its standard error?,Test statistic = $\frac{\text{estimate}}{s.e.}$
+"In linear regression, what is the 'residual sum of squares'?",The sum of the squared differences between observed values and those predicted by the regression line.
+What is 'Measurement Error'?,The difference between the recorded value of a variable and its true value.
+How does measurement error in the exposure variable affect the observed association with an outcome?,It usually weakens (attenuates) the observed association.

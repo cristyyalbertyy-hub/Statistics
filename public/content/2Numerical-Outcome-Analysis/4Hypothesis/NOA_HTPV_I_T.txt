@@ -1,0 +1,13 @@
+Certainly! Here is an infographic designed to provide a clear explanation of statistical hypothesis testing. This infographic, titled "STATISTICAL HYPOTHESIS TESTING: A FUNDAMENTAL PROCESS," guides a researcher through five essential steps:
+
+DEFINE YOUR HYPOTHESES: Clearly state both the Null Hypothesis (H₀, no effect) and the Alternative Hypothesis (H₁, an effect exists).
+
+COLLECT DATA & CHOOSE TEST: Gather independent samples and select the appropriate statistical test (like t-test or ANOVA).
+
+CHECK ASSUMPTIONS: Verify that your data meets the requirements for the test (such as normality or constant variance).
+
+CALCULATE P-VALUE: Determine the P-Value using sample data to assess the strength of the evidence against H₀.
+
+MAKE DECISION: Interpret the results by comparing the P-Value to your significance level (α) to either reject or fail to reject H₀.
+
+The entire framework is structured around the data you collect, transforming it into clear, evidence-based results.

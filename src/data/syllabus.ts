@@ -75,29 +75,103 @@ export const syllabus: SyllabusNode[] = [
   },
 ]
 
-const CONTENT_PREFIX: Record<string, string> = {
-  'basics-and-data/populations-and-samples': 'BD_PS',
-  'basics-and-data/variable-types': 'BD_VT',
-  'basics-and-data/data-display': 'BD_DD',
+type ContentType = 'video' | 'podcast' | 'infographic' | 'questionnaire'
+
+interface LeafContentConfig {
+  folder: string
+  prefix: string | Partial<Record<ContentType, string>>
+}
+
+const LEAF_CONTENT: Record<string, LeafContentConfig> = {
+  'basics-and-data/populations-and-samples': {
+    folder: '1basics-and-data/populations-and-samples',
+    prefix: 'BD_PS',
+  },
+  'basics-and-data/variable-types': {
+    folder: '1basics-and-data/variable-types',
+    prefix: 'BD_VT',
+  },
+  'basics-and-data/data-display': {
+    folder: '1basics-and-data/data-display',
+    prefix: 'BD_DD',
+  },
+  'numerical-outcome-analysis/mean-sd-standard-error': {
+    folder: '2Numerical-Outcome-Analysis/1MeanSD',
+    prefix: { video: 'NOA_MSD', podcast: 'NOA_MSS', infographic: 'NOA_MSS', questionnaire: 'NOA_MSD' },
+  },
+  'numerical-outcome-analysis/normal-distribution': {
+    folder: '2Numerical-Outcome-Analysis/2Normal Distribution',
+    prefix: 'NOA_ND',
+  },
+  'numerical-outcome-analysis/confidence-intervals-means': {
+    folder: '2Numerical-Outcome-Analysis/3Confidence',
+    prefix: 'NOA_CIM',
+  },
+  'numerical-outcome-analysis/hypothesis-testing-p-values': {
+    folder: '2Numerical-Outcome-Analysis/4Hypothesis',
+    prefix: 'NOA_HTPV',
+  },
+  'numerical-outcome-analysis/comparison-two-means-t-tests': {
+    folder: '2Numerical-Outcome-Analysis/5Comparison',
+    prefix: 'NOA_CTM',
+  },
+  'numerical-outcome-analysis/analysis-of-variance-anova': {
+    folder: '2Numerical-Outcome-Analysis/6Analysis Variance',
+    prefix: 'NOA_AV',
+  },
+  'numerical-outcome-analysis/linear-and-multiple-regression': {
+    folder: '2Numerical-Outcome-Analysis/7LinearMultipleRegression',
+    prefix: 'NOA_LMR',
+  },
+  'numerical-outcome-analysis/correlation-coefficients': {
+    folder: '2Numerical-Outcome-Analysis/8correlationCoefficients',
+    prefix: 'NOA_CC',
+  },
+}
+
+function getPrefix(config: LeafContentConfig, type: ContentType): string {
+  if (typeof config.prefix === 'string') return config.prefix
+  return config.prefix[type] ?? Object.values(config.prefix)[0]!
 }
 
 export function buildLeafId(chapterId: string, leafId: string): string {
   return `${chapterId}/${leafId}`
 }
 
-export function getContentPath(leafKey: string, type: 'video' | 'podcast' | 'infographic' | 'questionnaire'): string {
-  const prefix = CONTENT_PREFIX[leafKey]
+export function getContentPath(leafKey: string, type: ContentType): string {
+  const config = LEAF_CONTENT[leafKey]
   const suffix = { video: 'V', podcast: 'P', infographic: 'I', questionnaire: 'Q' }[type]
   const ext = { video: 'mp4', podcast: 'm4a', infographic: 'png', questionnaire: 'csv' }[type]
 
-  if (prefix) {
-    return `/content/${leafKey}/${prefix}_${suffix}.${ext}`
+  if (config) {
+    const prefix = getPrefix(config, type)
+    return `/content/${config.folder}/${prefix}_${suffix}.${ext}`
   }
 
   return `/content/${leafKey}/${type}.${ext}`
 }
 
+export function getExtraVideoPath(leafKey: string): string {
+  return getContentPath(leafKey, 'video').replace(/_V\.mp4$/, '_V2.mp4')
+}
+
+export function getInfographicTextPath(leafKey: string): string {
+  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_I_T.txt')
+}
+
+export function getContentFolder(leafKey: string): string {
+  const config = LEAF_CONTENT[leafKey]
+  return config ? `public/content/${config.folder}/` : `public/content/${leafKey}/`
+}
+
 export function getContentFileHint(leafKey: string): string {
-  const prefix = CONTENT_PREFIX[leafKey] ?? '{PREFIX}'
-  return `{PREFIX}_V.mp4, {PREFIX}_P.m4a, {PREFIX}_I.png, {PREFIX}_Q.csv`.replace(/\{PREFIX\}/g, prefix)
+  const config = LEAF_CONTENT[leafKey]
+  if (!config) return '{PREFIX}_V.mp4, {PREFIX}_P.m4a, {PREFIX}_I.png, {PREFIX}_Q.csv'
+
+  const video = getPrefix(config, 'video')
+  const podcast = getPrefix(config, 'podcast')
+  const infographic = getPrefix(config, 'infographic')
+  const questionnaire = getPrefix(config, 'questionnaire')
+
+  return `${video}_V.mp4, ${podcast}_P.m4a, ${infographic}_I.png, ${questionnaire}_Q.csv`
 }
