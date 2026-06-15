@@ -1,0 +1,35 @@
+What is a 'binary outcome variable' in medical statistics?,"An outcome where every individual in a sample falls into one of two alternative categories, such as 'diseased' or 'healthy'."
+How is the sample proportion ($p$) of a binary event calculated?,"The number of subjects experiencing the event ($d$) divided by the total sample size ($n$), expressed as $p = \frac{d}{n}$."
+Term: Prevalence,Definition: The total number of existing cases in a population divided by the total population at a specific point in time.
+Term: Cumulative Incidence (Risk),Definition: The number of new cases of a disease during a specified period divided by the number of persons initially at risk.
+"In a $2 \times 2$ table for comparing two groups, what does 'Group 1' typically denote?",The group of individuals exposed to a risk factor or receiving a specific treatment.
+Formula: Risk Difference,"$p_1 - p_0$, where $p_1$ is the proportion in the exposed group and $p_0$ is the proportion in the unexposed group."
+Formula: Risk Ratio (Relative Risk),"$\frac{p_1}{p_0}$, representing the ratio of the risk in the exposed group to the risk in the unexposed group."
+How are 'odds' defined in relation to the probability ($p$) of an event?,"The probability that the event happens divided by the probability that it does not happen, calculated as $\frac{p}{1 - p}$."
+Formula: Odds Ratio (OR),"$\frac{d_1 \times h_0}{d_0 \times h_1}$, where $d$ represents those with the event and $h$ represents those without, for groups 1 and 0."
+What is the alternative name for the Odds Ratio based on its calculation in a $2 \times 2$ table?,The cross-product ratio.
+Under what condition is the Odds Ratio approximately equal to the Risk Ratio?,"When the outcome is rare, typically defined as a probability of 0.1 or less."
+Which measure of association is the preferred choice for case-control studies?,"The Odds Ratio, because risk cannot be directly estimated as the controls represent an unknown fraction of the population."
+What is the 'null hypothesis' when comparing two population proportions ($\pi_1$ and $\pi_0$)?,"The hypothesis that there is no difference between the proportions in the population, or $\pi_1 - \pi_0 = 0$."
+Formula: Standard Error of a single proportion ($p$),"$\sqrt{\frac{p(1 - p)}{n}}$, where $n$ is the sample size."
+What is the sampling distribution of a proportion called?,The binomial distribution.
+"To use the normal approximation for a proportion, what minimum value should $np$ and $n(1-p)$ each exceed?",They should each be greater than 10.
+Formula: Standard Error of the difference between two proportions ($p_1 - p_0$),"$\sqrt{\text{s.e.}(p_1)^2 + \text{s.e.}(p_0)^2}$, which combines the individual standard errors of both groups."
+How is the 'pooled' proportion ($p$) calculated for a $z$-test comparing two proportions?,The total number of events in both groups ($d_1 + d_0$) divided by the total sample size ($n_1 + n_0$).
+Formula: $z$-test for comparing two proportions,"$z = \frac{p_1 - p_0}{\sqrt{p(1 - p) (\frac{1}{n_1} + \frac{1}{n_0})}}$, where $p$ is the overall pooled proportion."
+"In a $2 \times 2$ contingency table, how many degrees of freedom are used for the Chi-squared ($\chi^2$) test?",Exactly 1 degree of freedom.
+What is the mathematical relationship between the $z$-statistic from a normal test and the $\chi^2$ statistic from a $2 \times 2$ table?,"$\chi^2 = z^2$, and both tests yield identical $P$-values."
+When should Fisher's exact test be used instead of the $\chi^2$ test for a $2 \times 2$ table?,When the total number of individuals is small or any of the 'expected' values in the table cells are less than 5.
+Concept: Discordant Pairs,"Definition: In matched studies, pairs where the two subjects have different outcomes, such as one being 'positive' and the other 'negative'."
+"In the analysis of paired binary data, which type of pairs contribute to the estimate of the effect?",Only the discordant pairs contribute to the analysis; concordant pairs are ignored.
+What does a Risk Ratio of 0.5 imply about the effect of an exposure?,"The risk of the outcome in the exposed group is half that of the unexposed group, indicating a protective effect."
+Why is the log scale often used when calculating confidence intervals for Risk Ratios or Odds Ratios?,"Because the sampling distribution of ratio measures is skewed, whereas the distribution of their logarithms is approximately normal."
+Term: Mantel-Haenszel Method,Definition: A technique used to provide a summary estimate of an association by combining results across different strata to control for confounding.
+What does a $P$-value represent in the context of comparing two proportions?,"The probability of observing a difference as large as or larger than the one found, assuming the null hypothesis of no difference is true."
+The range of values within which we are reasonably confident the true population difference in proportions lies is the _____.,Confidence Interval
+How does increasing the sample size affect the confidence interval for a risk difference?,"It decreases the standard error, thereby narrowing the width of the confidence interval."
+What is the maximum possible value for a probability?,1 (or 100%).
+"Unlike probabilities, which are bounded by 0 and 1, what is the upper bound for 'odds'?",Infinity.
+"In a clinical trial, what does a Risk Ratio of 1.0 indicate?",There is no difference in risk between the treatment group and the control group.
+Which measure is more dramatic when the outcome is common: the Risk Ratio or the Odds Ratio?,The Odds Ratio will always be further from 1.0 than the Risk Ratio when the outcome is common.
+Process: Indirect Standardisation,A method used to compare mortality by calculating the number of deaths expected if the study population had the same age-sex specific rates as a standard population.

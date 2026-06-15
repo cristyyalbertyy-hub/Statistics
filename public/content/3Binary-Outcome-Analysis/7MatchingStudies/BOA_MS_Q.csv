@@ -1,0 +1,75 @@
+What is the primary reason for using a matched design in a case-control study?,To ensure that cases and controls are similar with respect to major potential confounding variables.
+"In a matched study, what term describes a pair where the individuals have different exposure or outcome statuses?",Discordant pair.
+Concept: Concordant pair,Definition: A matched pair where both individuals have the same status (e.g. both exposed or both unexposed).
+What is the formula for the McNemar's chi-squared test statistic ($\chi^{2}_{paired}$) using discordant pairs $r$ and $s$?,$\chi^{2}_{paired} = \frac{(r - s)^{2}}{r + s}$
+"In the analysis of matched case-control studies, information about the association is provided entirely by which type of pairs?",Discordant pairs.
+Why is a standard logistic regression model considered inappropriate for finely matched data?,It produces biased odds ratios that are further from the null value of 1 than they should be.
+What statistical method allows for the control of additional confounders in an individually matched case-control study?,Conditional logistic regression.
+What is the minimum number of total discordant pairs required for the McNemar's chi-squared test to be valid?,10.
+Provide an example of a matched design where the 'pairs' consist of the same individual.,A clinical trial assigning different treatments to the left and right eyes of each patient.
+How does a crossover trial use matching to increase statistical efficiency?,It accounts for between-patient variability by having each patient act as their own control.
+"In a matched case-control study with a 1:1 matching ratio, how is the odds ratio ($OR$) estimated?",By calculating the ratio of the two types of discordant pairs.
+Formula: Odds Ratio ($OR$) in 1:1 matched pairs ($r$ = case exposed/control unexposed; $s$ = control exposed/case unexposed),$OR = \frac{r}{s}$
+What analysis method is acceptable for frequency matched studies if the matching variables are included as covariates?,Standard (unconditional) logistic regression.
+What is the primary risk of matching on a variable that is on the causal path between the exposure and the disease?,It leads to an underestimate of the true association between the exposure and the outcome.
+Term: Conditional logistic regression,Definition: A variant of logistic regression where cases are only compared with controls within the same matched set.
+Why do concordant pairs fail to provide information about the association in a matched case-control analysis?,They offer no contrast in exposure status between the case and the control to estimate an effect.
+What design element is used in crossover trials to prevent the first treatment's effects from influencing the second treatment period?,Washout period.
+Why might neighbourhood matching be chosen as a strategy in developing countries?,To ensure a control group with a similar socio-economic distribution when population registers are unavailable.
+How does the basic analysis of numerical outcomes in matched studies differ from that of binary outcomes?,"Numerical outcomes typically use a paired $t$-test, while binary outcomes use McNemar's test."
+Which method estimates the odds ratio by treating each individual matched set as a separate stratum?,Mantel-Haenszel method.
+"In conditional logistic regression, what specific piece of data must be provided to identify the matching structure?",A variable specifying the matched set or pair identifier.
+What is a major disadvantage of individual matching regarding the analysis of the matching variables themselves?,The independent association of the matching variables with the outcome cannot be examined.
+The Mantel-Haenszel estimate of the odds ratio ($OR_{MH}$) for matched pairs is mathematically identical to which ratio?,The ratio of the discordant pairs.
+"If standard logistic regression is used on 1:1 matched data, the resulting odds ratio is approximately equal to the _____ of the correct $OR$.",Square.
+What is the definition of 'overmatching' in a case-control study?,Matching on a variable associated with the exposure but not independently with the disease.
+Formula: z-test statistic for the difference between paired proportions,$z = \frac{r - s}{\sqrt{r + s}}$
+Why must the order of treatment allocation be randomised in a crossover trial?,To avoid bias from time-related changes or order effects.
+What is the general effect on P-values if clustering or matching in the study design is ignored during analysis?,The P-values will be too small.
+Term: Mantel-Haenszel method (in matching),Definition: A stratified analysis technique where each matched set or pair is treated as its own stratum.
+Why is stratification often insufficient for controlling additional confounders in small matched sets?,"Each stratum contains too few subjects (e.g. 1 case, 2 controls) to allow further subdivision."
+"In reproducibility studies of matched measurements, what does a $\kappa$ value of 0 indicate?",Agreement is no better than what would be expected by chance alone.
+Which coefficient measures the ratio of between-cluster variance to total variance in matched or clustered designs?,Intraclass correlation coefficient (ICC).
+"In a matched case-control study, what type of pair is formed if the case is exposed and its matched control is also exposed?",Concordant pair.
+"In a matched case-control study, what type of pair is formed if the case is unexposed and its matched control is exposed?",Discordant pair.
+"Under the null hypothesis in a 1:1 matched study, what is the expected ratio of the two types of discordant pairs?",1:1.
+What is the minimum total number of pairs required for the approximate error factor for the matched-pair $OR$ to be valid?,50.
+What is the primary benefit of matching in clinical trials where different treatments are applied to the same patient (e.g. different eyes)?,It eliminates the confounding effect of all between-patient variability.
+Term: Frequency matching,"Definition: Selecting a control group so its overall distribution of a variable matches the cases, without individual pairing."
+How should the analysis of crossover trials account for the matched nature of the data?,By using statistical methods specifically designed for paired data.
+What is the impact on efficiency if a researcher matches on a variable that is not a true confounder?,The efficiency of the study is decreased.
+Can risk ratios or absolute risks be directly estimated from a matched case-control study?,"No, only the odds ratio can be estimated."
+A matched study with two controls for every case is described by what matching ratio?,1:2.
+What is the mathematical relationship between the $F$-value from a two-way ANOVA and the $t$-value from a paired $t$-test?,$F = t^{2}$
+Why is 'intent-to-treat' analysis standard in crossover trials even when subjects do not follow the treatment order?,To preserve the integrity of the randomisation and avoid bias from non-random withdrawals.
+How does conditional logistic regression determine exposure effects?,By comparing observed exposures against all possible combinations of exposures within each matched set.
+"If a case-control study is frequency matched on age, what must be done in the analysis for it to be valid?",Age must be included as a variable in the statistical model.
+"In a matched case-control study, matching on gender prevents the researcher from determining the gender's _____ association with the disease.",Independent.
+Formula: Error Factor ($EF$) for the 95% CI of a matched-pair odds ratio,$EF = \exp[1.96 \times \sqrt{1/r + 1/s}]$
+An individual matching design where cases and controls are matched on age and sex is an example of _____ matching.,Stratum (or Individual).
+What test serves as the squared version of the z-test for the difference between matched proportions?,McNemar's chi-squared test.
+What is the 'matching unit' in a study where patients are matched within the same medical facility?,The hospital.
+Concept: Discordant pair (Type 1 in $OR$ calculation),Definition: A matched pair where the case is exposed and the control is unexposed.
+Why is matching often used in the study of rare diseases?,To ensure comparability between the small number of cases and a representative control group.
+"If the number of discordant pairs is less than 10, which method should replace the McNemar's chi-squared test?",Methods based on exact binomial probabilities.
+What does a stratum represent in a Mantel-Haenszel analysis of individually matched data?,A single case and its corresponding matched control(s).
+What does the 'line of equality' ($y = x$) represent on a scatter plot of matched numerical measurements?,The points where the values for both measurements are identical.
+"In a paired $t$-test, the statistical analysis is actually performed on the _____ between the pairs.",Differences.
+Matching in case-control studies is intended to improve _____ by narrowing the confidence intervals of the effect estimate.,Efficiency.
+Does a matched design automatically remove the need for a matched analysis?,"No, the matching must always be explicitly accounted for in the analysis to avoid bias."
+What is the primary effect of 'breaking the match' (ignoring matching) in a 1:1 case-control study analysis?,It biases the odds ratio estimate towards the null value of 1.0.
+Conditional logistic regression is named as such because the likelihood is calculated _____ on the observed exposures in each set.,Conditional.
+What is the calculated odds ratio ($OR$) if there are 57 pairs where only the case is exposed and 13 pairs where only the control is exposed?,$OR \approx 4.38$
+Term: Crossover trial,"Definition: A design where each subject receives two or more treatments in a randomised order, serving as their own control."
+"In a crossover trial, what is the 'carry-over effect'?",When the effects of the treatment from the first period persist and influence results in the second period.
+"For matched numerical data with a non-normal distribution of differences, what class of statistical test is appropriate?",Non-parametric methods based on ranks (e.g. Wilcoxon matched pairs signed rank test).
+A study that matches cases with controls based on their shared environment (like neighbours) is an example of _____ matching.,Individual (or Neighbourhood).
+How can matching increase the logistical difficulty of a case-control study?,It can be difficult and time-consuming to find controls that meet all the specific matching criteria.
+"In a matched-pair study, what are the four possible exposure combinations between a case and its control?","Both exposed, both unexposed, case exposed/control not, or control exposed/case not."
+Why is matching by age often preferred over simple age-stratification in small studies?,It guarantees that the age distribution remains identical between groups even with very small sample sizes.
+"In a 1:1 matched study, if $r$ is case-exposed/control-unexposed and $s$ is case-unexposed/control-exposed, what is the null hypothesis for the ratio $r/s$?",The null hypothesis is that $r/s = 1$.
+"In conditional logistic regression, how does the software handle matched sets with different numbers of controls?",It places no restriction on the number of cases or controls in each matched set.
+What happens to the precision of an estimate if matching is performed on a factor unrelated to the disease?,The precision of the estimate is decreased.
+"In crossover trials, what is the purpose of the 'washout' period?",To ensure that the first treatment is fully eliminated from the subject's system before the second begins.
+Concept: 1:M Matching,Definition: A matched design where each case is matched with $M$ controls (where $M > 1$).
+"In a paired $t$-test, what is the null hypothesis regarding the mean difference between pairs?",The null hypothesis is that the mean difference in the population is zero.

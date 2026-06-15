@@ -1,0 +1,50 @@
+What type of outcome variable is specifically analysed using logistic regression?,A binary (or dichotomous) outcome variable.
+"If the probability of an event is $\pi$, what is the mathematical formula for the 'odds' of that event?",$\text{Odds} = \frac{\pi}{1 - \pi}$
+The transformation of the probability $\pi$ into the log of the odds is known as the _____ function.,logit
+"In the logistic regression equation $\log(\text{odds}) = \beta_0 + \beta_1x_1$, what does the parameter $\beta_0$ represent?",The log-odds of the outcome in the baseline (unexposed) group.
+"In a logistic regression model, what does the parameter $\beta_1$ represent on the log-odds scale?",The log-odds ratio associated with a one-unit increase in the exposure variable $x_1$.
+How is the exposure odds ratio (OR) derived from a logistic regression coefficient $\beta$?,By calculating the exponential of the coefficient: $\exp(\beta)$.
+Why is logistic regression described as a 'multiplicative' model when interpreted on the original (ratio) scale?,Because the effects of different exposures multiply together to determine the final odds.
+"When using a computer package for logistic regression, what is the standard convention for coding the presence of the outcome event?",The event is coded as 1 and the absence of the event is coded as 0.
+What is the primary reason for fitting logistic regression models on a log scale rather than a probability scale?,"Log-odds are unconstrained and can take any value between $-\infty$ and $+\infty$, unlike probabilities which are limited to 0–1."
+"To calculate a $95\%$ confidence interval for an odds ratio in logistic regression, what value must first be determined on the log scale?",The standard error of the log-odds ratio.
+What specific statistical test uses the ratio of a regression coefficient to its standard error to calculate a $P$-value?,The Wald test.
+How many indicator (dummy) variables are required to model a categorical exposure variable with $k$ levels in a logistic regression?,$k - 1$ indicator variables.
+"In logistic regression, what does an indicator variable represent for a non-baseline group?",The log-odds ratio comparing that specific group to the baseline group.
+"When a numerical exposure variable is included as a single term in a logistic regression, what assumption is being made about its relationship with the log-odds?",That there is a linear relationship between the exposure variable and the log-odds of the outcome.
+How does logistic regression control for confounding variables?,By including the confounding variables as additional exposure variables in a multivariable model.
+"In a multivariable logistic regression, what does the 'adjusted' odds ratio for an exposure represent?","The effect of that exposure on the odds of the outcome, independent of the other variables in the model."
+What term describes the situation where the effect of one exposure variable on the odds of disease differs depending on the level of another variable?,Interaction (or effect modification).
+Which regression method is used to adjust for confounding in individually matched case–control studies?,Conditional logistic regression.
+How does conditional logistic regression differ from standard logistic regression regarding comparison groups?,It only compares cases to controls within the same matched set.
+What is the risk of using standard logistic regression instead of conditional logistic regression on finely matched data?,It produces biased odds ratios that are further from the null value of 1 than they should be.
+Under what condition are odds ratios derived from logistic regression approximately equal to risk ratios?,When the outcome of interest is rare in the population.
+What is the 'link function' for a logistic regression model in the context of generalised linear models?,The logit function.
+Which regression model should be used if the categorical outcome variable has more than two unordered categories?,Multinomial (or polychotomous) logistic regression.
+"Which regression model is appropriate for a categorical outcome variable that has a natural ordering, such as 'mild', 'moderate', or 'severe'?",Ordinal logistic regression.
+"The most common form of ordinal logistic regression, which assumes exposure effects are the same across all cumulative categories, is the _____ model.",proportional odds
+How is the Likelihood Ratio Statistic (LRS) calculated when comparing two nested logistic regression models?,"$	ext{LRS} = -2 \times (L_{exc} - L_{inc})$, where $L$ is the log-likelihood."
+"When comparing a model with and without a categorical variable of $g$ groups using a Likelihood Ratio Test, how many degrees of freedom are used for the $\chi^2$ distribution?",$g - 1$ degrees of freedom.
+"In a logistic regression output, the 'Constant' term typically refers to the _____ group.",baseline
+What estimation method is used by computer programs to find the most likely values for logistic regression parameters?,Maximum likelihood estimation (MLE).
+Why might a researcher prefer a Likelihood Ratio Test over a Wald test for a categorical variable with multiple levels?,"The Likelihood Ratio Test provides a single, combined test of the null hypothesis for the entire variable."
+"In the context of logistic regression, what is the 'linear predictor'?",The quantity $\beta_0 + \beta_1x_1 + \dots + \beta_px_p$ that predicts the log-odds.
+How can a researcher check the linearity assumption for a continuous variable in a logistic regression model?,By grouping the variable into ordered categories and plotting the observed log-odds against the groups.
+What is the main advantage of using logistic regression over Mantel–Haenszel methods for confounding?,"It allows for the simultaneous control of multiple confounding variables, including continuous ones."
+"In a matched case–control study, why is the 'constant' term omitted or non-interpretable in conditional logistic regression?",Because the baseline risk is allowed to vary between each matched set and is factored out of the likelihood.
+"When the outcome is common, how do odds ratios generally compare to risk ratios for an exposure that increases risk?",The odds ratio will be larger (further from 1) than the risk ratio.
+What statistical distribution is assumed for the outcome variable in a logistic regression model?,The binomial distribution.
+"In multivariable logistic regression, 'adjusted' effects are sometimes called _____ effects.",independent
+"If a logistic regression coefficient $\beta$ is negative, what does this indicate about the relationship between the exposure and the outcome?",The exposure is associated with a decrease in the odds of the outcome.
+Term: Logit function,"Definition: The natural logarithm of the odds, $\log(\frac{\pi}{1 - \pi})$, used as the link function in logistic regression."
+Concept: Indicator variables,Definition: Binary variables (0 or 1) created to represent categories of a non-numerical exposure in a regression model.
+What is the purpose of the 'Wald $z$ statistic' in logistic regression output?,To test the null hypothesis that a specific regression coefficient is equal to zero.
+"In logistic regression, the exponential of the intercept, $\exp(\beta_0)$, represents the _____ of the outcome in the unexposed group.",baseline odds
+A Likelihood Ratio Test comparing a linear model to a categorical model for the same exposure is a test for _____.,non-linearity (or 'departure from linear trend')
+"In a logistic model with two variables $A$ and $B$, the term 'no interaction' implies that the odds ratio for $A$ is _____ across all levels of $B$.",the same (constant)
+What is the mathematical relationship between the log-odds and the log-odds ratio in a simple logistic model comparing exposed to unexposed?,$\log(\text{OR}) = \log(\text{odds}_{\text{exposed}}) - \log(\text{odds}_{\text{unexposed}})$.
+"If the odds ratio for an exposure is 2.5, how is the upper confidence limit $L$ related to the odds ratio and the error factor $EF$?",$L = OR \times EF$.
+"What is the 'null value' for an odds ratio in logistic regression, indicating no association?",1.0
+"On the log-odds scale, what is the 'null value' for a logistic regression coefficient?",0
+"When a logistic regression model fails to converge (produce results) for risk ratios, what is often the underlying cause?",The outcome is common and the mathematical constraints of risk ratios (which cannot exceed 1) make model fitting difficult.
+Formula: $\text{LRS} = -2 \times \log(\text{Likelihood Ratio})$,Name: Likelihood Ratio Statistic. Purpose: To test the significance of one or more variables in a regression model.

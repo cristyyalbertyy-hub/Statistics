@@ -1,0 +1,56 @@
+Which statistical distribution describes the sampling distribution of a proportion?,The binomial distribution.
+The binomial distribution is used to analyse outcomes that are categorised into how many alternatives?,Two alternatives (binary outcomes).
+"In binomial notation, what does the Greek letter $\pi$ represent?",The population proportion or the probability of the event occurring for an individual.
+"In the context of the binomial distribution, what does the variable $n$ denote?",The sample size.
+"In binomial calculations, what does the variable $d$ represent?",The number of individuals in the sample who experience the event of interest.
+Which assumption regarding individual outcomes must be met to apply the binomial distribution?,The outcomes must be independent of each other.
+What is the mathematical definition of the factorial operation $n!$?,All integers from the number $n$ down to 1 multiplied together.
+"In statistics, what is the defined value of $0!$?",1
+What is the general formula for the probability of observing exactly $d$ events in a sample of size $n$?,$Prob(d \text{ events}) = \frac{n!}{d!(n-d)!} \pi^d (1-\pi)^{n-d}$
+"In the binomial formula, what does the component $\frac{n!}{d!(n-d)!}$ represent?",The number of possible ways in which $d$ events can be observed in a sample of size $n$.
+"In the binomial formula, what does the component $\pi^d (1-\pi)^{n-d}$ represent?",The probability of any single sequence of $d$ events and $n-d$ non-events occurring.
+Under what specific condition is the binomial distribution perfectly symmetrical?,When the population proportion $\pi$ is equal to 0.5.
+How does the shape of the binomial distribution change as the sample size $n$ increases?,It becomes closer to a normal distribution.
+Is the sampling distribution for a proportion $p$ discrete or continuous?,It is discrete.
+What is the formula for the population mean of the number of events $d$ in a binomial distribution?,$n\pi$
+What is the formula for the standard error of the number of events $d$ in a binomial distribution?,$\sqrt{n\pi(1-\pi)}$
+What is the formula for the population mean of the proportion of events $p$?,$\pi$
+What is the formula for the standard error of a proportion $p$?,$\sqrt{\frac{\pi(1-\pi)}{n}}$
+What is the formula for the standard error of a percentage of events $100p$?,$100 \times \sqrt{\frac{\pi(1-\pi)}{n}}$
+"According to the normal approximation, $n\pi$ and $n(1-\pi)$ must both be at least what value to use the normal distribution?",10
+"When calculating a 95% confidence interval for a single proportion using the normal approximation, what is the formula for the standard error?",$s.e.(p) = \sqrt{\frac{p(1-p)}{n}}$
+What is the requirement for the values of $np$ and $n-np$ to validly calculate a confidence interval for a proportion using the normal approximation?,Both $np$ and $n-np$ must be 10 or more.
+"In a $z$-test for a single proportion, how is the standard error calculated if the null hypothesis is $\pi = \pi_0$?",$s.e.(\pi_0) = \sqrt{\frac{\pi_0(1-\pi_0)}{n}}$
+What is the purpose of a continuity correction in binomial analysis?,To improve the accuracy of the normal approximation when $n\pi$ or $n(1-\pi)$ are small.
+Between what values of $n\pi$ is a continuity correction typically recommended?,Between 5 and 10.
+"To approximate the binomial probability of observing 9 or more events with the normal curve, which value should be used as the starting point?",8.5
+How is the cumulative incidence (risk) of a disease defined?,The number of new cases divided by the number of persons initially disease-free.
+How does prevalence differ from cumulative incidence?,"Prevalence measures the proportion of a population with a disease at a specific point in time, rather than new cases over a period."
+Which definition of probability describes it as the proportion of times an event occurs in a large number of repeated trials?,The frequentist definition.
+Which definition of probability treats it as a subjective 'degree of belief' in an hypothesis?,The Bayesian (or subjective) definition.
+"In the binomial distribution, the sum of probabilities for all possible values of $d$ must equal _____",1
+What is the probability that none of the children in a family of four have sickle-cell disease if the probability for each child is 0.25?,$0.75^4 \approx 0.3164$
+What determines the standard error of a binomial proportion?,The amount of variation in the population (related to $\pi$) and the sample size ($n$).
+Term: Bernoulli Trial,"Definition: A single experiment with exactly two possible outcomes, which forms the basis for the binomial distribution."
+Formula: $z$-test statistic for a single proportion,$z = \frac{p - \pi_0}{s.e.(\pi_0)}$
+Formula: 95% Confidence Interval for a proportion,$p \pm (1.96 \times s.e.(p))$
+What happens to the standard error of a proportion as the sample size $n$ increases?,"It decreases, leading to a more precise estimate."
+How is the sample proportion $p$ calculated from the number of events $d$ and sample size $n$?,$p = \frac{d}{n}$
+"If $\pi$ is 0.1, is the binomial distribution symmetrical or skewed?",It is positively skewed.
+"If $\pi$ is 0.9, is the binomial distribution symmetrical or skewed?",It is negatively skewed.
+What is the maximum possible value for a binomial probability?,1 (or 100%)
+What is the minimum possible value for a binomial probability?,0
+The standard deviation of the sampling distribution of a proportion is known as the _____.,Standard error.
+Concept: Exact methods for proportions,Definition: Statistical methods that calculate confidence intervals directly from the binomial distribution rather than using the normal approximation.
+Why is the binomial distribution's sampling distribution considered discrete?,"Because for a given sample size $n$, the number of events $d$ can only take whole number values."
+"In the binomial distribution, what is the probability of an event NOT occurring for an individual?",$1 - \pi$
+What is the relationship between the binomial and normal distributions as $n \to \infty$?,The binomial distribution converges to the normal distribution.
+"If you are testing if a proportion is lower than a national level, what kind of $z$-test are you performing?",A one-sided hypothesis test (though two-sided is often standard).
+"In a family of $n=12$ where $\pi=0.5$, what is the exact probability of observing 12 events?",$0.5^{12} \approx 0.0002$
+What is the result of any value $x$ raised to the power of 0 ($x^0$)?,1
+How does a 'Risk' calculation differ from a 'Prevalence' calculation in terms of time?,Risk refers to new cases occurring over a specified period; Prevalence refers to existing cases at a point in time.
+"In the formula for the standard error of $d$, why does the value decrease as $\pi$ approaches 0 or 1?","Because the outcomes become more certain, reducing sampling variation."
+The horizontal axis of a binomial probability distribution diagram represents the _____.,Number of events ($d$) or the proportion ($p$).
+The vertical axis of a binomial probability distribution diagram represents the _____.,Probability.
+What is the mean number of sickle-cell children expected in a family of 4 if the risk for each is 0.25?,$4 \times 0.25 = 1$
+What is the standard error for the number of sickle-cell children in a family of 4 where $\pi=0.25$?,$\sqrt{4 \times 0.25 \times 0.75} = \sqrt{0.75} \approx 0.866$

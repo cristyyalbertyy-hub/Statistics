@@ -127,6 +127,98 @@ const LEAF_CONTENT: Record<string, LeafContentConfig> = {
     folder: '2Numerical-Outcome-Analysis/8correlationCoefficients',
     prefix: 'NOA_CC',
   },
+  'binary-outcome-analysis/differences-risks-and-odds': {
+    folder: '3Binary-Outcome-Analysis/1DifferencesRisksOdds',
+    prefix: 'BOA_DRO',
+  },
+  'binary-outcome-analysis/binomial-distribution': {
+    folder: '3Binary-Outcome-Analysis/2BinomialDistribution',
+    prefix: 'BOA_BD',
+  },
+  'binary-outcome-analysis/comparing-proportions': {
+    folder: '3Binary-Outcome-Analysis/3ComparingProportions',
+    prefix: 'BOA_CP',
+  },
+  'binary-outcome-analysis/chi-squared-tests': {
+    folder: '3Binary-Outcome-Analysis/4ChiSquaredTests',
+    prefix: 'BOA_CST',
+  },
+  'binary-outcome-analysis/confounding-and-stratification': {
+    folder: '3Binary-Outcome-Analysis/5ConfoundingStratification',
+    prefix: 'BOA_CS',
+  },
+  'binary-outcome-analysis/logistic-regression': {
+    folder: '3Binary-Outcome-Analysis/6LogisticRegression',
+    prefix: 'BOA_LR',
+  },
+  'binary-outcome-analysis/matching-studies': {
+    folder: '3Binary-Outcome-Analysis/7MatchingStudies',
+    prefix: 'BOA_MS',
+  },
+  'longitudinal-and-survival-analysis/odds-and-hazard-ratios': {
+    folder: '4Longitudinal-and-Survival-Analysis/1OddsHazardRatios',
+    prefix: 'LSA_OHR',
+  },
+  'longitudinal-and-survival-analysis/computing-risks': {
+    folder: '4Longitudinal-and-Survival-Analysis/2ComputingRisks',
+    prefix: 'LSA_CR',
+  },
+  'longitudinal-and-survival-analysis/survival-analysis-kaplan-meier': {
+    folder: '4Longitudinal-and-Survival-Analysis/3SurvivalAnalysisKaplanMeier',
+    prefix: 'LSA_SAKM',
+  },
+  'longitudinal-and-survival-analysis/regression-analysis-cox-hazards': {
+    folder: '4Longitudinal-and-Survival-Analysis/4RegressionAnalysisCoxHazards',
+    prefix: 'LSA_RACH',
+  },
+  'longitudinal-and-survival-analysis/standardization': {
+    folder: '4Longitudinal-and-Survival-Analysis/5Standardization',
+    prefix: 'LSA_STD',
+  },
+  'statistical-modelling/likelihood-theory': {
+    folder: '5Statistical-Modelling/1LikelihoodTheory',
+    prefix: 'SM_LT',
+  },
+  'statistical-modelling/non-parametric-methods-ranking': {
+    folder: '5Statistical-Modelling/2NonParametricMethods',
+    prefix: 'SM_NPMR',
+  },
+  'statistical-modelling/bayesian-methods': {
+    folder: '5Statistical-Modelling/3BayesianMethods',
+    prefix: 'SM_BM',
+  },
+  'statistical-modelling/systematic-reviews-meta-analysis': {
+    folder: '5Statistical-Modelling/4SystematicReviewsMetaAnalysis',
+    prefix: 'SM_SRMA',
+  },
+  'statistical-modelling/diagnostic-test-analysis': {
+    folder: '5Statistical-Modelling/5DiagnosticTestAnalysis',
+    prefix: 'SM_DTA',
+  },
+  'statistical-modelling/bootstrapping-and-jackknifing': {
+    folder: '5Statistical-Modelling/6BootstrappingJackknifing',
+    prefix: 'SM_BJ',
+  },
+  'study-design-and-interpretation/sample-size-and-power-calculation': {
+    folder: '6Study-Design-and-Interpretation/1SampleSizePower',
+    prefix: 'SDI_SSPC',
+  },
+  'study-design-and-interpretation/measurement-error-reproducibility': {
+    folder: '6Study-Design-and-Interpretation/2MeasurementErrorReproducibility',
+    prefix: 'SDI_MER',
+  },
+  'study-design-and-interpretation/measures-of-association-impact': {
+    folder: '6Study-Design-and-Interpretation/3MeasuresAssociationImpact',
+    prefix: 'SDI_MAI',
+  },
+  'study-design-and-interpretation/analysis-of-bias': {
+    folder: '6Study-Design-and-Interpretation/4AnalysisBias',
+    prefix: 'SDI_AOB',
+  },
+  'study-design-and-interpretation/causal-inference-studies': {
+    folder: '6Study-Design-and-Interpretation/5CausalInferenceStudies',
+    prefix: 'SDI_CIS',
+  },
 }
 
 function getPrefix(config: LeafContentConfig, type: ContentType): string {
