@@ -1,0 +1,60 @@
+What is the primary focus of 'survival analysis' in medical statistics?,"It focuses on the time until a specific event occurs, such as death or recurrence of disease."
+"In longitudinal studies, what does the term 'censored' describe regarding survival times?","It refers to individuals known to have survived to a certain point, but whose status beyond that point is unknown."
+Why might an individual's follow-up time be 'censored' in a survival study?,"Loss to follow-up, withdrawal from the study, or the study ending before the event occurs."
+The _____ assumes that the probability of being censored is unrelated to the probability of the event of interest occurring.,non-informative censoring assumption
+"Define the 'survivor function', denoted as $S(t)$.",The probability that an individual survives (does not experience the event) up to and including time $t$.
+"What does the 'hazard function', denoted as $h(t)$, represent?","The instantaneous rate of event occurrence at time $t$, given that the individual has survived until that time."
+How is the Kaplan–Meier estimate of the survivor function $S(t)$ graphically represented?,As a step function that remains horizontal between events and drops vertically at each event time.
+What is the formula for the estimated risk $r_t$ of an event at a precise time $t$ in a Kaplan–Meier analysis?,"$r_t = d_t / n_t$, where $d_t$ is the number of events and $n_t$ is the number of individuals at risk at time $t$."
+"In Kaplan–Meier estimation, how is the survival probability at time $t$, denoted $s_t$, calculated from the risk $r_t$?",$s_t = 1 - r_t = (n_t - d_t) / n_t$.
+Identify the 'product-limit formula' used to calculate the survivor function $S(t_j)$ for the $j^{th}$ event.,$S(t_j) = s_{t1} \times s_{t2} \times \dots \times s_{tj}$.
+How do individuals lost to follow-up affect the Kaplan–Meier estimate of survival probability?,"They are removed from the denominator ($n_t$) for the next event, but do not otherwise change the survival probability."
+Why should the Kaplan–Meier survivor function be interpreted cautiously at the right-hand end of the curve?,"Very few patients remain at risk, making the estimated risks and vertical drops large and unstable."
+What is the main difference between the 'Life Table' method and the 'Kaplan–Meier' method for estimating survival?,"Life tables divide survival time into discrete intervals, whereas Kaplan–Meier uses exact event times."
+"In a life table, how is the number of persons at risk adjusted for those lost to follow-up during an interval?",It is calculated as the number alive at the start minus half the number censored during that interval.
+Term: Cohort Life Table,Definition: A display of the actual survival of a specific group of individuals followed through time from a common starting point.
+Term: Current Life Table,Definition: A display of the expected survivorship of a hypothetical population based on current age-specific death rates.
+How can 'life expectancy' be crudely estimated from a cumulative survival curve?,It is the time point where the cumulative probability of survival equals $0.5$ (the median survival time).
+State the 'proportional hazards assumption'.,"The assumption that the ratio of hazards between two groups remains constant over time, even if the underlying hazards change."
+"What is the 'cumulative hazard function', denoted $H(t)$?","The total hazard experienced up to time $t$, estimated by the sum of risks at each event time up to $t$."
+What is the 'Nelson–Aalen estimate' used to calculate?,The cumulative hazard function $H(t)$.
+Formula: Relationship between $S(t)$ and $H(t)$,$S(t) = e^{-H(t)}$ or $H(t) = -\log(S(t))$.
+What type of graph is used to check the proportional hazards assumption visually?,"A plot of $\log(-\log(S(t)))$ against time (or log-time), looking for parallel lines."
+"If the event rate $\lambda$ is constant over time, what is the shape of the survivor function $S(t)$?",It is an exponential function: $S(t) = e^{-\lambda t}$.
+The 'log rank test' is used to test which null hypothesis?,The null hypothesis that there is no difference in the hazards (and thus survival patterns) between two or more groups.
+The Mantel–Cox procedure is a special application of which statistical method used for stratified analysis?,"The Mantel–Haenszel procedure, applied to a separate $2 \times 2$ table for each event time."
+What is the purpose of the 'Cox regression' model?,To investigate the effect of several variables (covariates) on survival time simultaneously.
+"State the mathematical form of the Cox proportional hazards model for the hazard at time $t$, $h(t)$.",$\log(h(t)) = \log(h_0(t)) + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_p x_p$.
+"In Cox regression, what does the 'baseline hazard' $h_0(t)$ represent?",The hazard for an individual in whom all exposure variables (covariates) are equal to zero.
+How is the 'hazard ratio' (HR) derived from a Cox regression coefficient $\beta$?,$\text{HR} = e^{\beta}$ (or $\exp(\beta)$).
+"Under the proportional hazards assumption, what happens to the hazard ratio over time?",It remains constant at all times $t$.
+What estimation procedure is used for Cox regression because the baseline hazard is not explicitly estimated?,Conditional likelihood estimation.
+"In a study of survival after surgery, why might time since recruitment be the best choice for the time axis?",The hazard is expected to change most dramatically relative to the time since the surgical event.
+When might 'age' be a more appropriate time axis than 'time since recruitment' in survival analysis?,When the disease outcome is strongly associated with age and recruitment was not triggered by a specific medical event.
+How can Cox regression account for 'time-varying exposures'?,By splitting follow-up time for each individual into periods where the exposure remains constant (delayed entry).
+What is the link between Poisson regression and parametric survival models?,Poisson regression is identical to a parametric survival model that assumes an exponential survivor function.
+Name one commonly used distribution for 'parametric survival models' other than the exponential.,"The Weibull (or Gompertz, gamma, lognormal, log-logistic) distribution."
+Why are parametric survival models particularly useful when the goal is prediction?,They explicitly model and estimate the mathematical form of the survivor function.
+"In survival analysis, what does the 'risk set' at time $t$ consist of?",All individuals being followed who have not yet experienced the event or been censored at time $t$.
+Concept: Proportional Hazards (PH),Definition: The assumption that the effect of a covariate is to multiply the baseline hazard by a constant factor across all time points.
+"If the Cox regression coefficient $\beta$ for an exposure is $0.5$, what is the estimated hazard ratio?",$e^{0.5} \approx 1.65$.
+What does a hazard ratio of $1$ indicate in a survival analysis comparison?,There is no difference in the rate of event occurrence between the two groups.
+The standard error for the Mantel–Cox log hazard ratio involves the sum of strata _____.,variances ($V_i$).
+How is the 'Mantel–Cox $\chi^2$ statistic' (log rank test) calculated using observed ($d_{1i}$) and expected ($E_{1i}$) events?,"$\chi^2 = (\sum(d_{1i} - E_{1i}))^2 / V$, where $V$ is the total variance."
+What is 'informative censoring'?,A bias that occurs when the probability of being censored is related to the probability of the event occurring.
+Why does Kaplan–Meier analysis avoid the grouping assumptions of Life Tables?,"It calculates survival at the exact time of each death, rather than assuming losses occur half-way through an interval."
+What is 'person-years-at-risk' (pyar)?,A measure of the total time individuals in a study were at risk of experiencing the event.
+"In survival analysis, the _____ represents the probability of surviving beyond time $t$.",survivor function ($S(t)$)
+True or False: The Cox regression model can adjust for multiple confounders simultaneously.,True.
+Concept: Nelson–Aalen Estimate,Definition: A non-parametric estimator used to calculate the cumulative hazard function in survival data.
+Which statistical package feature is essential for calculating follow-up times in longitudinal studies?,"The ability to manipulate and calculate the difference between dates (e.g., exitdate - startdate)."
+"If $S(t) = 0.8$ at one year, what is the cumulative hazard $H(t)$ at that time?",$H(t) = -\log(0.8) \approx 0.223$.
+What is the degrees of freedom for a log rank test comparing two groups?,One ($1$).
+"In survival data, 'ties' refer to what occurrence?",When more than one individual experiences the event of interest at exactly the same time.
+The _____ axis in survival analysis defines which subjects are included in the risk sets at each event time.,time
+How does the 'hazard' differ from 'risk' in longitudinal studies?,"Hazard is a rate (events per unit time), while risk is a probability (proportion experiencing event in a period)."
+Formula: Life Expectancy from a Life Table,Life expectancy $= 0.5 + \sum (\text{length of interval} \times \text{cumulative chance of survival})$.
+What happens to the denominator $n_t$ in Kaplan–Meier as time progresses?,It decreases as individuals either experience the event or are censored.
+"When a survival curve reaches $0$, what does it imply about the study population?",Every individual in the study has experienced the event of interest.
+A hazard ratio of $2.5$ for a treatment means the treatment group experiences the event _____ times as fast as the control group.,$2.5$
+What is 'delayed entry' (left truncation) in survival analysis?,When subjects do not become 'at risk' or join the risk sets until some time after the study's time origin.

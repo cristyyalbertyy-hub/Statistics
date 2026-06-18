@@ -1,0 +1,80 @@
+The right of an individual to choose for himself or herself is the ethical principle of _____.,Autonomy
+Term: Confidentiality,Definition: The responsibility of custodians to use or disclose health information only as authorised.
+What term describes the procedures and technology employed to protect information from accidental or malicious alteration?,Security
+The right of an individual to control the use and dissemination of their personal information is known as _____.,Information privacy
+What is the primary risk associated with the 'gimmick effect' in e-health system implementation?,The system may have short-term appeal but fail to contribute to patient well-being.
+Term: Data Integrity,"Definition: The state of data being whole, complete, correct, and consistent."
+"In informatics, what does the term 'dirty data' refer to?","A database containing errors such as duplicate, incomplete, or outdated records."
+What is the potential consequence of researchers using 'dirty data' for medical studies?,It can lead to flawed information that results in incorrect clinical conclusions.
+How can human error compromise the integrity of health care data?,Through the incorrect entry of patient identification numbers or misspelled names.
+A malicious code that blocks an organisation from using its computer systems until a payment is made is called _____.,Ransomware
+How does a computer 'worm' differ from a traditional computer virus?,A worm can replicate and spread across networks without needing a host file.
+The tricking of a user to load an infected physical device onto their computer is a security threat known as _____.,Baiting
+What is the primary security risk of using public-access photocopiers in a health care setting?,Healthcare data may remain stored on the copier's hard drive after use.
+Term: Malware,"Definition: Malicious software designed to damage, disrupt, or gain unauthorised access to a computer system."
+What technical tool is used to separate an internal computer system from the outside world to grant controlled access?,Firewall
+Term: Encryption,Definition: The use of mathematical algorithms to encode messages so only authorised users with keys can read them.
+What legislation in the United States was created to stimulate the adoption of electronic health records and strengthen privacy protections?,The HITECH Act of 2009
+Which regulatory act holds both health care organisations and their business associates responsible for data breaches?,The HITECH Act
+What is the primary risk of health care professionals using 'work-arounds' to bypass troublesome technology?,They can create significant safety issues and circumvent essential safeguards.
+Human-technology interface design flaws are responsible for what percentage of patient-monitoring incidents?,87%
+What risk arises when a health care professional's mental workload (MWL) is too high?,"It leads to confusion, decreased performance, and a higher chance of errors."
+What is a major security concern for health care organisations using cloud computing?,The organisation must relinquish direct control over hardware and software storage.
+Term: e-HDI (e-Health Data Integration),Definition: The theory and practice of linking digital health data sets from diverse electronic databases.
+What is 'quantity-based aggregation' in the context of e-HDI security?,A security concern where a large collection of data objects is more sensitive than a small collection.
+The process of disguising a subject's information to prevent the discovery of their identity is called _____.,Sanitisation
+Which security policy prevents consultants from accessing data sets of competing organisations to avoid conflicts of interest?,Chinese Wall security policy
+What is the primary objective of using 'Digital Signatures' in e-health services?,To ensure user authentication and maintain data integrity in electronic communications.
+What is the 'digital divide' risk in e-consumer health informatics?,Disadvantaged populations may lack the training or access to extract and interpret health information.
+Why is the pharmaceutical industry traditionally slow to adopt e-medicine technologies?,Concerns that competitors could gain access to sensitive trial data and product strategies.
+What is the risk of providing second-opinion medical consultations across state or provincial borders?,It can raise complex legal issues regarding medical licensing and jurisdictional boundaries.
+Term: Authentication,Definition: The verification of the identity of a user of e-health data.
+Term: Authorisation,Definition: The process of determining the access rights and privileges of an authenticated user.
+What is the risk of failing to erase health care data from a leased device before returning it?,It can lead to an unintentional data breach and significant legal fines.
+How can the use of mobile devices like 'smart glasses' pose a privacy risk in hospitals?,They can take photos or videos of patients without their knowledge or consent.
+What risk is associated with clinicians using social media to interact with patients?,It can lead to boundary violations and unauthorised disclosure of personal health information.
+Term: Phishing,Definition: Tricking a user into revealing credentials or downloading malware via a deceptive email link.
+What is 'SaaS' (Software-as-a-Service) in the context of health care technology?,A cloud-based model where software is hosted by a vendor and accessed via a web browser.
+What is the primary risk of 'spyware' hidden in innocent-looking file downloads?,It can steal user IDs and passwords by tracking keystrokes.
+What is the main challenge of 'e-surveillance' in public health informatics?,It is heavily resource-dependent and requires managing inconsistent data from various sources.
+The ethical duty of caregivers to protect personal information entrusted to them is known as _____.,Confidentiality
+What is the purpose of 'Risk Analysis' in health care information systems?,To identify how a security breach could affect a system and determine the seriousness of the consequences.
+Term: Biometrics,Definition: Authentication methods that recognise users based on physical traits like fingerprints or retinal patterns.
+What is the main risk of 'unintended consequences' during CPOE (Computerised Provider Order Entry) implementation?,Poorly implemented technology can increase mortality rates or create new medical errors.
+What concern arises from 'medicalisation' of a patient's residence through e-home care?,It can create ethical concerns regarding the privacy and perceived safety of the home environment.
+"In the context of EHR hurdles, what does 'lack of standards' refer to?",The absence of a common vocabulary and technical interface for sharing data between institutions.
+What is the risk of relying solely on automated decision support systems (DSS)?,They can contribute to mistakes if they provide meaningless information or are not tempered by clinical judgment.
+How does 'Identity Theft' manifest as a risk in health informatics?,Unauthorised access to sensitive EHR data can lead to the fraudulent use of a patient's personal information.
+What is the role of an 'Audit Trail' in electronic health records?,To track who accesses stored records and what specific changes are made to the data.
+Term: Informed Consent,Definition: The process of ensuring a patient understands how their data will be used and disclosed before agreeing.
+What is the primary security risk of 'unsecured terminals' in a hospital ward?,They allow unauthorised persons to view or modify sensitive patient records if left logged in.
+What threat is posed by 'malicious insiders' in a health care organisation?,Employees with legitimate access privileges may intentionally leak or misuse patient data.
+Term: Firewall failure,Definition: A network security incident where the hardware or software barrier fails to block unauthorised traffic.
+What is the risk of using 'unencrypted transmissions' for telehealth data?,The data can be intercepted and read by unauthorised parties during transit over the internet.
+Why is 'data warehousing' a target for high-level security threats?,It stores massive amounts of aggregated patient data from many different sources in one location.
+What is the risk of 'misinterpretation' of e-health information by consumers?,"Patients may act on inaccurate online health advice, leading to potential physical harm."
+Term: HIPAA Privacy Rule,Definition: Federal policies and guidelines in the US for managing and ensuring the security of confidential patient information.
+How can 'unpredictable outcomes' occur during technology integration in critical care units?,"When systems developed for one context (e.g., medical-surgical) are applied to a different context (e.g., critical care)."
+"The study of the ethical, social, and legal implications of health informatics is often abbreviated as _____.",ESLI
+What is the primary risk of 'Bioterrorism' informatics databases?,The sensitive nature of the data makes them a high-value target for hackers or hostile entities.
+"In the context of e-HDI, what is 'conflict of interest'?",A conflict between a person's private interests and their official responsibilities in a position of trust.
+Term: Data Mining Ethics,Definition: The requirement to ensure patient data is de-identified and confidentiality is maintained during large-scale data analysis.
+What is the risk of 'information overload' for clinicians using EHRs?,Vital patient alerts or data points may be missed due to the sheer volume of presented information.
+What is 'VPN' (Virtual Private Network)?,"A technology that creates a secure, encrypted connection over a less secure network like the internet."
+What is a 'Trojan horse' in the context of computer security?,Malicious code hidden within a seemingly legitimate or innocent file or programme.
+What is the risk of 'patient-identifiable' data in research aggregates?,It increases the threat of privacy violation in cross-institutional and multi-provider environments.
+Term: Data Encryption Standard (DES),Definition: A common type of encryption technology used to protect data during electronic exchange.
+What is a 'Public-key cryptosystem'?,A security method using a pair of keys (public and private) to maintain data confidentiality and integrity.
+What is the primary concern of 'Anonymity' in secondary health data use?,Ensuring that individual identities are protected when data is used for research or marketing.
+How can 'firewall failure' occur in a health care network?,"Through software bugs, improper configuration, or an overwhelming external cyber-attack."
+What is the risk of using 'unauthorised access' to medical records by staff?,"It violates institutional policy and federal law, leading to fines or termination of employment."
+Term: Security Framework,Definition: A rigorous policy and technical structure designed to protect against unauthorised access to health data.
+"What is the risk of 'loss of devices' (e.g., tablets or smartphones) in a clinical setting?",Unprotected patient data stored on the device may be accessed by unauthorised finders.
+How does 'Network Security' impact the implementation of telemedicine?,Inadequate security can lead to the interception of private video consultations or patient data.
+What is the risk of 'software safety issues' in physician order entry systems?,Technical glitches can cause medication errors that directly harm patients.
+Term: Social Engineering,Definition: Tricking individuals into disclosing sensitive information or bypassing security protocols.
+What is the risk of 'inconsistent data' in public health informatics?,It can lead to incorrect patterns being identified during disease surveillance.
+What is the risk of 'handicapped information users' in e-communities?,They may face barriers to accessing specific life-saving health information due to poor interface design.
+What is the security risk of 'shared care' (multi-provider) models?,"Information must flow across many independent, sometimes virtual, organisations with varying security levels."
+Term: Data Loss Prevention (DLP),Definition: Tools designed to notify an organisation when a user shares sensitive files externally.
+What is the primary risk of 'scalability challenges' in large e-communities?,The system may struggle to effectively organise and mining massive amounts of growing user data.

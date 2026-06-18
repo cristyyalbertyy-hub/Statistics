@@ -165,15 +165,15 @@ const LEAF_CONTENT: Record<string, LeafContentConfig> = {
   },
   'longitudinal-and-survival-analysis/survival-analysis-kaplan-meier': {
     folder: '4Longitudinal-and-Survival-Analysis/3SurvivalAnalysisKaplanMeier',
-    prefix: 'LSA_SAKM',
+    prefix: 'LSA_SA',
   },
   'longitudinal-and-survival-analysis/regression-analysis-cox-hazards': {
     folder: '4Longitudinal-and-Survival-Analysis/4RegressionAnalysisCoxHazards',
-    prefix: 'LSA_RACH',
+    prefix: 'LSA_RA',
   },
   'longitudinal-and-survival-analysis/standardization': {
     folder: '4Longitudinal-and-Survival-Analysis/5Standardization',
-    prefix: 'LSA_STD',
+    prefix: 'LSA_S',
   },
   'statistical-modelling/likelihood-theory': {
     folder: '5Statistical-Modelling/1LikelihoodTheory',
