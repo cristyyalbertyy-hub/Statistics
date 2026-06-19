@@ -1,0 +1,75 @@
+"In medical research, what is the term for a variable that is the focus of attention and whose variation we seek to understand?",Outcome variable (also known as the response or dependent variable).
+"What type of variable is 'smear result' when categorised as negative, uncertain, or positive?",Ordered categorical variable.
+"A variable that can only take one of two possible values, such as 'dead' or 'alive', is classified as a _____ variable.",Binary
+"In a clinical trial, the 'treatment group' is considered which type of variable?",Exposure variable (also known as the explanatory or independent variable).
+How is a 'derived variable' defined in statistical analysis?,"A variable created by calculating or categorising information from originally recorded variables, such as age derived from date of birth."
+What is the primary purpose of a 'null hypothesis' in a statistical test?,"To postulate that there is no true association or difference between groups in the population, with any observed difference being due to chance."
+"The probability of obtaining a result at least as extreme as the one observed, assuming the null hypothesis is true, is called the _____.",P-value
+What information does a '95% confidence interval' provide regarding a population parameter?,"The range of values within which we are 95% confident the true population parameter lies, accounting for sampling variation."
+"In diagnostic test analysis, what does 'sensitivity' measure?",The proportion of true positives correctly identified by the test.
+"In diagnostic test analysis, what does 'specificity' measure?",The proportion of true negatives correctly identified by the test.
+How is 'Positive Predictive Value' (PPV) calculated?,The proportion of individuals with a positive test result who truly have the disease.
+How is 'Negative Predictive Value' (NPV) calculated?,The proportion of individuals with a negative test result who truly do not have the disease.
+What happens to the PPV of a test if the prevalence of the disease in the population decreases?,The Positive Predictive Value (PPV) decreases.
+What is plotted on the horizontal axis of a Receiver Operating Characteristic (ROC) curve?,$1 - Specificity$ (the false positive rate).
+What is plotted on the vertical axis of a Receiver Operating Characteristic (ROC) curve?,Sensitivity (the true positive rate).
+"In a ROC curve, an 'Area Under the Curve' (AUC) of $0.5$ indicates what level of discrimination?","No discrimination at all, equivalent to random guessing."
+What AUC value represents a diagnostic test with perfect discrimination?,$1.0$
+What is the purpose of the 'Kappa' ($\\kappa$) statistic in medical measurements?,"To measure the level of agreement between two observers or readings, beyond what is expected by chance alone."
+$\\kappa = \\frac{A_{obs} - A_{exp}}{1 - A_{exp}}$,"The formula for the Kappa statistic, where $A_{obs}$ is observed agreement and $A_{exp}$ is expected agreement."
+"According to Landis and Koch, what does a Kappa value greater than $0.75$ signify?",Excellent agreement.
+A Kappa value between $0.4$ and $0.75$ represents _____ agreement.,Fair to good
+What is the 'Gold Standard' in the context of diagnostic test evaluation?,The best available definitive assessment used to determine the true disease status of an individual.
+What term describes the phenomenon where an estimated regression coefficient is biased towards the null because of measurement error in the exposure variable?,Regression dilution bias.
+What is 'Regression to the Mean'?,The tendency for an extreme initial measurement to be closer to the average on a subsequent measurement due to random error.
+"In Evidence-Based Medicine (EBM), what do the letters in the 'PICO' acronym represent?","Patient/Population, Intervention, Comparison/Control, and Outcome."
+What is the difference between a systematic review and a meta-analysis?,"A systematic review is a qualitative synthesis of studies, whereas a meta-analysis uses statistical methods to quantitatively combine results."
+What does a 'Risk Ratio' (Relative Risk) of $2.0$ indicate about the exposed group compared to the unexposed group?,The risk of the outcome is twice as high in the exposed group.
+Formula: $\\frac{d_1 / h_1}{d_0 / h_0}$,"The formula for the Odds Ratio (OR), representing the odds of disease in the exposed group divided by the odds in the unexposed group."
+What is the 'Number Needed to Treat' (NNT)?,The number of patients who need to receive a treatment for one additional patient to benefit compared to the control.
+Formula: $NNT = \\frac{1}{ARR}$,"The formula for Number Needed to Treat, where $ARR$ is the Absolute Risk Reduction."
+Why is 'Blinding' used in randomised controlled trials?,"To prevent bias by ensuring that patients, health workers, and study personnel do not know which treatment was assigned."
+What is an 'Intention to Treat' (ITT) analysis?,"An analysis where participants are analysed in the groups to which they were originally randomised, regardless of the treatment they actually received."
+"In e-health systems, what is the primary function of a Laboratory Information System (LIS)?","To report on biological specimens and provide clinicians with reference ranges for high, low, or normal test values."
+How can e-primary care testing kits reduce 'misleading results' in home monitoring?,"By gathering results electronically without patient intervention, avoiding the 'special occasion' effect that can raise blood pressure during clinic visits."
+"The _____ process is a clinical documentation method involving Subjective testing, Objective findings, Assessment, and Plan.",SOAP
+"In the design of an E-Diagnosis Support System for Lower Back Pain, why is an 'additive method' used for combining evidence?","Because diagnoses supported by more evidence are seen as more likely, assuming independent contributions of different symptoms."
+What is the purpose of the 'Modified Turing Test' in evaluating e-Diagnosis support systems?,To validate the system's performance by comparing its diagnostic validity scores against those of human experts in a blind evaluation.
+Phase 1 of the Modified Turing Test is the _____ phase.,Case-solving
+"In the Modified Turing Test, what happens during the 'Rating' phase?",Experts explicitly assess each diagnosis using a rating scale and a self-reported certainty factor.
+What does the 'Recall rate' measure in an e-Diagnosis system?,The portion of an expert's diagnoses that the system correctly recommended (focusing on false negatives).
+What does the 'Precision rate' measure in an e-Diagnosis system?,The portion of the system's recommendations that were actually made by an expert (focusing on false positives).
+"In an e-Diagnosis system, how is 'Accuracy' typically defined for evaluation?",A measurement of whether the expert's primary diagnosis is included in the system's recommendations.
+What is 'Data Mining' in the context of health informatics?,The process of using software to sort through data to discover patterns and establish previously unidentified relationships.
+Which diagnostic support tool uses three simple questions to predict the need for a radiograph after an ankle injury?,The Ottawa rule for ankle fracture.
+"In statistical modelling, what is 'Collinearity'?","A problem occurring when exposure or confounding variables are highly correlated, making it difficult to estimate their individual effects."
+Which regression model is most appropriate for a numerical outcome variable that is approximately normally distributed?,Linear regression.
+"Which regression model is used for binary outcomes, often reporting effects as odds ratios?",Logistic regression.
+Which regression model is designed for analyzing rates of disease occurrence over time?,Poisson regression.
+Which regression model is used for survival analysis (time-to-event data)?,Cox regression (or proportional hazards regression).
+What does 'Confounding' refer to in epidemiological studies?,A bias that occurs when an association between exposure and outcome is distorted by a third variable related to both.
+What is 'Effect Modification' (also known as interaction)?,A situation where the strength of the association between an exposure and an outcome differs according to the level of another variable.
+"In the context of the LIS, what are 'Reference Ranges'?","Predetermined intervals of test values that help clinicians distinguish between high, low, or normal patient results."
+What is a 'Funnel Plot' used for in a meta-analysis?,To visually detect publication bias or other small-study effects by plotting study effect sizes against their precision.
+The process of _____ involves replacing numerical values with their rank in ascending order before analysis.,Non-parametric methods based on ranks
+Which non-parametric test is the counterpart to the paired t-test?,Wilcoxon signed rank test.
+Which non-parametric test is the counterpart to the two-sample t-test?,Wilcoxon rank sum test (or Mann-Whitney U-test).
+What is the primary disadvantage of non-parametric methods compared to parametric methods?,They focus on significance testing rather than estimation and are harder to extend to multivariable analyses.
+"In EBM, what is 'Critical Appraisal'?","The process of carefully and systematically examining research to judge its trustworthiness, value, and relevance."
+What is 'Text Mining' in health informatics?,"The extraction of key words or phrases from unstructured text documents, such as clinical notes, to identify patterns."
+How can 'Temporal Event Analysis' in an EHR improve patient outcomes?,By retrospectively examining sequences of treatments or medications to discover which patterns most impact results.
+"In diagnostic testing, what is 'Negative Predictive Value' primarily dependent on?","The sensitivity and specificity of the test, and the prevalence of the disease."
+What is a 'Receiver Operating Characteristic' (ROC) curve specifically used to determine?,The optimal cut-off value for a numerical test to achieve the best balance between sensitivity and specificity.
+What does a sensitivity of $90\%$ mean for a diagnostic test?,The test correctly identifies $90\%$ of people who actually have the disease.
+What does a specificity of $80\%$ mean for a diagnostic test?,The test correctly identifies $80\%$ of people who do not have the disease.
+"If a test has a high sensitivity but low specificity, it is most likely to produce many _____ results.",False positive
+"If a test has a high specificity but low sensitivity, it is most likely to produce many _____ results.",False negative
+What is 'Prevalence'?,The proportion of a population that has a particular disease or condition at a specific point in time.
+"In the LBP E-Diagnosis model, what are the two important prerequisites for the additive algorithm to work?",Rules must have high credibility (over $50\%$ chance of being true) and prior probabilities of diagnoses should be similar.
+"In meta-analysis, what is 'Heterogeneity'?",The variation in study outcomes between different studies included in the analysis.
+What is a 'Systematic Review Protocol'?,A document produced before starting the review that defines the problem and establishes study eligibility criteria.
+Why might a clinician override an e-Diagnosis system's recommendation?,To apply clinical judgment or review the system's decision-making process via an explanatory panel.
+What is 'Online Analytic Processing' (OLAP)?,"A method to generate different views of data in multidimensional databases, ranging from descriptive statistics to complex summaries."
+How does 'Intention to Treat' avoid bias?,"By preserving the comparability between groups created by randomisation, even if patients do not adhere to their assigned treatment."
+The 'Goldman' calculator is used to predict the probability of which condition?,Acute myocardial infarction.
+"In medical statistics, what does 'Power' refer to?",The likelihood that a statistical test will detect a real effect if one actually exists.

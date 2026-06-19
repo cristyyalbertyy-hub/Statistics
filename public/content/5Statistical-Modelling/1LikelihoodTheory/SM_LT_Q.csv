@@ -1,0 +1,55 @@
+"In statistical modelling, what does the 'Maximum Likelihood Estimate' (MLE) represent?",The parameter value that makes the observed data most compatible with the underlying probability model.
+How is the 'Likelihood Ratio' ($LR$) for a specific parameter value $\pi$ calculated?,$LR = \frac{\text{Likelihood for } \pi}{\text{Likelihood at the MLE}}$
+What is the maximum possible value for a Likelihood Ratio?,1
+The _____ is used to measure the amount of support the data provide for a particular value of a parameter relative to the MLE.,Likelihood Ratio
+Why is the logarithm of the likelihood ratio ($\log(LR)$) preferred over the raw ratio in parameter estimation?,It can be approximated by a quadratic equation for sufficiently large sample sizes.
+"According to the quadratic approximation, what is the value of the $\log(LR)$ at the Maximum Likelihood Estimate?",0
+Term: Information,"Definition: The quantity $\frac{1}{S^2}$ (where $S$ is the standard error), representing the curvature of the log-likelihood at the maximum."
+How does the amount of 'information' in a dataset affect the precision of a parameter estimate?,Higher information leads to a smaller standard error and a narrower confidence interval.
+"In the quadratic approximation $\text{Log}(LR) = -\frac{1}{2} (\frac{\text{MLE} - \theta}{S})^2$, what does the variable $S$ represent?",The standard error of the parameter estimate.
+What is the specific cut-off value of the Likelihood Ratio that approximately corresponds to a $95\%$ confidence interval?,$0.1465$
+The Likelihood Ratio cut-off for a $99\%$ confidence interval is approximately _____.,$0.0362$
+Under what condition does the quadratic approximation provide an exact fit to the log-likelihood ratio curve?,When the underlying probability distribution of the data is normal.
+Which mathematical theorem ensures that the normal distribution (and thus the quadratic approximation) is valid for large samples regardless of the underlying distribution?,Central Limit Theorem
+What is the purpose of the 'iteration' process in fitting regression models?,To find the parameter values that maximize the log-likelihood when simple equations are not available.
+"In the context of model fitting, what does 'convergence' mean?",The state where subsequent iteration steps yield the same values for the parameter estimates.
+Identify one common cause for a computer program failing to achieve convergence during iteration.,Insufficient data to support the number of parameters specified in the model.
+What transformation is applied to parameters in logistic regression to ensure the profile log-likelihoods are approximately quadratic?,Logarithmic transformation (specifically the logit for the outcome).
+The 'Likelihood Ratio Statistic' ($LRS$) used for hypothesis testing is calculated as _____.,$-2 \times \log(LR)$
+"When testing a single parameter, what is the theoretical distribution of the Likelihood Ratio Statistic ($LRS$)?",The $\chi^2$ distribution with 1 degree of freedom.
+"In a Likelihood Ratio Test, what two values are compared to calculate the $LRS$?",The log-likelihood of the model excluding the variable ($L_{\text{exc}}$) and the model including it ($L_{\text{inc}}$).
+Formula: $LRS = -2 \times (L_{\text{exc}} - L_{\text{inc}})$,Purpose: To test the null hypothesis that the additional parameters in the inclusive model have no association with the outcome.
+How does the Wald test differ from the Likelihood Ratio Test in its approach to the log-likelihood curve?,The Wald test relies on the quadratic approximation (curvature) strictly at the MLE.
+The _____ test uses the gradient and curvature of the log-likelihood ratio at the null value of the parameter rather than the MLE.,Score
+"Under what condition will the Wald, Score, and Likelihood Ratio tests yield identical results?",When the log-likelihood ratio is exactly quadratic (such as in linear regression with normal errors).
+What is 'profile log-likelihood'?,A cross-section of the log-likelihood surface focused on one parameter while others are held at their most likely values.
+Why is it often necessary to plot the Likelihood Ratio for a Rate Ratio on a log scale?,To make the log-likelihood ratio curve closer to a quadratic form.
+"In simple scenarios, like estimating a single proportion, how is the Maximum Likelihood Estimate related to the sample value?","The MLE is equal to the sample value (e.g., $d/n$)."
+"When a computer program 'perturbs' parameters during iteration, what information is it trying to obtain?",The gradient and curvature of the log-likelihood curve at that specific point.
+"In Likelihood theory, what does 'supported range' mean?","The range of parameter values where the Likelihood Ratio is above a specific cut-off (e.g., $0.1465$)."
+The standard error $S$ derived from likelihood is determined by the _____ of the log-likelihood curve at its peak.,Sharpness (or curvature)
+Concept: Likelihood vs Probability,"Likelihood measures support for different parameter values given fixed data, while probability measures the chance of data outcomes given fixed parameters."
+"When using a Likelihood Ratio Test for a categorical exposure with $k$ groups, how many degrees of freedom are used for the $\chi^2$ distribution?",$k - 1$
+"In Bayesian inference, the _____ probability is the result of updating a prior belief with the likelihood of observed data.",Posterior
+What is the 'Frequentist' definition of probability?,The proportion of times an event would occur in a large number of similar repeated trials.
+How does a 'vague' prior distribution affect a Bayesian analysis compared to a frequentist analysis?,The results of both analyses become very similar because the posterior is dominated by the likelihood.
+A $95\%$ _____ interval in Bayesian statistics is the range within which there is a $95\%$ probability that the parameter lies.,Credible
+"In the iteration process, if the log-likelihood surface is 'very non-quadratic', what is a likely outcome for the computer program?",Failure to achieve convergence.
+Which regression type uses the 'identity function' as its link function in a generalized linear model framework?,Multiple Linear Regression
+The 'Score test' is mathematically equivalent to which commonly used statistic in stratified analysis?,The Mantel–Haenszel statistic
+What is the primary advantage of the Likelihood Ratio Test over the Wald test in complex regression modelling?,It is more reliable when the log-likelihood is not perfectly quadratic.
+How is the 'Log Likelihood' ($L$) related to the 'Likelihood'?,$L = \log_{e}(\text{Likelihood})$
+"In a Poisson regression model, the MLE for the rate ratio is simply the ratio of the _____.",Observed incidence rates in each group.
+"If $\log(LR) = -1.9208$, what is the corresponding Likelihood Ratio ($LR$)?",$e^{-1.9208} \approx 0.1465$
+The likelihood for simple and multiple regression is based on the _____ distribution.,Normal
+What does a Likelihood Ratio of $0.01$ for a specific parameter value suggest?,That value is highly unlikely/unsupported by the data compared to the MLE.
+"In the comparison of two groups, the log-likelihood ratio surface is visualized as a _____.",Hill (or three-dimensional surface)
+Why is the Likelihood Ratio Statistic ($LRS$) multiplied by $-2$?,To ensure the resulting value follows a $\chi^2$ distribution for testing.
+Term: MLE in Logistic Regression,Definition: The set of regression coefficients that maximize the probability of the observed binary outcomes.
+"When testing the joint null hypothesis of $k$ parameters, the $LRS$ has a $\chi^2$ distribution with _____ degrees of freedom.",$k$
+True or False: The MLE is always the value that makes the null hypothesis most likely to be true.,False (It makes the observed data most likely).
+How does the sample size ($n$) influence the shape of the likelihood curve?,Increasing $n$ makes the curve narrower and more sharply peaked.
+Process: Iterative model fitting,Step 1: Guess MLEs; Step 2: Calculate log-likelihood; Step 3: Perturb parameters for gradient/curvature; Step 4: Fit quadratic and find its maximum; Step 5: Repeat until convergence.
+"In medical statistics, what is the 'likelihood' of an observed result if the parameter $\pi = 0.5$ and the data consists of one success in one trial?",$0.5$
+"What happens to the supported range as the chosen Likelihood Ratio cut-off decreases (e.g., from $0.1465$ to $0.0362$)?",The range becomes wider.
+Likelihood theory provides the basis for fitting which three major types of regression besides linear?,"Logistic, Poisson, and Cox regression."

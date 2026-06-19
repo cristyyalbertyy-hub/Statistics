@@ -1,0 +1,70 @@
+How is a 'systematic review' defined in the context of health care?,"It is the application of scientific strategies to limit bias through the systematic assembly, critical appraisal, and synthesis of all relevant studies on a specific topic."
+What is the primary difference between a systematic review and a traditional narrative review?,Systematic reviews include a methods section that explicitly states the research question and the criteria for selecting and appraising studies.
+What is 'meta-analysis'?,It is a quantitative statistical method used to combine and summarise the results of several independent studies identified in a systematic review.
+"In Evidence-Based Medicine (EBM), what does the 'P' in the PICO acronym represent?",Patient population or problem.
+"In the PICO acronym for formulating clinical questions, what does the 'I' stand for?",Intervention.
+"Within the PICO framework, what does the 'C' represent?","Comparison, controls, or standard therapy."
+What outcome-related component does the 'O' represent in the PICO acronym?,The improved result or clinical outcome being measured.
+Which international organisation is dedicated to maintaining and disseminating systematic reviews of health care interventions?,The Cochrane Collaboration.
+What is the specific purpose of the Database of Abstracts of Reviews of Effects (DARE)?,It provides a regularly updated source of structured summaries of systematic reviews from various sources.
+What assumption underlies a 'fixed-effect' meta-analysis model?,It assumes the true treatment effect is the same in every study and that observed variation is due solely to sampling error.
+How does a 'random-effects' meta-analysis model differ from a fixed-effect model?,It assumes the true treatment effects vary between studies and incorporates this between-study heterogeneity into the analysis.
+What is the standard graphical display used to present the results of a meta-analysis?,A forest plot.
+"In a forest plot, what does the area of each box represent?",The weight assigned to that individual study in the meta-analysis.
+What does the diamond at the bottom of a forest plot represent?,The combined summary estimate and its corresponding confidence interval.
+Which statistical test is commonly used to assess the presence of heterogeneity between studies in a meta-analysis?,The $\chi^2$ (Cochran's Q) test.
+What does a significant $P$-value in a $\chi^2$ test of heterogeneity indicate?,There is strong evidence that the treatment effects differ across the included studies.
+"In random-effects meta-analysis, what parameter represents the between-study variance?",$\tau^2$ (tau-squared).
+Which widely used method for estimating between-study variance was proposed in 1986?,The DerSimonian and Laird method.
+What is 'publication bias'?,The tendency for studies with positive or statistically significant results to be published more readily than those with negative or null results.
+What graphical tool is used to detect potential publication bias or 'small study effects'?,A funnel plot.
+"In the absence of bias, what shape should a funnel plot ideally form?",A symmetrical inverted funnel.
+What does asymmetry in a funnel plot suggest about the studies in a meta-analysis?,"It indicates potential bias, often because smaller studies showing no beneficial effect are missing or unpublished."
+What is the purpose of 'meta-regression'?,To examine associations between specific study characteristics and the observed treatment effects.
+Which statistical test for funnel plot asymmetry involves regressing the log odds ratio against its standard error?,Egger's test.
+What is a major limitation of meta-analyses based on observational studies compared to randomised trials?,They are more susceptible to bias from confounding factors that may not be adequately controlled.
+How should 'sparse data' (zero cells in a $2 \times 2$ table) be handled in meta-analysis calculations?,By adding $0.5$ to all cells in the study's table to prevent the formulae from breaking down.
+What does the 'TRIP' database provide to clinicians?,A comprehensive search tool that catalogues and groups evidence sources from seventy-five different sites.
+"In meta-analysis, what are 'inverse-variance weights'?","Weights calculated as $w_i = \frac{1}{v_i}$, where $v_i$ is the variance of the effect estimate in a specific study."
+What is the purpose of the 'QUOROM' statement?,To provide guidelines for the standardised reporting of systematic reviews and meta-analyses.
+What is 'sensitivity testing' in the context of meta-analysis?,A procedure used to determine if the combined results remain consistent when different assumptions or study inclusion criteria are applied.
+"In a forest plot, what does the unbroken vertical line represent?",The null value (typically $1$ for odds ratios or $0$ for mean differences) where there is no treatment effect.
+Why is 'searching the grey literature' important for a systematic review?,It helps reduce publication bias by identifying unpublished works such as conference abstracts and dissertations.
+What is 'meta-synthesis'?,"The process of searching, appraising, and synthesising methodologies for qualitative research studies."
+Which meta-analysis model gives relatively more weight to smaller studies?,The random-effects model.
+What is the 'Cochrane Library'?,An online collection of regularly updated systematic reviews of medical and public health interventions.
+"In the five stages of EBM, what follows searching for the evidence?","Critically appraising the evidence for its validity, results, and applicability."
+"Which metasearch engine scours sites like PubMed, DARE, and NGC to provide a coherent list of evidence-based results?",SUMSearch.
+What does 'contingency searching' mean in the SUMSearch tool?,The tool alters its search strategy by broadening or narrowing focus based on the number of results obtained.
+What is a 'Critically Appraised Topic' (CAT)?,"A concise, evidence-based summary of research that addresses a specific patient-related clinical issue."
+Why is the randomised controlled trial (RCT) considered a high-quality source for systematic reviews?,Appropriate randomisation minimises the risk of systematic errors and confounding.
+What defines 'small study effects' in meta-analysis?,The tendency for smaller studies in a meta-analysis to show larger treatment effects than larger studies.
+How does meta-regression account for unexplained heterogeneity between studies?,"By incorporating an additional variance component, $\tau^2$, into the linear model."
+"In a meta-regression model, what occurs when consecutive steps in the iteration yield nearly identical values for $\tau^2$?",The model is said to have converged.
+What does the Campbell Collaboration focus on?,Producing systematic reviews of social and educational policies and practices.
+"Which resource offers succinct, structured summaries known as 'Patient Oriented Evidence that Matters'?",POEMs.
+What is the primary role of the Joanna Briggs Institute (JBI)?,Providing resources for best care practices and leading the development of evidence-based practices.
+"In a fixed-effect meta-analysis of log odds ratios, how is the standard error of the summary estimate calculated?","It is the square root of the reciprocal of the sum of the weights, $s.e.(\log(OR_F)) = \sqrt{\frac{1}{\sum w_i}}$."
+Why might a systematic review exclude a specific study?,If the study is not considered methodologically sound or does not meet the pre-specified eligibility criteria.
+What is the goal of identifying 'evidence spin' in medical reporting?,To detect and account for bias added to the reporting of evidence that may influence health service decision-making.
+Which database is considered the clinician's 'first stop' for summaries of systematic reviews?,The Database of Abstracts of Reviews of Effects (DARE).
+How can a PubMed search be specifically limited to high-level evidence?,By using built-in filters to limit results to systematic reviews and meta-analyses.
+"In a meta-analysis of binary outcomes, which weighting method is an alternative to the inverse-variance method?",Mantel-Haenszel weights.
+What does the 'width of the diamond' in a forest plot indicate?,The precision (confidence interval) of the pooled summary estimate.
+Which resource at the University of Utah provides links for clinical epidemiology and biostatistics?,The Epidemiology and Biostatistics Resources page.
+What is 'Andrew Booth’s Netting the Evidence'?,A comprehensive web-based library and metasite for Evidence-Based Medicine (EBM) links and resources.
+"In the hierarchy of evidence, why is meta-analysis typically placed at the top?",Because it uses multiple individual research studies to reach a robust consensus.
+What is the first step in conducting a meta-analysis?,Defining the clinical problem and generating a protocol.
+Why is 'iteration' used in fitting complex regression models like meta-regression?,Because maximum likelihood estimates for parameters often depend on each other and cannot be solved with simple equations.
+What is the primary risk of using 'expert reviews' that are not systematic?,They are often idiosyncratic and can be a misleading basis for drawing conclusions due to inherent bias.
+How does 'double-blinding' in the original trials affect meta-analysis results?,Trials that are not double-blinded have been shown to yield significantly larger (and potentially biased) estimates of effect.
+What does the $I^2$ statistic (related to Cochran's Q) measure in meta-analysis?,The percentage of variation across studies that is due to heterogeneity rather than chance.
+Which model is preferred when the studies being combined have different populations or varied clinical settings?,The random-effects model.
+"In a forest plot, what is indicated if the $95\%$ confidence interval line crosses the null vertical line?",The result for that specific study is not statistically significant at the $5\%$ level.
+What does the 'systematic assembly' of literature aim to prevent?,Selection bias.
+What is 'evidence-based clinical practice guidelines'?,Recommendations published based on the analysis of systematic reviews by individuals or organisations.
+How can journals alleviate publication bias through their submission process?,"By considering studies for publication 'blind' of the results, based only on the literature review and methodology."
+What is the 'Cochrane US' network established for?,To promote evidence-based decision-making and support the Cochrane Collaboration within the United States.
+What is the relationship between Egger's test and meta-regression?,Egger's test is mathematically equivalent to a meta-regression of the log odds ratio against its standard error.
+"In meta-analysis, what does the term 'pooling' refer to?",The statistical process of combining the data from multiple studies to generate a single summary effect.
+What does the 'Users’ Guides to the Medical Literature' series provide?,Structured methods for the critical appraisal of original trials and systematic reviews.

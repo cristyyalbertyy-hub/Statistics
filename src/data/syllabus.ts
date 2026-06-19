@@ -181,7 +181,7 @@ const LEAF_CONTENT: Record<string, LeafContentConfig> = {
   },
   'statistical-modelling/non-parametric-methods-ranking': {
     folder: '5Statistical-Modelling/2NonParametricMethods',
-    prefix: 'SM_NPMR',
+    prefix: 'SM_NPM',
   },
   'statistical-modelling/bayesian-methods': {
     folder: '5Statistical-Modelling/3BayesianMethods',
@@ -248,7 +248,11 @@ export function getExtraVideoPath(leafKey: string): string {
 }
 
 export function getInfographicTextPath(leafKey: string): string {
-  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_I_T.txt')
+  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_T.pdf')
+}
+
+export function getInfographicExtraTextPath(leafKey: string): string {
+  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_T2.pdf')
 }
 
 export function getContentFolder(leafKey: string): string {

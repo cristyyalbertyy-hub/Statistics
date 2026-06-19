@@ -1,0 +1,65 @@
+On what principle is the consensus-based model in e-health-care diagnosis theoretically based?,The theoretical adequacy of a consensus position established by the voting of multiple experts.
+"In a consensus-based diagnostic model, how does each response differ from the probabilistic summation approach?",Each response independently affects the likelihood of a diagnosis rather than being a simple additive factor.
+What is the first prerequisite for a consensus-based voting algorithm to work accurately regarding rule credibility?,"Each rule must have a high level of credibility, specifically a greater than $50\%$ chance of being true."
+What assumption does the consensus-based diagnostic algorithm make regarding the prior probabilities of diagnoses?,All diagnoses should have similar incidence rates in the general population.
+"According to Proposition 2 in e-health inference, if $p > 0.5$ and prior probabilities are equal, which diagnosis is most likely to be true?",The diagnosis that receives the highest number of votes from the observation set.
+"In clinical epidemiology, what does the marker 'NNT' represent?",Number Needed to Treat.
+What is the formula for calculating Relative Risk ($RR$) given outcomes $A$ and $B$?,$RR = \frac{A}{B}$
+How is Absolute Risk Reduction ($ARR$) calculated in dichotomous outcomes?,$ARR = A - B$
+What is the mathematical relationship between $NNT$ and $ARR$?,$NNT = \frac{1}{ARR}$
+How is Relative Risk Reduction ($RRR$) defined using Relative Risk ($RR$)?,$RRR = 1 - RR$
+Which online interactive tool aids in pediatric differential diagnosis and treatment algorithms?,Isabel.
+"According to the Ottawa rule, what is the minimum number of questions needed to predict the necessity of an ankle radiograph?",Three.
+What lies at the heart of statistics according to Kirkwood and Sterne?,The interpretation of data in the presence of intrinsic biological variability.
+Name the three types of outcome variables categorized in medical statistics.,"Numerical outcomes, binary outcomes, and rates or survival times measured longitudinally."
+What is the primary aim of evidence-based medicine ($EBM$) in a clinical context?,Judging the relevance of average treatment effects from large populations to the management of a specific patient.
+Define a 'systematic review' in medical research.,"A systematic assembly, critical appraisal, and synthesis of all relevant studies on a specific topic."
+What term describes the statistical methods used for combining the results of multiple studies?,Meta-analysis.
+"In data definition, how is an 'ordered categorical' variable distinct from a 'categorical' variable?","It has categories with a clear, inherent ordering, such as age groups or disease stages."
+What is the formula for calculating the $k$th percentile for a distribution with $n$ observations?,$k$th percentile $= \frac{k \times (n + 1)}{100}$ value of ordered observations.
+How does the Central Limit Theorem describe the sampling distribution of a mean as sample size increases?,The sampling distribution tends towards a normal distribution regardless of the underlying distribution's shape.
+"In hypothesis testing, what is a 'null hypothesis'?",A statement assuming there is no difference between groups or no association between variables in the population.
+What does a $P$-value measure in the context of a null hypothesis?,The strength of the evidence against the null hypothesis.
+What is the primary purpose of a confidence interval?,To provide a range of values within which the true population association is likely to lie.
+Which regression model is commonly used to analyse binary outcomes in modern medical statistics?,Logistic regression.
+What is the fundamental measure of disease frequency used in longitudinal follow-up studies?,Rates.
+How is 'cumulative incidence' (risk) estimated?,By dividing the number of new cases by the number of persons initially disease-free at the start of the period.
+Under what condition is the chi-squared test for a $2 \times 2$ table considered invalid?,When the overall total is less than 40 or any expected value is less than 5.
+What process is used to control for confounding by splitting the sample into subsets based on the confounding variable?,Stratification.
+"Which statistical test is used for comparing proportions in paired data, such as matched case-control studies?",McNemar’s $\chi^2$ test.
+How is the incidence rate calculated from study data?,Rate $(\lambda) = \frac{\text{number of events}}{\text{total person-years of observation}}$.
+What does a Standardised Mortality Ratio ($SMR$) of 1 indicate?,The study population is equally likely to die as someone of the same age and sex in the standard population.
+Which survival analysis estimate is used when exact failure and censoring times are available?,The Kaplan-Meier estimate.
+What is the 'proportional hazards assumption' in survival analysis?,The assumption that the hazard ratio between groups remains constant over the period of follow-up.
+By what iterative process are Maximum Likelihood Estimates ($MLEs$) typically fitted by computer programmes?,Iteration.
+What is the Likelihood Ratio Statistic ($LRS$) formula used to compare two models?,$LRS = -2 \times (L_{\text{null}} - L_{\text{MLE}})$
+When are non-parametric methods based on ranks preferred over the $t$-test?,In small datasets with obvious non-normality that cannot be corrected by transformation.
+Concept: Bootstrapping,Definition: A technique for deriving confidence intervals by taking repeated samples with replacement from the original data.
+Why is 'sampling with replacement' essential in the bootstrapping procedure?,It ensures bootstrap samples differ from each other by allowing some observations to be picked multiple times while others are excluded.
+What is the minimum number of bootstrap samples typically required to derive reliable confidence intervals?,Approximately 1000 samples.
+"Among bootstrap confidence intervals, which type is generally considered to have the best statistical properties?",Bias corrected and accelerated ($BCa$) intervals.
+In what specific healthcare scenario is bootstrapping useful for comparing means of highly skewed data?,The analysis of treatment costs in clinical trials.
+How is a 'forest plot' used in the context of a meta-analysis?,It displays $95\%$ confidence intervals for individual studies alongside a summary estimate represented by a diamond.
+What graphical tool is used to detect publication bias in a meta-analysis?,A funnel plot.
+What does asymmetry in a funnel plot typically suggest?,"The presence of bias, such as publication bias or poor methodological quality in smaller trials."
+How does the Bayesian approach to inference differ from the Frequentist approach regarding parameters?,"Bayesianism treats parameters as random variables with probability distributions, while Frequentists treat them as fixed but unknown constants."
+"In Bayesian statistics, what is the 'posterior probability distribution'?",The updated probability distribution for a parameter derived from both the prior distribution and the observed data.
+What does the 'Monte-Carlo' aspect of the $MCMC$ method refer to?,The random sampling of parameter values from their conditional distributions.
+Which Bayesian software package uses Gibbs Sampling for model estimation?,BUGS (Bayesian inference Using Gibbs Sampling).
+What is the 'positive predictive value' of a diagnostic test?,The proportion of true positives among all individuals who test positive.
+What does the area under a Receiver Operating Characteristic ($ROC$) curve measure?,The ability of a continuous variable to discriminate between individuals with and without a disease.
+What is the purpose of the 'kappa statistic' ($\kappa$)?,To measure the degree of agreement between two observers beyond what is expected by chance alone.
+"According to Landis and Koch, what range of kappa values represents 'excellent' agreement?",Values greater than approximately 0.75.
+What does a Bland-Altman plot (difference-against-mean plot) reveal about two measurement methods?,Whether there is a systematic bias (tendency to be higher or lower) between the methods.
+Define 'Data Mining' in the context of healthcare informatics.,A model-developing process using algorithms to act on data sets to extract knowledge and predict specific system behaviours.
+"In data mining, what is 'scoring'?",Applying a developed model to a new situation where the outcome is currently unknown.
+What is 'nearest neighbour analysis'?,A technique that classifies records in a data set based on a select number of similar adjacent records ($k$-nearest neighbours).
+How does 'text mining' differ from standard 'data mining'?,"Text mining extracts key words or phrases from unstructured documents, whereas data mining typically acts on numerical data."
+What is the primary function of Online Analytic Processing ($OLAP$)?,"To generate multidimensional views of data, such as frequency tables or comparative summaries, from databases."
+Why is failure to account for 'clustering' a problem in statistical analysis?,It can lead to confidence intervals that are too narrow and $P$-values that are too small.
+"In a clinical trial, what does 'concealment of allocation' prevent?",Selection bias by ensuring that those enrolling patients do not know which treatment the next patient will receive.
+How is the 'hazard ratio' ($HR$) interpreted in survival analysis?,As the relative risk of the event occurring in one group compared to another at any specific point in time.
+What does 'collinearity' refer to in multiple regression?,"The high correlation between two or more exposure variables, making it difficult to determine their independent effects."
+What is the 'Rule of 5' regarding the validity of the Mantel-Haenszel test?,The sums of the differences between observed and expected values across strata must be at least 5.
+Define 'Reliability' for a numerical measurement.,The ratio of the variance of the true measurements to the variance of the recorded (observed) measurements.
+"In meta-analysis, what is 'heterogeneity'?",The variation in treatment effects between different studies beyond what would be expected by chance.

@@ -453,13 +453,14 @@
   border-radius: var(--radius);
 }
 
-.infographic-text {
+.infographic-pdf {
   width: 100%;
   max-width: 860px;
-  white-space: pre-wrap;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
+  height: 80vh;
+  min-height: 480px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
 }
 
 /* ── Questionnaire ── */

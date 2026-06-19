@@ -5,6 +5,7 @@ import {
   getContentFolder,
   getContentPath,
   getExtraVideoPath,
+  getInfographicExtraTextPath,
   getInfographicTextPath,
   SYLLABUS_TITLE,
 } from '../data/syllabus'
@@ -259,25 +260,35 @@ function InfographicContent({
   exists: boolean | null
   title: string
 }) {
-  const [captionText, setCaptionText] = useState<string | null>(null)
+  const [textPdfExists, setTextPdfExists] = useState(false)
+  const [extraTextPdfExists, setExtraTextPdfExists] = useState(false)
   const textPath = getInfographicTextPath(leafId)
+  const extraTextPath = getInfographicExtraTextPath(leafId)
 
   useEffect(() => {
     let cancelled = false
 
-    fetch(textPath)
-      .then((res) => (res.ok ? res.text() : null))
-      .then((text) => {
-        if (!cancelled) setCaptionText(text)
+    Promise.all([
+      fetch(extraTextPath, { method: 'HEAD' }),
+      fetch(textPath, { method: 'HEAD' }),
+    ])
+      .then(([extraRes, textRes]) => {
+        if (!cancelled) {
+          setExtraTextPdfExists(extraRes.ok)
+          setTextPdfExists(textRes.ok)
+        }
       })
       .catch(() => {
-        if (!cancelled) setCaptionText(null)
+        if (!cancelled) {
+          setExtraTextPdfExists(false)
+          setTextPdfExists(false)
+        }
       })
 
     return () => {
       cancelled = true
     }
-  }, [textPath])
+  }, [extraTextPath, textPath])
 
   if (exists === false) return <Placeholder type="Infographic" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
@@ -285,10 +296,19 @@ function InfographicContent({
   return (
     <div className="infographic-wrapper">
       <img src={path} alt={`Infographic: ${title}`} className="infographic-img" />
-      {captionText && (
-        <div className="infographic-text" role="note">
-          {captionText}
-        </div>
+      {extraTextPdfExists && (
+        <iframe
+          src={extraTextPath}
+          title={`${title} — supplementary text`}
+          className="infographic-pdf"
+        />
+      )}
+      {textPdfExists && (
+        <iframe
+          src={textPath}
+          title={`${title} — text`}
+          className="infographic-pdf"
+        />
       )}
     </div>
   )
