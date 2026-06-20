@@ -3,13 +3,14 @@ import type { ContentTab, LeafSelection } from '../types'
 import {
   getContentFileHint,
   getContentFolder,
-  getContentPath,
   getExtraVideoPath,
-  getInfographicImagePdfPath,
-  getInfographicExtraTextPath,
-  getInfographicTextPath,
   SYLLABUS_TITLE,
 } from '../data/syllabus'
+import {
+  checkAssetExists,
+  getInfographicCompanionPdfPaths,
+  resolveContentPath,
+} from '../utils/contentAssets'
 import { parseQuestionnaireCsv, type QuestionnaireItem } from '../utils/questionnaire'
 
 const TABS: { id: ContentTab; label: string; icon: string }[] = [
@@ -26,7 +27,7 @@ interface ContentPanelProps {
 
 export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
   const [activeTab, setActiveTab] = useState<ContentTab>('video')
-  const [assetExists, setAssetExists] = useState<boolean | null>(null)
+  const [resolvedPath, setResolvedPath] = useState<string | null | undefined>(undefined)
   const [questionnaire, setQuestionnaire] = useState<QuestionnaireItem[] | null>(null)
 
   useEffect(() => {
@@ -35,34 +36,30 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
 
   useEffect(() => {
     if (!selection) {
-      setAssetExists(null)
+      setResolvedPath(undefined)
       setQuestionnaire(null)
       return
     }
 
-    const path = getContentPath(selection.leafId, activeTab)
     let cancelled = false
+    setResolvedPath(undefined)
+    setQuestionnaire(null)
 
-    fetch(path, { method: 'HEAD' })
-      .then((res) => {
-        if (!cancelled) setAssetExists(res.ok)
-      })
-      .catch(() => {
-        if (!cancelled) setAssetExists(false)
-      })
+    resolveContentPath(selection.leafId, activeTab).then((path) => {
+      if (cancelled) return
+      setResolvedPath(path)
 
-    if (activeTab === 'questionnaire') {
-      fetch(path)
-        .then((res) => (res.ok ? res.text() : null))
-        .then((text) => {
-          if (!cancelled) setQuestionnaire(text ? parseQuestionnaireCsv(text) : null)
-        })
-        .catch(() => {
-          if (!cancelled) setQuestionnaire(null)
-        })
-    } else {
-      setQuestionnaire(null)
-    }
+      if (activeTab === 'questionnaire' && path) {
+        fetch(path)
+          .then((res) => (res.ok ? res.text() : null))
+          .then((text) => {
+            if (!cancelled) setQuestionnaire(text ? parseQuestionnaireCsv(text) : null)
+          })
+          .catch(() => {
+            if (!cancelled) setQuestionnaire(null)
+          })
+      }
+    })
 
     return () => {
       cancelled = true
@@ -96,7 +93,7 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
     )
   }
 
-  const contentPath = getContentPath(selection.leafId, activeTab)
+  const assetExists = resolvedPath === undefined ? null : resolvedPath !== null
 
   return (
     <div className="content-panel">
@@ -135,19 +132,18 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
       <div className="content-body" role="tabpanel">
         {activeTab === 'video' && (
           <VideoContent
-            path={contentPath}
+            path={resolvedPath ?? ''}
             leafId={selection.leafId}
             exists={assetExists}
             title={selection.title}
           />
         )}
         {activeTab === 'podcast' && (
-          <PodcastContent path={contentPath} exists={assetExists} title={selection.title} />
+          <PodcastContent path={resolvedPath ?? ''} exists={assetExists} title={selection.title} />
         )}
         {activeTab === 'infographic' && (
           <InfographicContent
-            path={contentPath}
-            leafId={selection.leafId}
+            path={resolvedPath ?? ''}
             exists={assetExists}
             title={selection.title}
           />
@@ -192,34 +188,39 @@ function VideoContent({
   exists: boolean | null
   title: string
 }) {
-  const [extraExists, setExtraExists] = useState<boolean>(false)
-  const extraPath = getExtraVideoPath(leafId)
+  const [extraPath, setExtraPath] = useState<string | null>(null)
 
   useEffect(() => {
-    let cancelled = false
+    if (!path) {
+      setExtraPath(null)
+      return
+    }
 
-    fetch(extraPath, { method: 'HEAD' })
-      .then((res) => {
-        if (!cancelled) setExtraExists(res.ok)
+    let cancelled = false
+    const candidates = [path.replace(/_V\.mp4$/, '_V2.mp4'), getExtraVideoPath(leafId)]
+
+    Promise.all(candidates.map((candidate) => checkAssetExists(candidate).then((ok) => (ok ? candidate : null))))
+      .then((results) => {
+        if (!cancelled) setExtraPath(results.find((candidate): candidate is string => candidate !== null) ?? null)
       })
       .catch(() => {
-        if (!cancelled) setExtraExists(false)
+        if (!cancelled) setExtraPath(null)
       })
 
     return () => {
       cancelled = true
     }
-  }, [extraPath])
+  }, [leafId, path])
 
   if (exists === false) return <Placeholder type="Video" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
 
   return (
-    <div className={`media-wrapper${extraExists ? ' video-stack' : ''}`}>
+    <div className={`media-wrapper${extraPath ? ' video-stack' : ''}`}>
       <video controls src={path} className="video-player">
         Your browser does not support the video tag.
       </video>
-      {extraExists && (
+      {extraPath && (
         <video controls src={extraPath} className="video-player">
           Your browser does not support the video tag.
         </video>
@@ -252,32 +253,39 @@ function PodcastContent({
 
 function InfographicContent({
   path,
-  leafId,
   exists,
   title,
 }: {
   path: string
-  leafId: string
   exists: boolean | null
   title: string
 }) {
   const pdfSections = [
-    { path: getInfographicImagePdfPath(leafId), title: `${title} — infographic (PDF)` },
-    { path: getInfographicExtraTextPath(leafId), title: `${title} — supplementary text` },
-    { path: getInfographicTextPath(leafId), title: `${title} — text` },
+    { suffix: '_I.pdf', title: `${title} — infographic (PDF)` },
+    { suffix: '_T2.pdf', title: `${title} — supplementary text` },
+    { suffix: '_T.pdf', title: `${title} — text` },
   ]
-  const [visiblePdfs, setVisiblePdfs] = useState<string[]>([])
+  const [visiblePdfs, setVisiblePdfs] = useState<{ path: string; title: string }[]>([])
 
   useEffect(() => {
+    if (!path) {
+      setVisiblePdfs([])
+      return
+    }
+
     let cancelled = false
+    const candidates = getInfographicCompanionPdfPaths(path)
 
     Promise.all(
-      pdfSections.map(({ path: pdfPath }) =>
-        fetch(pdfPath, { method: 'HEAD' }).then((res) => (res.ok ? pdfPath : null)),
-      ),
+      candidates.map(async (pdfPath, index) => {
+        if (!(await checkAssetExists(pdfPath))) return null
+        return { path: pdfPath, title: pdfSections[index]?.title ?? `${title} — PDF` }
+      }),
     )
       .then((results) => {
-        if (!cancelled) setVisiblePdfs(results.filter((pdfPath): pdfPath is string => pdfPath !== null))
+        if (!cancelled) {
+          setVisiblePdfs(results.filter((section): section is { path: string; title: string } => section !== null))
+        }
       })
       .catch(() => {
         if (!cancelled) setVisiblePdfs([])
@@ -286,7 +294,7 @@ function InfographicContent({
     return () => {
       cancelled = true
     }
-  }, [leafId])
+  }, [path, title])
 
   if (exists === false) return <Placeholder type="Infographic" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
@@ -294,17 +302,14 @@ function InfographicContent({
   return (
     <div className="infographic-wrapper">
       <img src={path} alt={`Infographic: ${title}`} className="infographic-img" />
-      {visiblePdfs.map((pdfPath) => {
-        const section = pdfSections.find(({ path: candidate }) => candidate === pdfPath)
-        return (
-          <iframe
-            key={pdfPath}
-            src={pdfPath}
-            title={section?.title ?? `${title} — PDF`}
-            className="infographic-pdf"
-          />
-        )
-      })}
+      {visiblePdfs.map((section) => (
+        <iframe
+          key={section.path}
+          src={section.path}
+          title={section.title}
+          className="infographic-pdf"
+        />
+      ))}
     </div>
   )
 }

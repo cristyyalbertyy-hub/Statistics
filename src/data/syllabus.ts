@@ -231,16 +231,27 @@ export function buildLeafId(chapterId: string, leafId: string): string {
 }
 
 export function getContentPath(leafKey: string, type: ContentType): string {
+  return getContentPathCandidates(leafKey, type)[0]!
+}
+
+export function getContentPathCandidates(leafKey: string, type: ContentType): string[] {
   const config = LEAF_CONTENT[leafKey]
   const suffix = { video: 'V', podcast: 'P', infographic: 'I', questionnaire: 'Q' }[type]
   const ext = { video: 'mp4', podcast: 'm4a', infographic: 'png', questionnaire: 'csv' }[type]
 
-  if (config) {
-    const prefix = getPrefix(config, type)
-    return `/content/${config.folder}/${prefix}_${suffix}.${ext}`
+  if (!config) {
+    return [`/content/${leafKey}/${type}.${ext}`]
   }
 
-  return `/content/${leafKey}/${type}.${ext}`
+  const prefixes = [getPrefix(config, type)]
+  if (leafKey === 'study-design-and-interpretation/analysis-of-bias') {
+    const alternate = prefixes[0] === 'SDI_AB' ? 'SDI_AOB' : 'SDI_AB'
+    prefixes.push(alternate)
+  }
+
+  return prefixes.map(
+    (prefix) => `/content/${config.folder}/${prefix}_${suffix}.${ext}`,
+  )
 }
 
 export function getExtraVideoPath(leafKey: string): string {
