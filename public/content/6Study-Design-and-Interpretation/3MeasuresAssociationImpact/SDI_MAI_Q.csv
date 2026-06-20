@@ -1,0 +1,67 @@
+Metric: Recall rate in e-DSS.,The portion of an expert's diagnoses that are correctly recommended by the system.
+Metric: Precision rate in e-DSS.,The portion of diagnoses recommended by the system that are actually made by an expert.
+What condition must be met for 100 percent accuracy in an e-DSS according to primary diagnosis measurements?,The primary diagnosis of an expert must be included in the system's recommendation.
+"In the context of evidence-based health care, what has largely replaced mentor advice and personal experience in clinical decision-making?",The rules of evidence used to interpret medical literature and controlled clinical trials.
+Term: Systematic review.,Definition: A structured and concise summary of two or more original clinical studies designed to address a focused question.
+When is the term 'meta-analysis' applied to a systematic review?,When quantitative analysis is performed to combine the results of multiple studies.
+What are the four relevant markers of effect for dichotomous outcomes in clinical epidemiology?,"Relative risk, relative risk reduction, absolute risk reduction, and number needed to treat."
+Formula for Relative Risk ($RR$) using Treatment A and Treatment B mortality rates.,$RR = \frac{A}{B}$.
+How is 'Absolute Risk Reduction' ($ARR$) calculated given mortality percentages for Treatments A and B?,$ARR = A - B$.
+Formula for Number Needed to Treat ($NNT$) using the Absolute Risk Reduction ($ARR$).,$NNT = \frac{1}{ARR}$.
+What effect does increasing the threshold level ($t$) have on the risk of identifying a specific patient in integrated views?,The risk of identifying a patient decreases as $t$ increases.
+"In medical statistics, what is the distinction between an exposure variable and an outcome variable?",An exposure variable influences the occurrence of the outcome variable being studied.
+What is the primary purpose of using a confidence interval in a medical study?,To provide a range of values within which the true population association is likely to lie.
+Definition: Null Hypothesis ($H_0$).,The assumption that there is no effect of a treatment or no association between variables in the population.
+What does a $P$-value represent regarding the null hypothesis?,"The strength of evidence against the null hypothesis, with smaller values indicating stronger evidence."
+Formula for the $k$th percentile of a distribution with $n$ observations.,$k\text{th percentile} = \frac{k \times (n + 1)}{100}$.
+How is the 'Correlation Coefficient' ($r$) used to interpret the relationship between two variables?,It measures the strength and direction of the linear association between the outcome and exposure variables.
+A Risk Ratio ($RR$) of $1$ signifies what relationship between a risk factor and a disease?,There is no association between the risk factor and the disease.
+How is 'Cumulative Incidence' (Risk) estimated in a study population?,The number of new cases in a period divided by the number of persons initially at risk.
+Formula for the Odds Ratio ($OR$) in a $2 \times 2$ table where $d$ is events and $h$ is non-events.,$OR = \frac{d_1 \times h_0}{d_0 \times h_1}$.
+Concept: Confounding.,Definition: When the association between an exposure and outcome is distorted by a third variable related to both.
+What is 'Intention to Treat' analysis in a randomised controlled trial?,Analysing participants according to their original random group assignment regardless of the treatment they actually received.
+How is the incidence 'Rate' ($l$) calculated in longitudinal studies?,The number of events ($d$) divided by the total person-years of observation ($T$).
+What does the 'Standardised Mortality Ratio' ($SMR$) indicate when its value is greater than $1$?,The study population has a higher likelihood of death than the standard population after adjustment.
+Definition: Sensitivity.,The proportion of true positives correctly identified by a diagnostic test.
+Definition: Specificity.,The proportion of true negatives correctly identified by a diagnostic test.
+What does the 'Kappa statistic' ($\kappa$) measure in clinical observations?,The extent of agreement between observers beyond what would be expected by chance alone.
+How is 'Efficacy' calculated from the Risk Ratio ($RR$)?,$Efficacy = 1 - RR$.
+What is the 'Number Needed to Harm' ($NNH$) used to evaluate?,The adverse impact or frequency of side effects associated with a treatment.
+Formula for the 'Number Needed to Treat' ($NNT$) based on the risk difference.,$NNT = \frac{1}{|\text{risk difference}|}$.
+What is the primary goal of 'Translational Bioinformatics'?,To integrate biological and clinical data to produce knowledge that improves patient health.
+Why is 'Coded Entry' preferred over 'Free-text' in clinical information systems?,It allows for rigorous analysis of care and avoids inconsistencies or fragmented data.
+What did Archie Cochrane introduce in 1972 as the 'gold standard' for evaluating clinical interventions?,The use of randomised controlled trials ($RCTs$) and systematic reviews.
+Term: 'Relative Risk Reduction' ($RRR$).,"Definition: The proportion of the baseline risk that is removed by a treatment, calculated as $1 - RR$."
+What does 'Statistical Power' represent in study design?,The probability that a study will successfully detect a real treatment effect if one exists.
+Definition: 'Prevalence'.,The proportion of a population that has a specific disease or attribute at a given point in time.
+How does 'Direct Standardisation' differ from 'Indirect Standardisation'?,"Direct uses standard population weights applied to study rates, while indirect uses standard rates applied to the study population's structure."
+"In survival analysis, what is the 'Log-rank test' used for?",To compare the survival patterns of two or more independent groups to see if they differ significantly.
+What is the 'Intraclass Correlation Coefficient' ($ICC$) used to assess in measurement error analysis?,"The ratio of the variance between true values to the total observed variance, measuring reproducibility."
+What is the 'Population Attributable Risk' (PAR)?,The difference between the overall risk in a population and the risk among those who are unexposed.
+Metric: Throughput.,Definition: The amount of work or data processed by a system or process within a specific timeframe.
+What represents the 'True Positive Rate' in a diagnostic context?,Sensitivity.
+What represents the 'True Negative Rate' in a diagnostic context?,Specificity.
+Formula for the 'Standardised Distance' ($d_f^{i j}$) for a nominal attribute where $x_{if}$ and $x_{jf}$ are the values.,"$d_f^{i j} = 1$ if $x_{i f} \ne x_{j f}$, and $0$ otherwise."
+What is the clinical significance of an $NNT$ of $3.3$ compared to $333$?,An $NNT$ of $3.3$ is much more clinically important as fewer patients must be treated to prevent one death.
+Concept: Type I Error.,Definition: Rejecting the null hypothesis when it is actually true (a false positive finding).
+Concept: Type II Error.,Definition: Failing to reject the null hypothesis when it is actually false (a false negative finding).
+How is 'Efficacy' related to 'Risk Ratio' ($RR$) in vaccine trials?,"It is the proportion of cases prevented by the vaccine, calculated as $(1 - RR) \times 100\%$."
+Definition: 'Standard Error' ($s.e.$).,A measure of the uncertainty or precision of a sample estimate of a population parameter.
+"In a $2 \times 2$ table, if the risk in the exposed is $0.0013$ and unexposed is $0.0001$, what is the Risk Ratio?",13.
+What does a 'Forest Plot' show in the context of a meta-analysis?,"The results of individual studies and their combined average estimate, often including confidence intervals."
+What is the purpose of 'Randomisation' in clinical trials?,To ensure that treatment groups are comparable at the start of the trial and to prevent selection bias.
+Definition: 'Nominal Variable'.,"A categorical variable where categories have no natural order, such as 'blood group'."
+Definition: 'Ordered Categorical Variable'.,"A categorical variable where categories have a meaningful sequence, such as 'disease severity'."
+The ability of a system to processed a specific number of records without revealing identity is linked to the _____.,Threshold level ($t$)
+Formula for 'Attributable Risk' ($AR$) comparing the risk in the exposed ($p_1$) and unexposed ($p_0$).,$AR = p_1 - p_0$.
+How is 'Population Proportional Attributable Risk' used by health planners?,To estimate the percentage reduction in overall disease that would occur if an exposure were eliminated.
+"In 'Cox Regression', what is the 'Hazard Ratio'?",The ratio of the risk of the event occurring per unit of time in one group versus another.
+Concept: 'Publication Bias'.,Definition: The tendency for studies with significant results to be published more frequently than those with non-significant results.
+What is the 'Design Effect' ($Deff$) in cluster sampling?,The factor by which the required sample size must be increased to account for the clustering of data.
+Metric: 'Turnaround time'.,The total time taken to complete a process from initiation to completion.
+The 'Intraclass Correlation Coefficient' ($ICC$) is calculated as the ratio of between-cluster variance to _____.,Total variance
+"In diagnostic testing, what does '$1 - \text{Specificity}$' represent?",The false positive rate.
+"In diagnostic testing, what does '$1 - \text{Sensitivity}$' represent?",The false negative rate.
+Formula for the 'Kappa statistic' where $A_{obs}$ is observed agreement and $A_{exp}$ is expected agreement.,$\kappa = \frac{A_{obs} - A_{exp}}{1 - A_{exp}}$.
+What is 'Translational Research' in health informatics?,Research that aims to close the gap between laboratory findings and bedside patient care.
+Why is 'Blinding' used in clinical trials?,To prevent knowledge of the treatment assignment from influencing the trial's results or assessments.

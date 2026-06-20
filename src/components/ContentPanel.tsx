@@ -5,6 +5,7 @@ import {
   getContentFolder,
   getContentPath,
   getExtraVideoPath,
+  getInfographicImagePdfPath,
   getInfographicExtraTextPath,
   getInfographicTextPath,
   SYLLABUS_TITLE,
@@ -260,35 +261,32 @@ function InfographicContent({
   exists: boolean | null
   title: string
 }) {
-  const [textPdfExists, setTextPdfExists] = useState(false)
-  const [extraTextPdfExists, setExtraTextPdfExists] = useState(false)
-  const textPath = getInfographicTextPath(leafId)
-  const extraTextPath = getInfographicExtraTextPath(leafId)
+  const pdfSections = [
+    { path: getInfographicImagePdfPath(leafId), title: `${title} — infographic (PDF)` },
+    { path: getInfographicExtraTextPath(leafId), title: `${title} — supplementary text` },
+    { path: getInfographicTextPath(leafId), title: `${title} — text` },
+  ]
+  const [visiblePdfs, setVisiblePdfs] = useState<string[]>([])
 
   useEffect(() => {
     let cancelled = false
 
-    Promise.all([
-      fetch(extraTextPath, { method: 'HEAD' }),
-      fetch(textPath, { method: 'HEAD' }),
-    ])
-      .then(([extraRes, textRes]) => {
-        if (!cancelled) {
-          setExtraTextPdfExists(extraRes.ok)
-          setTextPdfExists(textRes.ok)
-        }
+    Promise.all(
+      pdfSections.map(({ path: pdfPath }) =>
+        fetch(pdfPath, { method: 'HEAD' }).then((res) => (res.ok ? pdfPath : null)),
+      ),
+    )
+      .then((results) => {
+        if (!cancelled) setVisiblePdfs(results.filter((pdfPath): pdfPath is string => pdfPath !== null))
       })
       .catch(() => {
-        if (!cancelled) {
-          setExtraTextPdfExists(false)
-          setTextPdfExists(false)
-        }
+        if (!cancelled) setVisiblePdfs([])
       })
 
     return () => {
       cancelled = true
     }
-  }, [extraTextPath, textPath])
+  }, [leafId])
 
   if (exists === false) return <Placeholder type="Infographic" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
@@ -296,20 +294,17 @@ function InfographicContent({
   return (
     <div className="infographic-wrapper">
       <img src={path} alt={`Infographic: ${title}`} className="infographic-img" />
-      {extraTextPdfExists && (
-        <iframe
-          src={extraTextPath}
-          title={`${title} — supplementary text`}
-          className="infographic-pdf"
-        />
-      )}
-      {textPdfExists && (
-        <iframe
-          src={textPath}
-          title={`${title} — text`}
-          className="infographic-pdf"
-        />
-      )}
+      {visiblePdfs.map((pdfPath) => {
+        const section = pdfSections.find(({ path: candidate }) => candidate === pdfPath)
+        return (
+          <iframe
+            key={pdfPath}
+            src={pdfPath}
+            title={section?.title ?? `${title} — PDF`}
+            className="infographic-pdf"
+          />
+        )
+      })}
     </div>
   )
 }

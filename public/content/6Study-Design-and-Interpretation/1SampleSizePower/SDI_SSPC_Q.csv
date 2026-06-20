@@ -1,0 +1,72 @@
+The explicit process of using rules of evidence to interpret medical literature for direct patient care is known as _____.,Evidence-based medicine
+How did the old clinical paradigm differ from the new paradigm regarding the basis for diagnosis and treatment?,"The old paradigm relied on clinical experience and pathophysiology, whereas the new paradigm adds the use of evidence from patient-oriented research."
+What is the primary reason that a 'critical eye' is necessary when evaluating reports of clinical research trials?,Many studies have substantial flaws that may limit their practical application.
+Term: Variable,"Definition: Any aspect of an individual that is measured (e.g., blood pressure) or recorded (e.g., age)."
+"In statistics, a _____ is the larger group from which we collect a smaller group of data to make inferences.",Population
+What is the term for the number of individuals included in a study?,Sample size
+"In medical statistics, the difference between a sample estimate and the true population value is attributed to _____.",Sampling variation
+What is the name of the frequency distribution of means collected from many independent samples of the same size?,Sampling distribution
+What does the standard error ($SE$) of the sample mean measure?,How precisely the population mean is estimated by the sample mean.
+What is the formula for the standard error ($SE$) of a sample mean using the sample standard deviation ($s$) and sample size ($n$)?,$SE = \frac{s}{\sqrt{n}}$
+How does increasing the sample size ($n$) affect the standard error ($SE$)?,It decreases the standard error.
+A _____ provides a range of values within which we are reasonably confident the true population mean lies.,Confidence interval
+What is the formula for a large-sample $95\%$ confidence interval ($CI$) for a mean $\bar{x}$?,$95\% CI = \bar{x} \pm (1.96 \times SE)$
+"For a $99\%$ confidence interval, what multiplier of the standard error is used in the large-sample calculation?",$2.58$
+"When a sample size is small (typically $n < 60$), which distribution is used instead of the normal distribution to calculate confidence intervals?",The $t$ distribution
+Which statistical value measures the strength of evidence against the null hypothesis?,The $P$-value
+Definition: Null Hypothesis,The assumption that there is no true difference between groups or no association between variables in the population.
+What is the $P$-value threshold typically used to define 'statistical significance'?,$P < 0.05$
+Explain the phrase 'absence of evidence is not evidence of absence' in the context of small studies.,"A non-significant $P$-value in a small study may mean the study lacked the power to detect a real effect, not that the effect doesn't exist."
+How does a larger sample size affect the likelihood of achieving statistical significance for a given difference?,It increases the likelihood (decreases the $P$-value) by reducing the standard error.
+Why must the medical importance of an effect be considered even if the $P$-value is highly significant?,"Large studies can detect tiny, clinically irrelevant differences as statistically significant."
+What is the primary purpose of a formal sample size calculation in a research proposal?,To demonstrate that the study is capable of answering the questions posed by having adequate power.
+What three quantities must be specified to calculate the required sample size for a study aiming to detect a difference?,"The size of the difference to be detected, the significance level, and the desired power."
+Term: Power (of a study),Definition: The probability that a study will detect an effect of a specified size at a given significance level.
+How does the size of the 'true' effect being investigated influence the required sample size?,Smaller effects require larger sample sizes to detect.
+"In sample size formulae, what does the value '$u$' represent?",The one-sided percentage point of the normal distribution corresponding to $100\%$ minus the power.
+"In sample size formulae, what does the value '$v$' represent?",The percentage point of the normal distribution corresponding to the required two-sided significance level.
+"If the power of a study is $90\%$, what is the value of '$u$' used in the sample size formula?",$1.28$
+"If the significance level is $5\%$, what is the value of '$v$' used in the sample size formula?",$1.96$
+What adjustment factor should be applied to the sample size if $x\%$ of participants are expected to be lost to follow-up?,$\frac{100}{100 - x}$
+"When a study is four times as large as the size needed to detect an overall association, what is it likely designed to detect?",Interaction or subgroup effects.
+"In a cluster randomized trial, the 'design effect' is used to adjust the sample size based on the average cluster size and the _____.",Intraclass correlation coefficient (ICC)
+Formula: Design Effect ($Deff$),$Deff = 1 + (n' - 1) \times ICC$ (where $n'$ is the average cluster size).
+What is a Type I error in hypothesis testing?,Incorrectly rejecting the null hypothesis when it is actually true (a false positive).
+What is a Type II error in hypothesis testing?,Failing to reject the null hypothesis when it is actually false (a false negative).
+"If $\beta$ is the probability of a Type II error, what is the formula for the power of the study?",$Power = 100\% - \beta\%$
+Why is the $P$-value not the probability that the null hypothesis is true?,"The $P$-value is the probability of the data given the null hypothesis, whereas researchers are interested in the probability of the hypothesis given the data."
+"According to the source material, what percentage of significant results might be false-positives if power is only $50\%$ and only $10\%$ of hypotheses are true?",Approximately $47.4\%$
+Which measure of impact represents the probability that a disease event occurs during a specified period?,Cumulative incidence (or risk)
+Term: Prevalence,Definition: The proportion of a population suffering from a disease at a particular point in time.
+How is the incidence rate calculated?,By dividing the number of events by the total person-years of observation ($d / T$).
+What statistical distribution is used to model the number of occurrences of rare events over time or space?,The Poisson distribution
+"In a Poisson distribution, the standard error for the number of occurrences ($d$) is equal to _____.",$\sqrt{d}$
+What measure is used to compare the risk of an event in an exposed group to an unexposed group?,Risk ratio (or relative risk)
+"In a clinical trial, the number of patients that must be treated to prevent one adverse outcome is the _____.",Number needed to treat (NNT)
+What is the formula for Number Needed to Treat ($NNT$) given the Absolute Risk Reduction ($ARR$)?,$NNT = \frac{1}{ARR}$
+The number of patients who would need to be treated for one additional person to experience a harmful side-effect is the _____.,Number needed to harm (NNH)
+What diagnostic metric measures the proportion of people with a disease who are correctly identified by a test?,Sensitivity
+What diagnostic metric measures the proportion of people without a disease who are correctly identified as negative by a test?,Specificity
+What is the purpose of a Receiver Operating Characteristic ($ROC$) curve?,To display the relationship between sensitivity and specificity for different cut-off values of a continuous variable.
+"What statistic is used to assess the extent of agreement between two observers, accounting for agreement expected by chance?",The Kappa statistic ($\kappa$)
+What is the range of values for the Kappa statistic if agreement is exactly what would be expected by chance?,$0$
+Which statistical approach uses a 'prior opinion' and modifies it with new data to derive a 'posterior probability'?,Bayesian statistics
+"In a _____ study, a group of people is followed over time to see who develops the outcome of interest.",Longitudinal (or cohort)
+"In a _____ study, the distribution of exposures is compared between a diseased group (cases) and a healthy group (controls).",Case-control
+Why can risk ratios not be directly calculated from a case-control study?,"The controls represent an unknown fraction of the whole population, making it impossible to estimate the total risk."
+What is the standard measure of association used in case-control studies?,The odds ratio ($OR$)
+Which statistical method is used to control for confounding by combining results across different levels (strata) of the confounder?,Mantel-Haenszel stratification
+What regression model is used to analyze the association between exposure variables and a binary outcome variable?,Logistic regression
+What regression model is typically used for the analysis of rates?,Poisson regression
+Which regression model is used to analyze survival times and hazard ratios?,Cox regression
+Term: Meta-analysis,Definition: Statistical methods used to combine the results of a number of independent studies to provide an overall estimate.
+The _____ is the ratio of between-cluster variance to total variance in a clustered study design.,Intraclass correlation coefficient (ICC)
+"When using a funnel plot in a meta-analysis, what does asymmetry often suggest?",Publication bias
+"In frequentist statistics, a $95\%$ confidence interval contains the true population value in _____ of all intervals derived this way.",$95\%$
+What is the Bayesian equivalent of the frequentist confidence interval?,A credible interval
+"In sample size determination for comparing two means, what population parameter reflects the variability of the outcome?",The standard deviation ($\sigma$)
+"When calculating sample size for two groups of unequal size, where the larger group is '$c$' times the smaller, what is the adjustment factor for the smaller group?",$f = \frac{c + 1}{2c}$
+Why does a cluster randomized trial require a larger sample size than an individually randomized trial?,Because individuals within a cluster tend to be more similar to each other than to individuals in other clusters.
+"How does increasing the required power (e.g., from $80\%$ to $90\%$) affect the calculated sample size?",It increases the required sample size.
+"If the significance level is tightened (e.g., from $5\%$ to $1\%$), how does this affect the required sample size?",It increases the required sample size.
+True or False: A significance test can prove that a null hypothesis is true.,False (it can only provide evidence against the null hypothesis).

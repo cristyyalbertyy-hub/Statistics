@@ -1,0 +1,75 @@
+"In medical statistics, what is an 'exposure variable'?","A variable that influences disease outcomes, such as a risk factor or a medical treatment."
+What is the 'outcome variable' in a clinical study?,The variable whose variation or occurrence researchers are seeking to understand.
+What is the primary purpose of a 'confidence interval'?,To provide a range of values within which the size of an association in the population is likely to lie.
+What does a '$P$-value' assess in statistical analysis?,The strength of the evidence against the null hypothesis.
+Define a 'null hypothesis' in the context of medical research.,The specific hypothesis that there is no difference between groups or no association between variables.
+"According to the philosopher Karl Popper, science is a process of _____ hypotheses.",disproving
+"In a linear regression equation $y = \beta_0 + \beta_1 x$, what does the 'outcome variable' correspond to?",The $y$-variable (or dependent variable).
+"In a linear regression equation $y = \beta_0 + \beta_1 x$, what does the 'exposure variable' correspond to?",The $x$-variable (or independent variable).
+What characterizes a 'binary outcome'?,"An outcome with only two possibilities, such as the occurrence or absence of an event."
+Define a 'confounding variable'.,A factor associated with both the exposure and the outcome that is not on the causal pathway between them.
+What is 'confounding bias'?,A distortion in the estimated association between exposure and outcome caused by an unadjusted third factor.
+How does 'stratification' control for confounding in data analysis?,By restricting comparisons to individuals who have the same value for the confounding variable.
+The subsets defined by the levels of a confounding variable $C$ during stratification are called _____.,strata
+Why is 'randomisation' used in clinical trials regarding confounding?,"To ensure treatment and control groups are similar in all respects except the intervention, thus avoiding confounding."
+What is the 'Mantel-Haenszel method' used for?,To control for confounding via stratification when both exposure and outcome are binary variables.
+What defines a 'cohort study'?,A longitudinal study where a group of individuals is followed over time to record the incidence of outcomes.
+In which study design is sampling based on 'disease status' rather than exposure status?,Case-control study
+What is the primary principle for selecting 'controls' in a case-control study?,They should represent the population at risk who would have been included as cases if they developed the disease.
+Define a 'cross-sectional study'.,A study carried out at just one point in time or over a very short period.
+What is a 'matched design' in a case-control study?,A design where controls are deliberately chosen to have the same values for major confounding variables as the cases.
+What is an 'intention to treat' (ITT) analysis?,An analysis where participants are compared within the groups to which they were originally randomly allocated.
+Which regression model is most appropriate for a 'numerical' outcome variable?,Linear regression
+Which regression model is most appropriate for a 'binary' outcome variable?,Logistic regression
+Which regression model is most appropriate for analysing 'rates' of disease?,Poisson regression
+Which regression model is most appropriate for 'survival' data (time-to-event outcomes)?,Cox regression (proportional hazards model)
+Formula: Risk Ratio ($RR$),$RR = \frac{\text{risk in exposed group}}{\text{risk in unexposed group}}$
+Formula: Odds Ratio ($OR$),$OR = \frac{\text{odds of disease in exposed group}}{\text{odds of disease in unexposed group}}$
+Under what specific condition is the Odds Ratio ($OR$) numerically equal to the Risk Ratio ($RR$)?,When the disease is rare.
+What is 'attributable risk' ($AR$)?,The difference between the risk in the exposed group and the risk in the unexposed group.
+What is 'population attributable risk' ($PAR$)?,The proportion of the disease incidence in the total population that is due to the exposure.
+Formula: Number Needed to Treat ($NNT$),$NNT = \frac{1}{\text{Risk Difference}}$
+What does the 'Number Needed to Harm' ($NNH$) indicate?,The number of patients who would need to be treated for one additional person to experience an adverse event.
+What is 'meta-analysis'?,The statistical method used to combine effect estimates from several different studies.
+"In meta-analysis, what is the 'fixed-effect model' assumption?",The assumption that the true treatment effect is the same in every study.
+"In meta-analysis, what is the 'random-effects model' assumption?",The assumption that the true study effects vary and the analysis estimates the mean of these effects.
+What is a 'funnel plot' used to detect in meta-analysis?,Asymmetry that may indicate publication bias or other systematic errors.
+What is a 'systematic review'?,"A systematic assembly, critical appraisal, and synthesis of all relevant studies on a specific topic."
+Define 'frequentist statistical inference'.,An approach where probability is defined as the proportion of times an event would occur in repeated trials.
+Define 'Bayesian statistical inference'.,An approach where probability represents a degree of belief in an hypothesis or event occurrence.
+"In Bayesian statistics, what is a 'prior probability'?",The probability assigned to an hypothesis before new data is collected.
+"In Bayesian statistics, what is a 'posterior probability'?",The probability distribution for a parameter derived from both the data and the prior distribution.
+A 95% _____ interval is the Bayesian equivalent to a Frequentist 95% confidence interval.,credible
+What is 'collinearity' in regression modelling?,A problem occurring when exposure and/or confounding variables are highly correlated with each other.
+What is 'regression to the mean'?,The phenomenon where repeat measurements tend to be closer to the overall average than the initial measurements.
+How is 'sensitivity' defined in diagnostic testing?,The ability of a test to correctly identify those with the disease.
+How is 'specificity' defined in diagnostic testing?,The ability of a test to correctly identify those without the disease.
+What does the 'Kappa statistic' measure?,"The extent of reproducibility or agreement for categorical variables, beyond what is expected by chance."
+What does the 'intraclass correlation coefficient' (ICC) assess?,The reliability and reproducibility of numerical measurements.
+What is 'informative censoring' in survival analysis?,A situation where the probability of being censored is related to the probability of the event of interest occurring.
+What is a 'Kaplan-Meier estimate'?,An estimate of the survival function from life-table data using exact failure and censoring times.
+"In diagnostic reasoning, if a symptom makes a diagnosis 'impossible', what is the resulting combined vote for that diagnosis?","The diagnosis is ruled out, regardless of other 'likely' symptoms."
+What is 'interaction' (or effect modification) in statistics?,When the effect of an exposure on an outcome varies depending on the level of another variable.
+Why should variables on the 'causal pathway' between exposure and outcome not be adjusted for in standard models?,Adjustment would lead to an underestimate of the true total effect of the exposure on the outcome.
+Define 'prevalence' in epidemiology.,The total number of existing cases in a population at a particular point in time.
+Define 'cumulative incidence' (risk).,The probability that a disease event occurs during a specified period of time among those initially disease-free.
+What is 'standard error' (SE)?,A measure of the inherent variation between individuals that reflects the precision of a sample estimate.
+What is the 'power' of a statistical test?,The probability of correctly rejecting the null hypothesis when it is indeed false.
+What is a 'Type I error'?,Rejecting the null hypothesis when it is actually true (a false positive).
+What is a 'Type II error'?,Failing to reject the null hypothesis when it is actually false (a false negative).
+"In survival analysis, what is the 'hazard ratio'?",The ratio of the hazards (instantaneous rates) between different exposure groups.
+What is 'multivariable regression'?,A model that studies how an outcome variable is related to two or more exposure variables.
+What is 'multivariate analysis' in the strict statistical sense?,The study of how several outcome variables vary together.
+Define 'efficacy' in the context of a medical intervention.,The reduction in the risk of the outcome event provided by the treatment.
+What is 'regression dilution bias'?,The underestimation of an association between an outcome and exposure due to measurement error in the exposure.
+"In a case-control study, why can 'risk differences' and 'risk ratios' generally not be derived?","Because the controls represent an unknown fraction of the whole population, making absolute risk estimation impossible."
+What is 'data-dredging'?,Searching through data for any possible associations without a specific $a$ $priori$ hypothesis.
+What does a 'causal Bayesian network' support in biomedical research?,"Causal modelling and the discovery of knowledge from large, complex biomedical datasets."
+"In a cross-over trial, what is the primary advantage of the design?","Each patient acts as their own control, matching treatment and control outcomes within the same individual."
+What is the main focus of 'evidence-based medicine' (EBM)?,Appraising evidence of average treatment effects to judge relevance for the management of a particular patient.
+"In a diagnostic rule 'If $A$, then $x$ likely', what does '$A$' represent?",An observation or symptom ($o_i$).
+What is 'heterogeneity' in the context of meta-analysis?,The variation in study results beyond what would be expected by sampling error alone.
+What is 'meta-regression' used for?,To examine associations between study characteristics (covariates) and treatment effects.
+What does a 'z-statistic' test in regression output?,The null hypothesis that a specific regression coefficient for a population parameter is zero.
+What is the purpose of using 'indicator variables' (dummy variables) in regression?,To examine the effect of each level of a categorical exposure variable compared to a baseline group.
+"In longitudinal studies, what does 'person-years-at-risk' ($pyar$) measure?",The total amount of time all individuals in the study were followed while being at risk of the outcome.

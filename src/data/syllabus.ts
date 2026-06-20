@@ -213,7 +213,7 @@ const LEAF_CONTENT: Record<string, LeafContentConfig> = {
   },
   'study-design-and-interpretation/analysis-of-bias': {
     folder: '6Study-Design-and-Interpretation/4AnalysisBias',
-    prefix: 'SDI_AOB',
+    prefix: 'SDI_AB',
   },
   'study-design-and-interpretation/causal-inference-studies': {
     folder: '6Study-Design-and-Interpretation/5CausalInferenceStudies',
@@ -245,6 +245,10 @@ export function getContentPath(leafKey: string, type: ContentType): string {
 
 export function getExtraVideoPath(leafKey: string): string {
   return getContentPath(leafKey, 'video').replace(/_V\.mp4$/, '_V2.mp4')
+}
+
+export function getInfographicImagePdfPath(leafKey: string): string {
+  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_I.pdf')
 }
 
 export function getInfographicTextPath(leafKey: string): string {

@@ -1,0 +1,64 @@
+Name the five main sources of random error in the collection and processing of statistical data.,"Instrumental errors, underlying variability, respondent errors, observer errors, and data processing errors."
+How do respondent errors typically occur in health-related surveys?,"They arise from misunderstandings, faulty recall, or the desire to provide a perceived 'correct' or socially acceptable answer."
+"Identify the type of error that results from mistakes in coding, copying, or data entry.",Data processing errors.
+"In the context of measurement error, what is meant by 'underlying variability'?",Natural differences that occur between replicate measurements taken from the same individual at different points in time.
+What is the primary difference between random measurement error and differential bias?,"Random error is independent of the values of other variables, while differential bias arises from systematic flaws in study design or conduct."
+Define 'sensitivity' in the evaluation of a diagnostic test.,The proportion of individuals with the disease who are correctly identified by the test.
+Define 'specificity' in the evaluation of a diagnostic test.,The proportion of individuals without the disease who are correctly identified by the test.
+What is a 'gold standard' in diagnostic test evaluation?,"A definitive, highly accurate measurement or procedure used to determine the true disease status of an individual."
+The probability that a person with a positive test result actually has the disease is known as the _____.,Positive Predictive Value ($PPV$)
+The probability that a person with a negative test result is truly free of the disease is known as the _____.,Negative Predictive Value ($NPV$)
+How does the prevalence of a disease in a population affect the predictive values of a diagnostic test?,A higher prevalence increases the positive predictive value and decreases the negative predictive value.
+What does a Receiver Operating Characteristic ($ROC$) curve plot?,It plots sensitivity against $1 - \text{specificity}$ for various choices of cut-off values.
+"In an $ROC$ curve, what is indicated by an area under the curve ($AUC$) of $0.5$?",The test has no discriminatory power and is no better than chance.
+"When evaluating a diagnostic test, what is the consequence of choosing a cut-off value that maximizes sensitivity?",It inevitably leads to a decrease in the specificity of the test.
+Term: Reproducibility,Definition: The extent to which a measurement provides the same result when repeated under the same conditions.
+Which statistical measure is most appropriate for assessing the reproducibility of categorical variables?,The Kappa statistic ($\kappa$).
+"In the Kappa statistic formula $\kappa = \frac{A_{obs} - A_{exp}}{1 - A_{exp}}$, what does $A_{exp}$ represent?",The proportion of agreement between observers that would be expected by chance alone.
+What does a Kappa value of $1$ indicate?,Complete agreement between observers or occasions.
+What does a Kappa value of $0$ signify regarding observer agreement?,Agreement is no better than what would be expected by chance alone.
+Term: Intraclass Correlation Coefficient ($ICC$),Definition: A measure of the reliability of numerical variables calculated as the ratio of between-subject variance to total variance.
+State the formula for the Intraclass Correlation Coefficient ($ICC$) using variance components.,"$ICC = \frac{\sigma^2_u}{\sigma^2_u + \sigma^2_e}$, where $\sigma^2_u$ is variance between individuals and $\sigma^2_e$ is measurement error variance."
+How does increasing the measurement error variance ($\sigma^2_e$) affect the $ICC$?,"It decreases the $ICC$, moving it closer to $0$."
+Why is a high Pearson correlation coefficient ($r$) insufficient to demonstrate agreement in method comparison studies?,Correlation measures the strength of association rather than the degree of literal agreement or systematic bias between methods.
+"In a Bland-Altman plot, what is represented on the vertical ($y$) axis?",The difference between the pair of measurements from the two different methods.
+"In a Bland-Altman plot, what is represented on the horizontal ($x$) axis?",The mean value of the pair of measurements from the two methods.
+"In a method comparison study, what does the 'line of equality' represent?",A line where the measurements from both methods are exactly the same.
+How is 'systematic bias' identified in a Bland-Altman analysis?,It is identified by the mean difference between the two methods significantly deviating from zero.
+What are the '95% limits of agreement' in a Bland-Altman plot?,"The range within which $95\%$ of the differences between the two methods are expected to fall, calculated as the mean difference $\pm 2$ standard deviations."
+Term: Regression Dilution Bias,Definition: The underestimation of an association between an exposure and an outcome due to random measurement error in the exposure variable.
+How is the estimated regression coefficient ($\beta$) related to the correct coefficient in linear regression when measurement error is present?,$\text{Estimated coefficient} = \text{correct coefficient} \times ICC$.
+What is the effect of random measurement error in a numerical outcome variable on the exposure-outcome association?,It does not cause regression dilution bias but it does reduce the precision of the estimated association.
+Why might it be more efficient to recruit fewer subjects and measure each multiple times rather than many subjects measured once?,"Multiple measurements reduce measurement error and bias in effect estimates, often providing more precise results for the same cost."
+"In a multivariable model, how can unequal measurement errors in two exposure variables lead to misleading results?",The variable measured with less error may appear significantly associated with the outcome even if the variable with more error is the true driver.
+Term: Regression to the Mean,Definition: The phenomenon where individuals with extreme initial measurements tend to have subsequent measurements closer to the population average.
+Why is regression to the mean a problem in clinical trials that only recruit patients with high blood pressure?,The observed reduction in blood pressure may be due to natural variability and measurement error rather than the effect of the treatment.
+How can researchers distinguish between a true treatment effect and regression to the mean?,By using a randomized control group to compare the changes in the treated group against the changes in the untreated group.
+What is the relationship between the Intraclass Correlation Coefficient ($ICC$) and the observed slope of regression to the mean ($\beta_{obs}$) when no true change exists?,$\beta_{obs} = ICC - 1$.
+What characterizes 'reliable information' in health informatics?,"Information derived from clean data gathered by authoritative, credible, and verifiable sources."
+Define 'verifiable information' within the context of data management.,Information that can be checked and proven to be correct.
+What is the goal of 'Data Mining' as a research tool?,"To explore and model large datasets to identify hidden patterns, trends, and meaningful insights."
+"In health informatics, what is the consequence of failing to standardize imaging information tagging?",It leads to variability and data silos that make it difficult to share or aggregate research data across different systems.
+Why are repeat studies necessary for the advancement of clinical practice through meta-analyses?,They provide the necessary volume of evidence to corroborate findings and reach a statistical consensus.
+Describe the function of 'clean data' in the Knowledge Discovery in Databases ($KDD$) process.,"It ensures that the resulting models and predictions are based on accurate and high-quality inputs, rather than errors or noise."
+"When a diagnostic test result is influenced by subjective assessment, what is the first step to ensure its reliability?",Assessing the reproducibility of the assessment between different observers using a Kappa statistic.
+Identify the primary danger of 'data-dredging' in statistical analysis.,It leads to the reporting of dramatic but spurious findings that are likely the result of chance variations.
+How does the 'Intention to Treat' analysis minimize bias in clinical trials?,It preserves the benefits of randomisation by analysing patients in their assigned groups regardless of whether they completed the protocol.
+What does a 'systematic bias' in a measurement method indicate?,A consistent tendency for the method to provide values that are either higher or lower than the true value.
+"In a one-way analysis of variance used to estimate $ICC$, what does the 'residual mean square' represent?",An estimate of the measurement error variance ($\sigma^2_e$).
+Under what condition does the $ICC$ reach its maximum value of $1$?,When there is no measurement error ($\sigma^2_e = 0$).
+"When comparing a new, cheaper measurement method to a standard, more expensive one, what is the 'mean difference' often called?",The bias of the new method relative to the standard.
+How does the 'range of the true quantity' in a sample affect the Pearson correlation coefficient ($r$) in method comparison?,"A wider range of true values will result in a higher correlation coefficient, even if agreement is poor."
+What is the recommended graphical approach to avoid the misleading nature of plotting two measurement methods against each other?,Constructing a Bland-Altman plot (difference vs. mean).
+Explain 'observer error' in the context of clinical measurements.,"Variations in results caused by imprecision, misuse of procedures, or simple mistakes by the person performing the measurement."
+What is the purpose of performing 'consistency checks' during the data cleaning phase?,"To identify and correct logical contradictions between two or more variables, such as a male patient recorded as being pregnant."
+What is the 'standard error of a rate' used to quantify?,The amount of sampling variation associated with the estimated rate.
+"In the context of the Kappa statistic, how are 'expected numbers' calculated for the diagonal cells of a contingency table?",By multiplying the row total by the column total and dividing by the grand total for each cell.
+What is 'instrumental error'?,"Measurement error arising from an inaccurate diagnostic test, an imprecise physical instrument, or limitations in a questionnaire's design."
+How is 'regression dilution bias' typically corrected in epidemiological studies?,By using replicate measurements on a subset of participants to estimate the $ICC$ and adjusting the regression coefficients accordingly.
+What is the primary implication of 'regression to the mean' for observational studies of change over time?,Observed changes may be mistaken for real trends when they are actually the result of initial extreme values having non-persistent errors.
+Why is the use of 'machine-readable' formatting essential for interoperable health records?,It allows for the seamless exchange of information and the automated analysis of data through data mining techniques.
+Define 'transparency' in the context of information utility for health professionals.,The quality where tools housing information are so intuitive that users can focus entirely on their tasks without the technology being a distraction.
+"In diagnostic testing, what is the result of using a test with very low specificity in a low-prevalence population?",It leads to a very high number of false positives and a low positive predictive value.
+Identify the statistical software mentioned in the source material for computing Cronbach’s alpha.,SPSS statistical software.
+What is the desirable value for Cronbach’s alpha to indicate good internal consistency (reliability)?,$0.8$ or higher.
