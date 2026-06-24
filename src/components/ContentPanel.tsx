@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { ContentTab, LeafSelection } from '../types'
-import {
-  getContentFileHint,
-  getContentFolder,
-  getExtraVideoPath,
-  SYLLABUS_TITLE,
-} from '../data/syllabus'
+import { getExtraVideoPath } from '../data/syllabus'
 import {
   checkAssetExists,
   getInfographicCompanionPdfPaths,
@@ -21,7 +16,7 @@ const TABS: { id: ContentTab; label: string; icon: string }[] = [
 ]
 
 interface ContentPanelProps {
-  selection: LeafSelection | null
+  selection: LeafSelection
   onBackToHome: () => void
 }
 
@@ -32,15 +27,9 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
 
   useEffect(() => {
     setActiveTab('video')
-  }, [selection?.leafId])
+  }, [selection.leafId])
 
   useEffect(() => {
-    if (!selection) {
-      setResolvedPath(undefined)
-      setQuestionnaire(null)
-      return
-    }
-
     let cancelled = false
     setResolvedPath(undefined)
     setQuestionnaire(null)
@@ -66,40 +55,15 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
     }
   }, [selection, activeTab])
 
-  if (!selection) {
-    return (
-      <div className="content-panel empty">
-        <div className="welcome-card">
-          <img
-            src="/M_S_I.png"
-            alt={`${SYLLABUS_TITLE} overview`}
-            className="welcome-infographic"
-          />
-          <h1>{SYLLABUS_TITLE}</h1>
-          <p>
-            Select a topic from the sidebar to access the video lecture, podcast,
-            infographic, and questionnaire for that subchapter.
-          </p>
-          <div className="resource-preview">
-            {TABS.map((tab) => (
-              <div key={tab.id} className="resource-chip">
-                <span className="chip-icon">{tab.icon}</span>
-                {tab.label}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   const assetExists = resolvedPath === undefined ? null : resolvedPath !== null
 
   return (
     <div className="content-panel">
-      <header className="content-header">
+      <header className="content-header subchapter-head">
         <button type="button" className="back-home-btn" onClick={onBackToHome}>
-          <span className="back-home-icon" aria-hidden="true">←</span>
+          <span className="back-home-icon" aria-hidden="true">
+            ←
+          </span>
           Back to overview
         </button>
         <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -149,30 +113,21 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
           />
         )}
         {activeTab === 'questionnaire' && (
-          <QuestionnaireContent
-            items={questionnaire}
-            exists={assetExists}
-            title={selection.title}
-            leafId={selection.leafId}
-          />
+          <QuestionnaireContent items={questionnaire} exists={assetExists} title={selection.title} />
         )}
       </div>
     </div>
   )
 }
 
-function Placeholder({ type, title, leafId }: { type: string; title: string; leafId?: string }) {
-  const folder = leafId ? getContentFolder(leafId) : 'public/content/{chapter}/{topic}/'
-  const hint = leafId ? getContentFileHint(leafId) : '{PREFIX}_V.mp4, {PREFIX}_P.m4a, {PREFIX}_I.png, {PREFIX}_Q.csv'
-
+function Placeholder({ type, title }: { type: string; title: string }) {
   return (
     <div className="content-placeholder">
       <div className="placeholder-icon">{type[0]}</div>
       <h2>{type} coming soon</h2>
       <p>
-        Add your {type.toLowerCase()} file for <strong>{title}</strong> to:
+        The {type.toLowerCase()} for <strong>{title}</strong> is not available yet.
       </p>
-      <code>{folder}{hint}</code>
     </div>
   )
 }
@@ -243,7 +198,9 @@ function PodcastContent({
 
   return (
     <div className="media-wrapper podcast">
-      <div className="podcast-art" aria-hidden="true">♫</div>
+      <div className="podcast-art" aria-hidden="true">
+        ♫
+      </div>
       <audio controls src={path} className="audio-player">
         Your browser does not support the audio element.
       </audio>
@@ -318,50 +275,82 @@ function QuestionnaireContent({
   items,
   exists,
   title,
-  leafId,
 }: {
   items: QuestionnaireItem[] | null
   exists: boolean | null
   title: string
-  leafId: string
 }) {
-  const [revealed, setRevealed] = useState<Record<string, boolean>>({})
+  const [index, setIndex] = useState(0)
+  const [revealed, setRevealed] = useState(false)
 
   useEffect(() => {
-    setRevealed({})
-  }, [leafId])
+    setIndex(0)
+    setRevealed(false)
+  }, [title, items])
 
-  if (exists === false) return <Placeholder type="Questionnaire" title={title} leafId={leafId} />
+  if (exists === false) return <Placeholder type="Questionnaire" title={title} />
   if (exists === null || !items) return <div className="loading">Loading…</div>
+  if (items.length === 0) return <p className="muted">No questions in this file.</p>
+
+  const card = items[index]!
+  const atStart = index === 0
+  const atEnd = index >= items.length - 1
+
+  const goPrevious = () => {
+    if (atStart) return
+    setIndex((i) => i - 1)
+    setRevealed(false)
+  }
+
+  const goNext = () => {
+    if (atEnd) return
+    setIndex((i) => i + 1)
+    setRevealed(false)
+  }
 
   return (
     <div className="questionnaire">
-      <h2>{title} — Questionnaire</h2>
-      <p className="questionnaire-intro">
-        Review each question, then reveal the answer to check your understanding.
+      <p className="questionnaire__progress">
+        Question {index + 1} of {items.length}
       </p>
-      <ol className="question-list">
-        {items.map((item, index) => (
-          <li key={item.id} className="question-block">
-            <p className="question-text">
-              <span className="question-number">{index + 1}.</span> {item.question}
-            </p>
-            <button
-              type="button"
-              className="reveal-btn"
-              aria-expanded={revealed[item.id] ?? false}
-              onClick={() => setRevealed((prev) => ({ ...prev, [item.id]: !prev[item.id] }))}
-            >
-              {revealed[item.id] ? 'Hide answer' : 'Reveal answer'}
-            </button>
-            {revealed[item.id] && (
-              <p className="answer-text" role="region" aria-label={`Answer to question ${index + 1}`}>
-                {item.answer}
-              </p>
-            )}
-          </li>
-        ))}
-      </ol>
+
+      <div className="questionnaire__nav-row">
+        <button
+          type="button"
+          className="questionnaire__arrow"
+          onClick={goPrevious}
+          disabled={atStart}
+          aria-label="Previous question"
+        >
+          ←
+        </button>
+
+        <div className="questionnaire__card">
+          <p className="questionnaire__question">{card.question}</p>
+          {revealed ? (
+            <div className="questionnaire__answer">
+              <span className="questionnaire__answer-label">Answer</span>
+              <p>{card.answer}</p>
+            </div>
+          ) : null}
+        </div>
+
+        <button
+          type="button"
+          className="questionnaire__arrow"
+          onClick={goNext}
+          disabled={atEnd}
+          aria-label="Next question"
+        >
+          →
+        </button>
+      </div>
+
+      {!revealed ? (
+        <button type="button" className="questionnaire__reveal" onClick={() => setRevealed(true)}>
+          Show answer
+        </button>
+      ) : null}
     </div>
   )
 }

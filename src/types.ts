@@ -3,6 +3,7 @@ export type ContentTab = 'video' | 'podcast' | 'infographic' | 'questionnaire'
 export interface SyllabusNode {
   id: string
   title: string
+  color?: string
   children?: SyllabusNode[]
 }
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type CSSProperties } from 'react'
 import type { LeafSelection, SyllabusNode } from '../types'
 import { buildLeafId } from '../data/syllabus'
 
@@ -6,6 +6,7 @@ interface AccordionMenuProps {
   nodes: SyllabusNode[]
   chapterId: string
   chapterTitle: string
+  chapterColor: string
   path: string[]
   selectedLeafId: string | null
   onSelectLeaf: (selection: LeafSelection) => void
@@ -20,6 +21,7 @@ export function AccordionMenu({
   nodes,
   chapterId,
   chapterTitle,
+  chapterColor,
   path,
   selectedLeafId,
   onSelectLeaf,
@@ -33,6 +35,7 @@ export function AccordionMenu({
           node={node}
           chapterId={chapterId}
           chapterTitle={chapterTitle}
+          chapterColor={chapterColor}
           path={[...path, node.title]}
           selectedLeafId={selectedLeafId}
           onSelectLeaf={onSelectLeaf}
@@ -47,6 +50,7 @@ interface AccordionItemProps {
   node: SyllabusNode
   chapterId: string
   chapterTitle: string
+  chapterColor: string
   path: string[]
   selectedLeafId: string | null
   onSelectLeaf: (selection: LeafSelection) => void
@@ -57,6 +61,7 @@ function AccordionItem({
   node,
   chapterId,
   chapterTitle,
+  chapterColor,
   path,
   selectedLeafId,
   onSelectLeaf,
@@ -73,6 +78,13 @@ function AccordionItem({
         <button
           type="button"
           className={`accordion-leaf-btn${isSelected ? ' selected' : ''}`}
+          style={
+            isSelected
+              ? ({
+                  '--chapter-color': chapterColor,
+                } as CSSProperties)
+              : undefined
+          }
           onClick={() =>
             onSelectLeaf({
               path: [...path],
@@ -106,6 +118,7 @@ function AccordionItem({
           nodes={node.children!}
           chapterId={chapterId}
           chapterTitle={chapterTitle}
+          chapterColor={chapterColor}
           path={path}
           selectedLeafId={selectedLeafId}
           onSelectLeaf={onSelectLeaf}
@@ -120,41 +133,50 @@ interface ChapterAccordionProps {
   chapter: SyllabusNode
   selectedLeafId: string | null
   onSelectLeaf: (selection: LeafSelection) => void
-  defaultOpen?: boolean
+  open: boolean
+  onToggle: () => void
 }
 
 export function ChapterAccordion({
   chapter,
   selectedLeafId,
   onSelectLeaf,
-  defaultOpen = false,
+  open,
+  onToggle,
 }: ChapterAccordionProps) {
-  const [expanded, setExpanded] = useState(defaultOpen)
+  const chapterColor = chapter.color ?? '#14213d'
   const hasSelectedChild =
     selectedLeafId !== null && selectedLeafId.startsWith(`${chapter.id}/`)
 
   return (
-    <section className={`chapter-accordion${hasSelectedChild ? ' has-selection' : ''}`}>
+    <section
+      className={`chapter-accordion${hasSelectedChild ? ' has-selection' : ''}`}
+      data-chapter={chapter.id}
+    >
       <button
         type="button"
         className="chapter-header"
-        aria-expanded={expanded}
-        onClick={() => setExpanded((open) => !open)}
+        aria-expanded={open}
+        style={{ backgroundColor: chapterColor }}
+        onClick={onToggle}
       >
-        <span className={`chevron chapter-chevron${expanded ? ' open' : ''}`} aria-hidden="true">
+        <span className={`chevron chapter-chevron${open ? ' open' : ''}`} aria-hidden="true">
           ›
         </span>
         <span className="chapter-title">{chapter.title}</span>
       </button>
-      {expanded && chapter.children && (
-        <AccordionMenu
-          nodes={chapter.children}
-          chapterId={chapter.id}
-          chapterTitle={chapter.title}
-          path={[chapter.title]}
-          selectedLeafId={selectedLeafId}
-          onSelectLeaf={onSelectLeaf}
-        />
+      {open && chapter.children && (
+        <div className="chapter-body">
+          <AccordionMenu
+            nodes={chapter.children}
+            chapterId={chapter.id}
+            chapterTitle={chapter.title}
+            chapterColor={chapterColor}
+            path={[chapter.title]}
+            selectedLeafId={selectedLeafId}
+            onSelectLeaf={onSelectLeaf}
+          />
+        </div>
       )}
     </section>
   )

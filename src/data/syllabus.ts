@@ -2,10 +2,13 @@ import type { SyllabusNode } from '../types'
 
 export const SYLLABUS_TITLE = 'Medical Statistics'
 
+const CHAPTER_PALETTE = ['#14213d', '#2d4636', '#d36b31'] as const
+
 export const syllabus: SyllabusNode[] = [
   {
     id: 'basics-and-data',
     title: 'Basics and Data',
+    color: CHAPTER_PALETTE[0],
     children: [
       { id: 'populations-and-samples', title: 'Populations and Samples' },
       { id: 'variable-types', title: 'Variable Types' },
@@ -15,6 +18,7 @@ export const syllabus: SyllabusNode[] = [
   {
     id: 'numerical-outcome-analysis',
     title: 'Numerical Outcome Analysis',
+    color: CHAPTER_PALETTE[1],
     children: [
       { id: 'mean-sd-standard-error', title: 'Mean, SD, and Standard Error' },
       { id: 'normal-distribution', title: 'Normal Distribution' },
@@ -29,6 +33,7 @@ export const syllabus: SyllabusNode[] = [
   {
     id: 'binary-outcome-analysis',
     title: 'Binary Outcome Analysis',
+    color: CHAPTER_PALETTE[2],
     children: [
       { id: 'differences-risks-and-odds', title: 'Differences, Risks, and Odds' },
       { id: 'binomial-distribution', title: 'Binomial Distribution' },
@@ -42,6 +47,7 @@ export const syllabus: SyllabusNode[] = [
   {
     id: 'longitudinal-and-survival-analysis',
     title: 'Longitudinal and Survival Analysis',
+    color: CHAPTER_PALETTE[0],
     children: [
       { id: 'odds-and-hazard-ratios', title: 'Odds and Hazard Ratios' },
       { id: 'computing-risks', title: 'Computing Risks' },
@@ -53,6 +59,7 @@ export const syllabus: SyllabusNode[] = [
   {
     id: 'statistical-modelling',
     title: 'Statistical Modelling',
+    color: CHAPTER_PALETTE[1],
     children: [
       { id: 'likelihood-theory', title: 'Likelihood Theory' },
       { id: 'non-parametric-methods-ranking', title: 'Non-parametric Methods (Ranking)' },
@@ -65,6 +72,7 @@ export const syllabus: SyllabusNode[] = [
   {
     id: 'study-design-and-interpretation',
     title: 'Study Design and Interpretation',
+    color: CHAPTER_PALETTE[2],
     children: [
       { id: 'sample-size-and-power-calculation', title: 'Sample Size and Power Calculation' },
       { id: 'measurement-error-reproducibility', title: 'Measurement Error and Reproducibility' },
