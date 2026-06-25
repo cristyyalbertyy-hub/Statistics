@@ -1,4 +1,5 @@
 import type { SyllabusNode } from '../types'
+import { publicAsset, remapContentPath } from '../publicAsset'
 
 export const SYLLABUS_TITLE = 'Medical Statistics'
 
@@ -248,7 +249,7 @@ export function getContentPathCandidates(leafKey: string, type: ContentType): st
   const ext = { video: 'mp4', podcast: 'm4a', infographic: 'png', questionnaire: 'csv' }[type]
 
   if (!config) {
-    return [`/content/${leafKey}/${type}.${ext}`]
+    return [publicAsset(`/content/${leafKey}/${type}.${ext}`)]
   }
 
   const prefixes = [getPrefix(config, type)]
@@ -257,25 +258,25 @@ export function getContentPathCandidates(leafKey: string, type: ContentType): st
     prefixes.push(alternate)
   }
 
-  return prefixes.map(
-    (prefix) => `/content/${config.folder}/${prefix}_${suffix}.${ext}`,
+  return prefixes.map((prefix) =>
+    publicAsset(`/content/${config.folder}/${prefix}_${suffix}.${ext}`),
   )
 }
 
 export function getExtraVideoPath(leafKey: string): string {
-  return getContentPath(leafKey, 'video').replace(/_V\.mp4$/, '_V2.mp4')
+  return remapContentPath(getContentPath(leafKey, 'video'), /_V\.mp4$/, '_V2.mp4')
 }
 
 export function getInfographicImagePdfPath(leafKey: string): string {
-  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_I.pdf')
+  return remapContentPath(getContentPath(leafKey, 'infographic'), /_I\.png$/, '_I.pdf')
 }
 
 export function getInfographicTextPath(leafKey: string): string {
-  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_T.pdf')
+  return remapContentPath(getContentPath(leafKey, 'infographic'), /_I\.png$/, '_T.pdf')
 }
 
 export function getInfographicExtraTextPath(leafKey: string): string {
-  return getContentPath(leafKey, 'infographic').replace(/_I\.png$/, '_T2.pdf')
+  return remapContentPath(getContentPath(leafKey, 'infographic'), /_I\.png$/, '_T2.pdf')
 }
 
 export function getContentFolder(leafKey: string): string {

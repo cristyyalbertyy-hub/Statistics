@@ -1,4 +1,5 @@
 import type { ContentTab } from '../types'
+import { remapContentPath } from '../publicAsset'
 import { getContentPathCandidates } from '../data/syllabus'
 
 export async function checkAssetExists(path: string): Promise<boolean> {
@@ -29,8 +30,8 @@ export async function resolveContentPath(
 
 export function getInfographicCompanionPdfPaths(pngPath: string): string[] {
   return [
-    pngPath.replace(/_I\.png$/, '_I.pdf'),
-    pngPath.replace(/_I\.png$/, '_T2.pdf'),
-    pngPath.replace(/_I\.png$/, '_T.pdf'),
+    remapContentPath(pngPath, /_I\.png$/, '_I.pdf'),
+    remapContentPath(pngPath, /_I\.png$/, '_T2.pdf'),
+    remapContentPath(pngPath, /_I\.png$/, '_T.pdf'),
   ]
 }

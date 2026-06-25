@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { ContentTab, LeafSelection } from '../types'
 import { getExtraVideoPath } from '../data/syllabus'
+import { remapContentPath } from '../publicAsset'
 import {
   checkAssetExists,
   getInfographicCompanionPdfPaths,
@@ -152,7 +153,10 @@ function VideoContent({
     }
 
     let cancelled = false
-    const candidates = [path.replace(/_V\.mp4$/, '_V2.mp4'), getExtraVideoPath(leafId)]
+    const candidates = [
+      remapContentPath(path, /_V\.mp4$/, '_V2.mp4'),
+      getExtraVideoPath(leafId),
+    ]
 
     Promise.all(candidates.map((candidate) => checkAssetExists(candidate).then((ok) => (ok ? candidate : null))))
       .then((results) => {
