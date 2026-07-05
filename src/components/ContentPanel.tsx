@@ -175,12 +175,12 @@ function VideoContent({
   if (exists === null) return <div className="loading">Loading…</div>
 
   return (
-    <div className={`media-wrapper${extraPath ? ' video-stack' : ''}`}>
-      <video controls src={path} className="video-player">
+    <div className={`media-wrapper${extraPath ? ' video-stack' : ''}`} onContextMenu={(event) => event.preventDefault()}>
+      <video controls controlsList="nodownload" playsInline src={path} className="video-player">
         Your browser does not support the video tag.
       </video>
       {extraPath && (
-        <video controls src={extraPath} className="video-player">
+        <video controls controlsList="nodownload" playsInline src={extraPath} className="video-player">
           Your browser does not support the video tag.
         </video>
       )}
@@ -201,11 +201,11 @@ function PodcastContent({
   if (exists === null) return <div className="loading">Loading…</div>
 
   return (
-    <div className="media-wrapper podcast">
+    <div className="media-wrapper podcast" onContextMenu={(event) => event.preventDefault()}>
       <div className="podcast-art" aria-hidden="true">
         ♫
       </div>
-      <audio controls src={path} className="audio-player">
+      <audio controls controlsList="nodownload" src={path} className="audio-player">
         Your browser does not support the audio element.
       </audio>
     </div>
