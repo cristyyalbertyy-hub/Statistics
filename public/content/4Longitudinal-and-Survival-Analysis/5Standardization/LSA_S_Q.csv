@@ -4,59 +4,59 @@ What are the two primary methods used for statistical standardisation?,Direct st
 Which method of standardisation involves applying the age-sex specific rates of the study populations to a single standard population?,Direct standardisation.
 Term: Direct Standardisation,Definition: A method where age-specific rates from study groups are applied to a standard population to calculate a summary adjusted rate.
 Which method of standardisation applies the age-sex specific rates of a standard population to the composition of the study populations?,Indirect standardisation.
-"In indirect standardisation, what is the resulting measure called when the observed deaths are divided by the expected deaths?",Standardised Mortality Ratio ($SMR$).
-What is the formula for the Standardised Mortality Ratio ($SMR$)?,$SMR = \frac{\text{observed number of deaths}}{\text{expected number of deaths}}$
-"If a study population has an $SMR$ of 1.0 compared to a standard population, what does this indicate?","The risk of death in the study population is exactly the same as in the standard population, after adjusting for age and sex."
-An $SMR$ of 3.1 suggests that the study population is _____ times more likely to die than the standard population.,3.1
+"In indirect standardisation, what is the resulting measure called when the observed deaths are divided by the expected deaths?",Standardised Mortality Ratio (SMR).
+What is the formula for the Standardised Mortality Ratio (SMR)?,SMR = \frac{\text{observed number of deaths}}{\text{expected number of deaths}}
+"If a study population has an SMR of 1.0 compared to a standard population, what does this indicate?","The risk of death in the study population is exactly the same as in the standard population, after adjusting for age and sex."
+An SMR of 3.1 suggests that the study population is _____ times more likely to die than the standard population.,3.1
 Under what condition is direct standardisation preferred over indirect standardisation?,When age-sex specific rates for the study populations are available and based on large enough numbers to be accurate.
 When is indirect standardisation typically used instead of direct standardisation?,When the age-specific rates of the study populations are unavailable or based on very small numbers of events.
 Identify one of the three common choices for a 'standard population' in direct standardisation.,"A census population from a local area or country (e.g., the total study population)."
-The formula for an age-standardised rate using direct standardisation is $\frac{\sum (w_i \cdot l_i)}{\sum w_i}$. What does $l_i$ represent?,The age-specific rate in age group $i$ of the population of interest.
-"In the direct standardisation formula, what does the weight $w_i$ represent?",The number of individuals or person-years in age group $i$ of the standard population.
+The formula for an age-standardised rate using direct standardisation is \frac{\sum (w_i \cdot l_i)}{\sum w_i}. What does l_i represent?,The age-specific rate in age group i of the population of interest.
+"In the direct standardisation formula, what does the weight w_i represent?",The number of individuals or person-years in age group i of the standard population.
 What assumption is made when using standardisation to compare groups?,"The patterns of change in rates across individual strata (e.g., age groups) are similar between the populations."
-How is the expected number of deaths ($E_i$) calculated for a specific age group in indirect standardisation?,By multiplying the age-specific mortality rate of the standard population by the number of people in that age group in the study population.
-What is the formula for the Error Factor ($EF$) used to calculate the $95\%$ confidence interval of an $SMR$?,"$EF = \exp(1.96 / \sqrt{d})$, where $d$ is the total observed number of deaths."
-"To calculate a $95\%$ confidence interval for an $SMR$, the lower limit is $SMR / EF$ and the upper limit is _____.",$SMR \cdot EF$
-How can an age-sex adjusted mortality rate be derived from an $SMR$?,By multiplying the $SMR$ by the crude mortality rate of the standard population.
-Which statistical regression model can be used to perform indirect standardisation and estimate $SMR$s?,Poisson regression.
-"When using Poisson regression for indirect standardisation, how is the $SMR$ calculated from the output?",$SMR = \exp(\text{regression coefficient for the constant term})$.
+How is the expected number of deaths (E_i) calculated for a specific age group in indirect standardisation?,By multiplying the age-specific mortality rate of the standard population by the number of people in that age group in the study population.
+What is the formula for the Error Factor (EF) used to calculate the 95\% confidence interval of an SMR?,"EF = \exp(1.96 / \sqrt{d}), where d is the total observed number of deaths."
+"To calculate a 95\% confidence interval for an SMR, the lower limit is SMR / EF and the upper limit is _____.",SMR \cdot EF
+How can an age-sex adjusted mortality rate be derived from an SMR?,By multiplying the SMR by the crude mortality rate of the standard population.
+Which statistical regression model can be used to perform indirect standardisation and estimate SMRs?,Poisson regression.
+"When using Poisson regression for indirect standardisation, how is the SMR calculated from the output?",SMR = \exp(\text{regression coefficient for the constant term}).
 "In direct standardisation, the standard error of the adjusted rate depends on the number of _____ in each age group of the study population.",events (or deaths)
-Why might a child's weight be analysed using $z$-scores based on reference curves rather than raw weight?,To allow for comparison against a standard population regardless of the child's age or sex.
-Term: $z$-score (Standard Normal Deviate),Definition: A measure of how many standard deviations an observation is above or below the population mean. Formula: $z = \frac{x - \mu}{\sigma}$.
+Why might a child's weight be analysed using z-scores based on reference curves rather than raw weight?,To allow for comparison against a standard population regardless of the child's age or sex.
+Term: z-score (Standard Normal Deviate),Definition: A measure of how many standard deviations an observation is above or below the population mean. Formula: z = \frac{x - \mu}{\sigma}.
 What population size is typically required to calculate a statistically stable rate for common events in a geographic area?,"At least 25,000 people."
 "In epidemiology, why are larger populations desirable when examining rare events like HIV infection?",To ensure the calculated rates are statistically stable and not subject to extreme random variation.
 "What is the term for a 'systematic assembly, critical appraisal and synthesis of all relevant studies on a specific topic'?",Systematic review.
 The statistical method used to combine the results of multiple similar studies into a single effect estimate is called _____.,meta-analysis
 What does 'data integrity' refer to in a health information system?,"The degree to which data are whole, complete, correct, and consistent."
 "In health informatics, what is 'dirty data'?","A database containing errors such as duplicate, incomplete, or outdated records."
-Identify the standard coding system used for defining medical concepts like diagnoses in Electronic Health Records ($EHR$s).,$ICD-10$ (International Classification of Diseases).
-Which standard specifies data models for communicating patient information between hospital computer systems?,Health Level Seven ($HL7$).
-What is the specific standard used for the exchange of medical imaging devices and information?,$DICOM$ (Digital Imaging and Communications in Medicine).
-"In a $2 \times 2$ contingency table, the odds ratio is also known as the _____ ratio.",cross-product
-Why are odds ratios ($OR$) frequently used for rare outcomes in medical literature?,"Because when the outcome is rare, the $OR$ is numerically equivalent to the risk ratio."
+Identify the standard coding system used for defining medical concepts like diagnoses in Electronic Health Records (EHRs).,ICD-10 (International Classification of Diseases).
+Which standard specifies data models for communicating patient information between hospital computer systems?,Health Level Seven (HL7).
+What is the specific standard used for the exchange of medical imaging devices and information?,DICOM (Digital Imaging and Communications in Medicine).
+"In a 2 \times 2 contingency table, the odds ratio is also known as the _____ ratio.",cross-product
+Why are odds ratios (OR) frequently used for rare outcomes in medical literature?,"Because when the outcome is rare, the OR is numerically equivalent to the risk ratio."
 Concept: Precision Medicine,"Definition: Tailoring treatment and prevention strategies to an individual's unique characteristics, including genetics, lifestyle, and environment."
 What is 'data mining'?,The process of using software to sort through data to discover patterns and establish relationships.
 What is the specific term for applying data mining techniques to animations or moving pictures?,Video data analysis.
 How does 'text mining' differ from standard 'data mining'?,"Text mining extracts key words or phrases from unstructured text, whereas standard data mining usually acts on numerical data."
 The method of partitioning objects into groups where instances in one group are similar to each other but different from other groups is _____ analysis.,clustering
 What is a 'Bland-Altman plot' used for?,To assess the agreement between two different methods of measuring the same numerical variable.
-"In a Bland-Altman plot, what is plotted on the vertical ($y$) axis?",The difference between the two measurements for each individual.
+"In a Bland-Altman plot, what is plotted on the vertical (y) axis?",The difference between the two measurements for each individual.
 What does the 'Kappa statistic' measure?,"The extent of reproducibility or agreement for categorical variables, adjusted for the agreement expected by chance."
 A Kappa value of 1 indicates _____.,complete agreement
 What is the primary reason for using a logarithmic transformation on medical data?,To linearize relationships or to equalize standard deviations across groups with different means.
 The antilog of the mean of log-transformed values is known as the _____ mean.,geometric
 What does 'sampling error' represent in statistics?,The difference between a sample estimate (like a mean) and the true population value due to chance variation.
-The standard error of a sample mean is calculated as $s / \sqrt{n}$. What does $s$ represent?,The sample standard deviation.
-What is the 'Null Hypothesis' ($H_0$) in a statistical test?,The assumption that there is no true association or difference in the population from which the sample was drawn.
-A $P$-value measures the strength of evidence against the _____.,null hypothesis
-What does a $95\%$ confidence interval represent?,A range of values within which we are $95\%$ certain the true population parameter lies.
+The standard error of a sample mean is calculated as s / \sqrt{n}. What does s represent?,The sample standard deviation.
+What is the 'Null Hypothesis' (H_0) in a statistical test?,The assumption that there is no true association or difference in the population from which the sample was drawn.
+A P-value measures the strength of evidence against the _____.,null hypothesis
+What does a 95\% confidence interval represent?,A range of values within which we are 95\% certain the true population parameter lies.
 "Which statistical distribution is symmetrical and bell-shaped, defined by its mean and standard deviation?",The Normal distribution.
-"In a Normal distribution, approximately what percentage of values lie within one standard deviation of the mean?",$68.26\%$
-"In a Normal distribution, approximately what percentage of values lie within two standard deviations of the mean?",$95.44\%$ (often rounded to $95\%$ for $\pm 1.96$ SD).
+"In a Normal distribution, approximately what percentage of values lie within one standard deviation of the mean?",68.26\%
+"In a Normal distribution, approximately what percentage of values lie within two standard deviations of the mean?",95.44\% (often rounded to 95\% for \pm 1.96 SD).
 "What is the term for a variable that can only take one of two values, such as 'dead' or 'alive'?",Binary variable (or dichotomous variable).
 "Data representing categories with a natural order, such as 'mild', 'moderate', and 'severe', are called _____ variables.",ordered categorical
 What is 'Public Health Informatics'?,"The systematic application of information and computer science to public health practice, research, and learning."
-Identify a benefit of using Electronic Health Records ($EHR$s) for public health reporting.,"They allow for automated, real-time collection of data to detect disease outbreaks faster than manual reporting."
+Identify a benefit of using Electronic Health Records (EHRs) for public health reporting.,"They allow for automated, real-time collection of data to detect disease outbreaks faster than manual reporting."
 What is 'GIS' (Geographic Information System) used for in public health?,To track and present the physical locations of health data in relation to spatial references like ZIP codes or coordinates.
 What term describes the sequencing of the human genome and the study of fundamental biological processes?,Omics (or Systems Biology).
 "In data cleaning, what is a 'consistency check'?","Searching for cases where two or more variables are logically inconsistent, such as a male patient recorded with a pregnancy."
@@ -68,8 +68,8 @@ What is the 'geometric mean' used for?,To provide a measure of central tendency 
 A 'Standardized Mortality Ratio' of 150 means the observed deaths are _____% higher than expected.,50
 "In the direct method of standardisation, the summary rate is a _____ average of the age-specific rates.",weighted
 What is 'interoperability' in the context of health care information systems?,"The ability of different systems and software to communicate, exchange data, and use the information that has been exchanged."
-What is the purpose of the 'National Retail Data Monitor' ($NRDM$)?,To detect unusual purchase patterns of over-the-counter medications that might signal a disease outbreak.
+What is the purpose of the 'National Retail Data Monitor' (NRDM)?,To detect unusual purchase patterns of over-the-counter medications that might signal a disease outbreak.
 "In statistics, what does the term 'outlier' refer to?",An observation that is extreme or inconsistent relative to the rest of the dataset.
 What are 'registries' in physician practices used for?,To identify subpopulations with specific conditions and track care gaps based on evidence-based guidelines.
 Which international nongovernmental organisation develops standards like ISO 20302 for health cards and informatics?,ISO (International Organization for Standardization).
-Why is 'standardized terminology' crucial for data mining in interoperable $EHR$s?,It ensures that data variables are understood and mapped correctly across different systems and agencies.
+Why is 'standardized terminology' crucial for data mining in interoperable EHRs?,It ensures that data variables are understood and mapped correctly across different systems and agencies.

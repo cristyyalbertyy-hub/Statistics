@@ -1,75 +1,75 @@
-"In survival analysis, what does the 'hazard' ($h(t)$) represent?",The instantaneous rate of the event occurring at time $t$.
-What is the 'survivor function' ($S(t)$)?,The probability that an individual has not experienced the event of interest up to and including time $t$.
+"In survival analysis, what does the 'hazard' (h(t)) represent?",The instantaneous rate of the event occurring at time t.
+What is the 'survivor function' (S(t))?,The probability that an individual has not experienced the event of interest up to and including time t.
 What is the fundamental assumption underlying the Cox regression model?,The proportional hazards assumption.
-What is the mathematical form of the Cox proportional hazards model on the log scale?,$\log(h(t)) = \log(h_0(t)) + \beta_1x_1 + \beta_2x_2 + \dots + \beta_px_p$
-"In the Cox model, what does the term $h_0(t)$ represent?","The baseline hazard, which is the hazard for an individual in whom all exposure variables equal zero."
-How is the hazard ratio (HR) for a single binary exposure variable calculated from the Cox regression coefficient $\beta_1$?,$\text{HR} = \exp(\beta_1)$
-What does a positive regression coefficient ($\beta > 0$) in a Cox model indicate about the hazard?,It indicates an increased hazard of the event occurring.
+What is the mathematical form of the Cox proportional hazards model on the log scale?,\log(h(t)) = \log(h_0(t)) + \beta_1x_1 + \beta_2x_2 + \dots + \beta_px_p
+"In the Cox model, what does the term h_0(t) represent?","The baseline hazard, which is the hazard for an individual in whom all exposure variables equal zero."
+How is the hazard ratio (HR) for a single binary exposure variable calculated from the Cox regression coefficient \beta_1?,\text{HR} = \exp(\beta_1)
+What does a positive regression coefficient (\beta > 0) in a Cox model indicate about the hazard?,It indicates an increased hazard of the event occurring.
 How do the effects of different exposure variables combine in a standard Cox regression model?,They combine in a multiplicative manner.
 What does the 'proportional hazards assumption' imply about the hazard ratio between two groups over time?,The ratio remains constant over the duration of follow-up.
-Why is the baseline hazard $h_0(t)$ typically not displayed in Cox regression computer output?,It is not estimated directly because the analysis is based on conditional likelihood estimation within risk sets.
+Why is the baseline hazard h_0(t) typically not displayed in Cox regression computer output?,It is not estimated directly because the analysis is based on conditional likelihood estimation within risk sets.
 What statistical measure is used to investigate the dependence of a regression on individual influential observations?,Cook's D
 What term refers to the group of subjects still being followed up at the time a specific event occurs?,The risk set
-How can the proportional hazards assumption be examined graphically using the cumulative hazard function $H(t)$?,By checking if the hazard function (the slope of the graph of cumulative hazard against time) varies consistently between groups.
-What is the Nelson-Aalen estimate used for in survival analysis?,Estimating the cumulative hazard function $H(t)$.
-Formula: Nelson-Aalen estimate of the cumulative hazard $H(t)$,"$H(t) = \sum \frac{d_i}{n_i}$, summed over all times up to and including $t$."
-"In the context of survival analysis, what is the 'cumulative hazard function' ($H(t)$)?",The total hazard experienced up to time $t$.
-What is the relationship between the survivor function $S(t)$ and the cumulative hazard $H(t)$?,$S(t) = e^{-H(t)}$
-"If the event rate $\lambda$ is constant over time, what is the risk up to time $t$?",$\text{Risk} = 1 - e^{-\lambda t}$
+How can the proportional hazards assumption be examined graphically using the cumulative hazard function H(t)?,By checking if the hazard function (the slope of the graph of cumulative hazard against time) varies consistently between groups.
+What is the Nelson-Aalen estimate used for in survival analysis?,Estimating the cumulative hazard function H(t).
+Formula: Nelson-Aalen estimate of the cumulative hazard H(t),"H(t) = \sum \frac{d_i}{n_i}, summed over all times up to and including t."
+"In the context of survival analysis, what is the 'cumulative hazard function' (H(t))?",The total hazard experienced up to time t.
+What is the relationship between the survivor function S(t) and the cumulative hazard H(t)?,S(t) = e^{-H(t)}
+"If the event rate \lambda is constant over time, what is the risk up to time t?",\text{Risk} = 1 - e^{-\lambda t}
 Which non-parametric test is used to compare the survival patterns of two or more groups?,The log-rank test (or Mantel-Cox test).
-What is the Mantel-Cox estimate of the hazard ratio ($\text{HR}_{MC}$)?,$\text{HR}_{MC} = Q/R$
+What is the Mantel-Cox estimate of the hazard ratio (\text{HR}_{MC})?,\text{HR}_{MC} = Q/R
 What does a violation of the proportional hazards assumption indicate about the exposure effect?,"The exposure effect (hazard ratio) changes over time, representing an interaction between the exposure and time."
 What are the two common analysis options when evidence of non-proportional hazards is found for a main exposure?,Including an exposure-time interaction term or splitting the follow-up time.
 How can one adjust for a confounding variable that violates the proportional hazards assumption?,By stratifying the Cox regression according to the values of that confounding variable.
-"In Cox regression, what is the most common choice for the time axis ($t=0$)?",Time from entry to the study.
+"In Cox regression, what is the most common choice for the time axis (t=0)?",Time from entry to the study.
 What is 'delayed entry' in a survival analysis?,When subjects enter the study at different times or ages relative to the chosen time axis.
 How does Poisson regression differ from Cox regression regarding the hazard rate?,"Poisson regression assumes rates are constant within time periods, while Cox regression makes no assumptions about how the hazard changes over time."
 "What type of survival model assumes a specific mathematical function (e.g., exponential) for the baseline survivor function?",Parametric survival models.
-How is the 95% confidence interval for a hazard ratio derived from the standard error of the log hazard ratio?,"$\text{HR} / \text{EF}$ to $\text{HR} \times \text{EF}$, where $\text{EF} = \exp(1.96 \times \text{s.e.})$"
-"In computer output for a Cox model, what does the $z$ statistic test?",The null hypothesis that the regression coefficient is equal to zero.
+How is the 95% confidence interval for a hazard ratio derived from the standard error of the log hazard ratio?,"\text{HR} / \text{EF} to \text{HR} \times \text{EF}, where \text{EF} = \exp(1.96 \times \text{s.e.})"
+"In computer output for a Cox model, what does the z statistic test?",The null hypothesis that the regression coefficient is equal to zero.
 What is the purpose of adding interaction terms to a multivariable Cox model?,To examine if the effect of one exposure variable depends on the level of another variable.
 How is the hazard ratio interpreted for a numerical exposure variable in a Cox model?,It is the constant increase in the log hazard per unit increase in the exposure variable.
-What is the value of the survivor function $S(t)$ at time $t=0$?,1
+What is the value of the survivor function S(t) at time t=0?,1
 Which regression model is used to investigate the link between several exposure variables and the time to a binary event?,Cox regression (or proportional hazards regression).
 "In survival data, what does 'censoring' occur?",When an individual is followed for a period but the event of interest has not yet happened by the end of that period.
 What is the link between the log-rank test and Cox regression?,"The log-rank test is the non-parametric equivalent for comparing groups, while Cox regression extends this to include multiple exposures."
-What is the 'linear predictor' in a Cox proportional hazards model?,The quantity $\beta_1x_1 + \beta_2x_2 + \dots + \beta_px_p$.
+What is the 'linear predictor' in a Cox proportional hazards model?,The quantity \beta_1x_1 + \beta_2x_2 + \dots + \beta_px_p.
 How is a hazard ratio of 0.5 interpreted?,The instantaneous rate of the event in the exposed group is half that of the unexposed group.
 What does 'attained age' mean when used as the time axis in survival analysis?,"The risk sets are constructed comparing individuals of the same age, regardless of when they entered the study."
 What is a 'time-varying exposure'?,An exposure variable whose value is measured more than once and can change over the course of follow-up.
-"Under the assumption of constant event rate $\lambda$, what is the average survival time?",$1/\lambda$
-"In a log-rank test, how are 'expected numbers' ($E_{1i}$) calculated for each table?","$E_{1i} = \frac{d_i \times n_{1i}}{n_i}$, where $d_i$ is total events and $n_{1i}$ is number exposed at time $i$."
-How many degrees of freedom does the Mantel-Cox $\chi^2$ statistic have when comparing two groups?,1
-"In the Cox model, what is the 'hazard ratio' at any time $t$ if $\beta_1$ is the log HR?",$\exp(\beta_1)$
+"Under the assumption of constant event rate \lambda, what is the average survival time?",1/\lambda
+"In a log-rank test, how are 'expected numbers' (E_{1i}) calculated for each table?","E_{1i} = \frac{d_i \times n_{1i}}{n_i}, where d_i is total events and n_{1i} is number exposed at time i."
+How many degrees of freedom does the Mantel-Cox \chi^2 statistic have when comparing two groups?,1
+"In the Cox model, what is the 'hazard ratio' at any time t if \beta_1 is the log HR?",\exp(\beta_1)
 What does a hazard ratio of 1.0 imply?,There is no difference in the instantaneous risk of the event between the groups being compared.
 What is the term for a longitudinal study outcome where the time until the event occurs is the primary interest?,Time-to-event (or survival) data.
-True or False: Cox regression assumes that the underlying baseline hazard $h_0(t)$ is constant over time.,False
+True or False: Cox regression assumes that the underlying baseline hazard h_0(t) is constant over time.,False
 What distinguishes 'multivariable' from 'multivariate' analysis in the strict statistical sense?,Multivariable refers to multiple exposure variables; multivariate refers to multiple outcome variables.
 What is 'collinearity' in regression modelling?,A condition where two or more exposure variables are highly correlated with each other.
 How does collinearity affect the interpretation of regression coefficients?,"It can make it appear that neither variable is associated with the outcome, even if both are strongly associated individually."
 What is the 'link function' for Poisson and Cox regressions in generalized linear models?,The logarithmic function.
 "In a Cox regression output table, what does the 'constant' term usually represent?",It is often omitted or corresponds to the log hazard in the baseline group if estimated.
 What is the impact of measurement error on the observed regression coefficient in 'regression to the mean'?,The observed association between a change and the initial value will appear stronger than the true association.
-Formula: The relationship between the hazard $h(t)$ and cumulative hazard $H(t)$ when the rate $\lambda$ is constant.,$H(t) = \lambda t$ and $h(t) = \lambda$.
-"In survival curves, what is the Kaplan-Meier estimate of $S(t)$?",A step function that calculates survival probabilities at every time an event occurs.
+Formula: The relationship between the hazard h(t) and cumulative hazard H(t) when the rate \lambda is constant.,H(t) = \lambda t and h(t) = \lambda.
+"In survival curves, what is the Kaplan-Meier estimate of S(t)?",A step function that calculates survival probabilities at every time an event occurs.
 What is the 'force of mortality'?,"Another term for the hazard rate, especially when the event of interest is death."
-How can the survivor function be used to estimate the median survival time?,By finding the time $t$ at which $S(t) = 0.5$.
-What is the 'Wald statistic' in the context of Cox regression output?,"The square of the $z$ statistic ($z = \text{coefficient} / \text{s.e.}$), which follows a $\chi^2$ distribution."
-"In the formula for the standard error of the log HR ($s.e._{MC}$), what does $V$ represent?",The sum across strata of the variances of the number of exposed individuals experiencing the event.
+How can the survivor function be used to estimate the median survival time?,By finding the time t at which S(t) = 0.5.
+What is the 'Wald statistic' in the context of Cox regression output?,"The square of the z statistic (z = \text{coefficient} / \text{s.e.}), which follows a \chi^2 distribution."
+"In the formula for the standard error of the log HR (s.e._{MC}), what does V represent?",The sum across strata of the variances of the number of exposed individuals experiencing the event.
 What is the relationship between the log-rank test and the Mantel-Haenszel procedure?,The log-rank test is a special application of the Mantel-Haenszel procedure constructed for each time an event occurs.
 What is the term for a variable that changes over time but is treated as a fixed value at the start of follow-up in simple models?,Baseline measurement.
 How is 'right-censoring' typically handled in Cox regression risk sets?,"Censored individuals are included in all risk sets up to the point they are censored, after which they are removed."
-"In the Cox model equation, what is the 'multiplicative factor' for the hazard of an exposed group ($x=1$) compared to unexposed ($x=0$)?",$\exp(\beta_1)$
+"In the Cox model equation, what is the 'multiplicative factor' for the hazard of an exposed group (x=1) compared to unexposed (x=0)?",\exp(\beta_1)
 What is the main limitation of using 'time since entry' as the time axis if age is a major factor in disease rate?,The model assumes that individuals of different ages have the same baseline hazard if they entered the study at the same time.
 How is a dose-response relationship typically tested in a Cox model for an ordered categorical variable?,By fitting the exposure as a single numerical variable (test for trend).
 What is the 'partial likelihood' (often called conditional likelihood) in Cox regression based on?,The rank order of event times rather than the exact times themselves.
 "In Example 27.1, what was the hazard ratio for central cholestasis and how was it interpreted?",3.751; patients with central cholestasis had 3.751 times the hazard rate of those without it.
 What happens to the hazard ratio if the proportional hazards assumption is violated and a single model is fitted?,"The model provides an 'average' hazard ratio over the follow-up period, which may be misleading."
 Why is Cox regression preferred over Poisson regression when the hazard is expected to change rapidly over time?,"Cox regression does not require specifying the hazard's shape, whereas Poisson regression assumes it is constant in defined intervals."
-What is the difference between cumulative incidence and the survivor function?,"Cumulative incidence is the probability of the event occurring ($1 - S(t)$), while the survivor function is the probability of the event not occurring ($S(t)$)."
+What is the difference between cumulative incidence and the survivor function?,"Cumulative incidence is the probability of the event occurring (1 - S(t)), while the survivor function is the probability of the event not occurring (S(t))."
 What is a 'step function' in the context of survival analysis display?,"The Kaplan-Meier survival curve, where the survival probability only changes at the times when events occur."
 What is 'person-time' (or person-years) in longitudinal studies?,The total of the individual periods of observation for all subjects in the study.
 How is the rate ratio related to the hazard ratio in many medical studies?,They are often used interchangeably as the hazard ratio is the instantaneous version of the rate ratio.
-What is the 'risk set' at time $t$ in a study of mortality?,All participants who are alive and still under observation at time $t$.
+What is the 'risk set' at time t in a study of mortality?,All participants who are alive and still under observation at time t.
 "In a Cox regression with multiple exposures, what does the coefficient for one variable represent?",The effect of that variable after controlling for the confounding effects of all other variables in the model.
 "What does a hazard ratio significantly less than 1.0 (e.g., 0.70) indicate?","A protective effect of the exposure, reducing the instantaneous rate of the event."

@@ -1,7 +1,7 @@
 "In the context of Bayesian inference, what does a 'prior distribution' represent?",An investigator's belief about the likely values of model parameters before any data are collected.
 What is the mathematical definition of a 'posterior distribution' in Bayesian statistics?,The probability distribution of model parameters modified in the light of observed data using Bayes' rule.
 How does 'subjective probability' differ from the frequentist definition?,It represents a degree of belief in an event or hypothesis rather than a long-term frequency of occurrence.
-What is the formula for Bayes' Rule relating the conditional probabilities of events $A$ and $B$?,$Prob(B\text{ given }A) = \frac{Prob(A\text{ given }B) \times Prob(B)}{Prob(A)}$
+What is the formula for Bayes' Rule relating the conditional probabilities of events A and B?,Prob(B\text{ given }A) = \frac{Prob(A\text{ given }B) \times Prob(B)}{Prob(A)}
 "In e-DSS design, what graph structure is typically used to model causal relationships among evidence and diagnostic variables?",A directed acyclic graph (DAG).
 What is the primary role of a 'belief function' in representing uncertainty?,It models the interaction and accumulation of evidence from independent criteria.
 Why is the use of numerical probability scales often ineffective for therapists in LBP diagnosis?,Therapists typically lack experience in numerical assessment and find it difficult to articulate conditional probabilities.
@@ -9,11 +9,11 @@ Why is the use of numerical probability scales often ineffective for therapists 
 "In the LBP project's voting scheme, what effect does an 'impossible' verbal probability have on a diagnosis?",It acts as an exclusive negation that completely removes the diagnosis from consideration regardless of other votes.
 How many votes does a rule with a probability of 'likely' contribute to its recommended diagnosis in the LBP e-DSS?,One vote.
 What is the central principle of a 'consensus-based model' in knowledge inference?,The theoretical adequacy of a position established by the collective voting of multiple experts or participants.
-"For the LBP inference algorithm to work accurately, what must be true regarding the credibility of individual rules?",Each rule must have a higher than 50 per cent chance of being true ($p > 0.5$).
+"For the LBP inference algorithm to work accurately, what must be true regarding the credibility of individual rules?",Each rule must have a higher than 50 per cent chance of being true (p > 0.5).
 What assumption does the LBP inference algorithm make regarding the incidence rates of different diagnoses?,All diagnoses should have similar or identical prior probabilities in the general population.
 How does the LBP inference algorithm behave when a diagnosis has a high prior probability?,"It tends to favour that diagnosis, resulting in a higher posterior probability even with the same number of votes."
-What does a 'Likelihood Ratio' ($LR$) measure in statistical modelling?,A comparative measure of how compatible the observed data are with a particular parameter value compared to the maximum likelihood estimate.
-What defines the 'Maximum Likelihood Estimate' ($MLE$) of a parameter?,The parameter value that corresponds to the largest possible likelihood for the observed data.
+What does a 'Likelihood Ratio' (LR) measure in statistical modelling?,A comparative measure of how compatible the observed data are with a particular parameter value compared to the maximum likelihood estimate.
+What defines the 'Maximum Likelihood Estimate' (MLE) of a parameter?,The parameter value that corresponds to the largest possible likelihood for the observed data.
 "In frequentist statistics, how is the population risk ratio viewed compared to the Bayesian approach?",It is treated as a fixed but unknown quantity rather than a random variable with a probability distribution.
 What is the interpretation of a 95% 'credible interval'?,There is a 95% probability that the true population parameter lies within the specified range.
 Under what condition are the results of a frequentist analysis and a Bayesian analysis nearly identical?,When the prior distribution is 'vague' and has little influence compared to the data.
@@ -21,7 +21,7 @@ What does the 'Monte-Carlo' aspect of MCMC methods refer to?,The process of rand
 What does the 'Markov Chain' aspect of MCMC methods refer to?,The fact that each step in the iterative procedure depends only on the results of the previous step.
 What is the purpose of the 'burn-in' period in MCMC procedures?,To remove the dependence of the generated parameter values on the arbitrary initial choice of starting values.
 "In the modified Turing test for e-DSS, how is an expert's 'competence' accounted for?",It is used as a weight in the calculation of the validity measure for the system's diagnoses.
-The validity measure $V_{sys}$ for an e-DSS is inclusively bounded between which two values?,0 and 1.
+The validity measure V_{sys} for an e-DSS is inclusively bounded between which two values?,0 and 1.
 What is the function of 'iteration' in fitting maximum likelihood estimates for complex models?,A computer programme repeatedly updates guesstimates for parameters to find the point where the log-likelihood is maximised.
 How is a 'Bayesian Network' useful for 'knowledge replenishment' in e-DSS?,"It can be used to integrate diagnostic knowledge from different sources, such as expert rules and data mining results."
 "In e-health systems, what role do 'anchors' play in knowledge engineering?",They serve as data-driven starting points for human experts to generate required estimations and projections.
@@ -29,21 +29,21 @@ What is the primary difference between a Confidence Interval and a Supported Ran
 How does the 'linear predictor' in a generalised linear model relate to the outcome?,"It is related via a link function, such as the logit function for logistic regression."
 "In the LBP project, why was a single stochastic variable insufficient to represent diagnosis?",The system required the ability to support and rank multiple simultaneous diagnoses.
 What is the 'Hub/Authority' approach used for in e-communities?,Identifying high-quality information by assuming that 'authorities' (good people) contribute 'good' information.
-"According to Proposition 1 in the consensus model proof, what happens as the number of 'likely' rules ($m$) increases if $p > 0.5$?",The Bayesian probability that the diagnosis is true increases monotonically.
-How is the 'global validity' of an e-DSS ($V_{sys}$) calculated?,By averaging the system's validity scores across all test cases under examination.
+"According to Proposition 1 in the consensus model proof, what happens as the number of 'likely' rules (m) increases if p > 0.5?",The Bayesian probability that the diagnosis is true increases monotonically.
+How is the 'global validity' of an e-DSS (V_{sys}) calculated?,By averaging the system's validity scores across all test cases under examination.
 "In the context of the LBP project, what is 'Knowledge Inference'?",The process of using a voting scheme and logic rules to arrive at a recommended diagnosis.
 What does a 'neutral' verbal probability contribute to the LBP voting scheme?,It has no effect on the voting outcome for the recommended diagnosis.
 Why might a Bayesian network be preferred over a simple rule-based system for complex diagnostics?,It explicitly models conditional probabilities and dependencies between multiple pieces of evidence and outcomes.
 What does the term 'likelihood' provide a comparative measure of?,How compatible the observed data are with different possible values of a parameter.
-"In Bayesian terms, how is the probability of the data, $Prob(\text{data})$, generally treated during parameter estimation?",As a constant that ensures the posterior distribution integrates to one.
+"In Bayesian terms, how is the probability of the data, Prob(\text{data}), generally treated during parameter estimation?",As a constant that ensures the posterior distribution integrates to one.
 What is the main limitation of using only accuracy-based metrics for multidiagnosis systems?,They are insufficient for assessing performance when a system must support and rank multiple diagnoses simultaneously.
 How does 'Collaborative Filtering' assist in managing information quality in large healthcare repositories?,It uses mechanisms like voting and ratings from the e-community to filter and evaluate contributed information.
 What is the primary advantage of using MCMC methods like 'Gibbs Sampling'?,They allow for the estimation of parameters in complex models where maximum-likelihood estimation is computationally difficult.
 "In a Bayesian framework, what question is asked regarding a new treatment's effectiveness compared to an existing one?",What is the probability that the new treatment is at least as good as the existing treatment?
-"In the LBP consensus model, if $d_j$ receives more votes than $d_k$ and they have equal prior probabilities, which is more likely to be true?",$d_j$ is more likely to be true.
+"In the LBP consensus model, if d_j receives more votes than d_k and they have equal prior probabilities, which is more likely to be true?",d_j is more likely to be true.
 What standard assumes that the outcome for each individual is not influenced by others?,The independence assumption.
 What software stands for 'Bayesian inference Using Gibbs Sampling'?,BUGS.
-"In the Likelihood Ratio Test, what is the formula for the test statistic $LRS$?",$LRS = -2 \times (L_{exc} - L_{inc})$
+"In the Likelihood Ratio Test, what is the formula for the test statistic LRS?",LRS = -2 \times (L_{exc} - L_{inc})
 How is the 'Log Likelihood Ratio' curve often approximated to simplify the derivation of MLEs and confidence intervals?,Using a quadratic approximation.
 "In e-DSS validity testing, how is the identity of the diagnostician handled in the second phase of the modified Turing test?",The identity is removed to allow other experts to conduct a 'blind evaluation' of the diagnosis.
 What term describes the increase in assessment inconsistency that occurs as knowledge volume and complexity grow?,Unsystematic assessment.

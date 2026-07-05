@@ -1,55 +1,55 @@
-"In a $2 \times 2$ contingency table, how are the 'odds' of an outcome event $D$ calculated?",The number of individuals who experience the event ($d$) divided by the number who do not ($h$).
-What is the formula for the estimated Odds Ratio ($OR$) comparing an exposed group to an unexposed group?,$OR = \frac{d_1 \times h_0}{d_0 \times h_1}$
+"In a 2 \times 2 contingency table, how are the 'odds' of an outcome event D calculated?",The number of individuals who experience the event (d) divided by the number who do not (h).
+What is the formula for the estimated Odds Ratio (OR) comparing an exposed group to an unexposed group?,OR = \frac{d_1 \times h_0}{d_0 \times h_1}
 What value of an Odds Ratio indicates no association between a risk factor and a disease?,1
-"If the Risk Ratio ($RR$) is greater than 1, how does the corresponding Odds Ratio ($OR$) typically compare?",The Odds Ratio is greater than the Risk Ratio ($OR > RR$).
+"If the Risk Ratio (RR) is greater than 1, how does the corresponding Odds Ratio (OR) typically compare?",The Odds Ratio is greater than the Risk Ratio (OR > RR).
 Under what specific condition is the Odds Ratio numerically equivalent to the Risk Ratio?,When the outcome is rare.
 Why are Odds Ratios often preferred over Risk Ratios in complex regression modelling for common outcomes?,"Risk Ratios are mathematically constrained by the maximum possible risk, whereas Odds Ratios are not."
 What is the primary measure of effect used in the analysis of case-control studies?,The Odds Ratio.
 What is the specific name of the formula used to calculate the standard error of the log Odds Ratio?,Woolf's formula.
 "In logistic regression, the linear model is related to the outcome via which link function?",The logit function (log odds).
-"In a logistic regression output, how is the effect of an exposure variable $x$ interpreted if expressed on the ratio scale?",As the Odds Ratio ($	ext{exp}(\beta)$) for the outcome per unit increase in $x$.
+"In a logistic regression output, how is the effect of an exposure variable x interpreted if expressed on the ratio scale?",As the Odds Ratio (	ext{exp}(\beta)) for the outcome per unit increase in x.
 The 'Constant' parameter in a logistic regression model corresponds to the log odds of the outcome in which group?,The baseline (unexposed) group.
-Term: Person-years-at-risk ($pyar$),Definition: The total time during which individuals in a longitudinal study are at risk of experiencing the outcome event.
-What defines the 'Rate' ($\lambda$) of occurrence for an outcome event in a longitudinal study?,The number of new events divided by the total person-time at risk.
-How is the Rate Ratio ($RR$) calculated for an exposed group ($1$) versus an unexposed group ($0$)?,$\frac{d_1 / T_1}{d_0 / T_0}$
-What is the standard error formula for the log Rate Ratio?,$\sqrt{\frac{1}{d_1} + \frac{1}{d_0}}$
-"In Poisson regression, the regression coefficients ($\\beta$) represent the increase in which measure per unit increase in exposure?",The log rate of the outcome.
+Term: Person-years-at-risk (pyar),Definition: The total time during which individuals in a longitudinal study are at risk of experiencing the outcome event.
+What defines the 'Rate' (\lambda) of occurrence for an outcome event in a longitudinal study?,The number of new events divided by the total person-time at risk.
+How is the Rate Ratio (RR) calculated for an exposed group (1) versus an unexposed group (0)?,\frac{d_1 / T_1}{d_0 / T_0}
+What is the standard error formula for the log Rate Ratio?,\sqrt{\frac{1}{d_1} + \frac{1}{d_0}}
+"In Poisson regression, the regression coefficients (\\beta) represent the increase in which measure per unit increase in exposure?",The log rate of the outcome.
 Which regression model is typically used to estimate rate ratios while controlling for confounding in longitudinal data?,Poisson regression.
-"In survival analysis, what does the survivor function $S(t)$ represent?",The probability that an individual has not experienced the event of interest up to and including time $t$.
-What is the definition of the 'hazard' ($h(t)$) in the context of survival analysis?,The instantaneous rate of event occurrence at time $t$.
-Which mathematical function links the cumulative hazard $H(t)$ to the survivor function $S(t)$?,$H(t) = -\ln(S(t))$ (or $S(t) = e^{-H(t)}$).
+"In survival analysis, what does the survivor function S(t) represent?",The probability that an individual has not experienced the event of interest up to and including time t.
+What is the definition of the 'hazard' (h(t)) in the context of survival analysis?,The instantaneous rate of event occurrence at time t.
+Which mathematical function links the cumulative hazard H(t) to the survivor function S(t)?,H(t) = -\ln(S(t)) (or S(t) = e^{-H(t)}).
 The assumption that the ratio of hazards between two groups remains constant over time is known as the _____.,Proportional hazards assumption.
-Which non-parametric estimate is used to calculate the cumulative hazard function $H(t)$?,The Nelson-Aalen estimate.
+Which non-parametric estimate is used to calculate the cumulative hazard function H(t)?,The Nelson-Aalen estimate.
 How can the proportional hazards assumption be checked graphically using cumulative hazards?,By checking if the plots of log cumulative hazard against time for different groups are parallel.
 What is the purpose of the Mantel-Cox (log rank) test?,To test the null hypothesis that there is no difference in the hazards (and thus survival) between two groups.
 What is the common name for Proportional Hazards Regression?,Cox regression.
-"In a Cox regression model, the hazard at time $t$ is the product of the baseline hazard $h_0(t)$ and which other component?",The exponential of the linear predictor ($	ext{exp}(\beta_1 x_1 + ...)$).
+"In a Cox regression model, the hazard at time t is the product of the baseline hazard h_0(t) and which other component?",The exponential of the linear predictor (	ext{exp}(\beta_1 x_1 + ...)).
 What does the 'Hazard Ratio' represent in a Cox regression model?,The ratio of the instantaneous risk of an event in the exposed group compared to the unexposed group.
 "In survival analysis, what is meant by 'censored' data?","Data for subjects whose survival status is known only up to a certain point, but not thereafter."
-"If the event rate ($\lambda$) is constant over time, how does the hazard $h(t)$ behave?",It remains constant ($h(t) = \lambda$).
+"If the event rate (\lambda) is constant over time, how does the hazard h(t) behave?",It remains constant (h(t) = \lambda).
 Which choice of time axis is most appropriate for a survival analysis following a cancer diagnosis?,Time since recruitment or start of treatment.
 What statistical approach can be used in Cox regression if a confounding variable violates the proportional hazards assumption?,Stratified Cox regression.
 How does Cox regression differ from Poisson regression regarding the assumption of disease rates?,"Cox regression makes no assumption about the underlying hazard shape, while Poisson regression assumes rates are constant within time periods."
-The exponentiated coefficient ($	ext{exp}(\beta)$) from a Poisson regression provides an estimate of which measure?,The Rate Ratio.
+The exponentiated coefficient (	ext{exp}(\beta)) from a Poisson regression provides an estimate of which measure?,The Rate Ratio.
 "In the context of the 'rare disease' assumption, how do the Risk Ratio, Odds Ratio, and Rate Ratio relate?",They are approximately equal to each other.
-"In a survival study, the median survival time is estimated from the survivor function as the time when $S(t)$ equals _____.",0.5
+"In a survival study, the median survival time is estimated from the survivor function as the time when S(t) equals _____.",0.5
 What is the 'baseline hazard' in a Cox model?,The hazard for an individual in whom all exposure variables are equal to zero.
-"If an Odds Ratio is less than 1, how does it compare to the corresponding Risk Ratio?",The Odds Ratio is further from 1 (smaller) than the Risk Ratio ($OR < RR$).
+"If an Odds Ratio is less than 1, how does it compare to the corresponding Risk Ratio?",The Odds Ratio is further from 1 (smaller) than the Risk Ratio (OR < RR).
 What is the 'Mantel-Haenszel' estimate used for in the context of Odds or Rate Ratios?,To calculate a summary measure of effect while controlling for confounding via stratification.
 Which survival analysis method uses the exact failure times of all individuals to estimate the survivor function?,The Kaplan-Meier method.
-"In a Cox regression output, what does a $P$-value of $< 0.001$ for a Hazard Ratio of 3.5 suggest?",Strong evidence against the null hypothesis that the hazard is the same in both groups.
+"In a Cox regression output, what does a P-value of < 0.001 for a Hazard Ratio of 3.5 suggest?",Strong evidence against the null hypothesis that the hazard is the same in both groups.
 What happens to the Odds Ratio as the probability of the outcome in the unexposed group increases toward 1?,The Odds Ratio becomes increasingly larger than the corresponding Risk Ratio.
 Why is 'age' often a better time axis than 'time since recruitment' in cohort studies like the Caerphilly study?,Because the hazard of disease changes most dramatically with age rather than study duration.
 What is a 'time-varying exposure' in a survival model?,An exposure whose value changes for a subject during the period of follow-up.
 How can time-varying exposures be accommodated in a Cox regression analysis?,By splitting the follow-up time for each subject into periods corresponding to different exposure levels.
 Term: Proportional Odds Model,Definition: An extension of logistic regression used when the outcome variable is ordered categorical.
 "When the outcome is common, which ratio measure is considered most appropriate for assessing the protective effect of a vaccine?",The Risk Ratio.
-"In a $2 \times 2$ table, if the number of cases is $d$ and healthy is $h$, the Odds are $d/h$. What is the Risk?",$d / (d + h)$ (or $d / n$).
-"In the relationship between hazards and risks, the risk up to time $t$ when the rate $\lambda$ is constant is _____.",$1 - e^{-\lambda t}$
+"In a 2 \times 2 table, if the number of cases is d and healthy is h, the Odds are d/h. What is the Risk?",d / (d + h) (or d / n).
+"In the relationship between hazards and risks, the risk up to time t when the rate \lambda is constant is _____.",1 - e^{-\lambda t}
 Which specific regression model is equivalent to a parametric survival model assuming an exponential survivor function?,Poisson regression.
 What is the primary advantage of using a parametric survival model over a Cox model?,It allows for the explicit estimation and prediction of survival probabilities.
-Concept: Wald $z$-test,Definition: A test statistic derived from the log hazard ratio divided by its standard error in Cox regression.
-How does the Mantel-Cox estimate of the Hazard Ratio ($HR_{MC}$) handle multiple events at the same time (ties)?,The procedure continues to function correctly by treating them as separate contributions to the risk set.
+Concept: Wald z-test,Definition: A test statistic derived from the log hazard ratio divided by its standard error in Cox regression.
+How does the Mantel-Cox estimate of the Hazard Ratio (HR_{MC}) handle multiple events at the same time (ties)?,The procedure continues to function correctly by treating them as separate contributions to the risk set.
 "For a rare disease, if the controls in a case-control study are selected 'concurrently', the Odds Ratio estimates which population measure?",The Rate Ratio.
-"In the context of regression modelling, what is the 'linear predictor'?",The sum of the products of the exposure variables and their respective regression coefficients ($eta_0 + eta_1 x_1 + ...$).
+"In the context of regression modelling, what is the 'linear predictor'?",The sum of the products of the exposure variables and their respective regression coefficients (eta_0 + eta_1 x_1 + ...).
 "If a study has incomplete follow-up, why is the Rate Ratio preferred over the Risk Ratio?",The Rate Ratio accounts for the varying lengths of time individuals were under observation.

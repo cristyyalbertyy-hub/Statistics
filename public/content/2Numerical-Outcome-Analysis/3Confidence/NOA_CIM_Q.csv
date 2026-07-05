@@ -1,35 +1,35 @@
 What is the statistical definition of a confidence interval for a population mean?,A range of likely values for the population mean calculated from the sample mean and its standard error.
 "If multiple independent 95% confidence intervals are calculated from the same population, what percentage of them is expected to contain the true population mean?",95%
-Formula: Standard error ($s.e.$) of the sample mean ($ar{x}$),$s.e. = \frac{s}{\sqrt{n}}$
+Formula: Standard error (s.e.) of the sample mean (ar{x}),s.e. = \frac{s}{\sqrt{n}}
 Which statistical measure quantifies the precision with which the population mean is estimated by the sample mean?,The standard error.
-"According to the text, what is the minimum sample size ($n$) typically required to use the normal distribution for calculating a confidence interval?",$n > 60$
-"In a large-sample 95% confidence interval for a mean, what is the standard multiplier for the standard error?",$1.96$
-"In a large-sample 90% confidence interval for a mean, what is the standard multiplier for the standard error?",$1.64$
-"In a large-sample 99% confidence interval for a mean, what is the standard multiplier for the standard error?",$2.58$
-Which probability distribution should be used to calculate a confidence interval for a small sample ($n < 60$) when the population standard deviation is unknown?,The Student's $t$ distribution.
-"For a single sample of size $n$, how many degrees of freedom are used to find the percentage point of the $t$ distribution?",$n - 1$
-Why are the percentage points of the $t$ distribution larger than those of the normal distribution for small degrees of freedom?,To account for the uncertainty in using the sample standard deviation ($s$) as an estimate for the population standard deviation ($\sigma$).
-How does the width of a $t$ distribution confidence interval change as the degrees of freedom increase?,The width decreases as it approaches the normal distribution.
+"According to the text, what is the minimum sample size (n) typically required to use the normal distribution for calculating a confidence interval?",n > 60
+"In a large-sample 95% confidence interval for a mean, what is the standard multiplier for the standard error?",1.96
+"In a large-sample 90% confidence interval for a mean, what is the standard multiplier for the standard error?",1.64
+"In a large-sample 99% confidence interval for a mean, what is the standard multiplier for the standard error?",2.58
+Which probability distribution should be used to calculate a confidence interval for a small sample (n < 60) when the population standard deviation is unknown?,The Student's t distribution.
+"For a single sample of size n, how many degrees of freedom are used to find the percentage point of the t distribution?",n - 1
+Why are the percentage points of the t distribution larger than those of the normal distribution for small degrees of freedom?,To account for the uncertainty in using the sample standard deviation (s) as an estimate for the population standard deviation (\sigma).
+How does the width of a t distribution confidence interval change as the degrees of freedom increase?,The width decreases as it approaches the normal distribution.
 Which statistical measure describes the variability between individual observations in a population?,The reference range.
-The interval $\bar{x} \pm 1.96 \times s.d.$ defines the _____.,95% reference range
-The interval $\bar{x} \pm 1.96 \times s.e.$ defines the _____.,95% confidence interval
-Why is a 95% confidence interval always narrower than a 95% reference range for a sample size greater than 1?,The standard error is smaller than the standard deviation because it is divided by $\sqrt{n}$.
-Formula: Standard error ($s.e.$) of the difference between two independent means from large samples,$s.e. = \sqrt{\frac{s_1^2}{n_1} + \frac{s_0^2}{n_0}}$
-"When comparing two small independent samples with equal variances, how are the degrees of freedom for the $t$ distribution calculated?",$n_1 + n_0 - 2$
-"In the comparison of two means, what does a confidence interval that excludes zero indicate about the $P$-value of the corresponding hypothesis test?","The $P$-value is less than the significance level (e.g., $P < 0.05$ for a 95% CI)."
+The interval \bar{x} \pm 1.96 \times s.d. defines the _____.,95% reference range
+The interval \bar{x} \pm 1.96 \times s.e. defines the _____.,95% confidence interval
+Why is a 95% confidence interval always narrower than a 95% reference range for a sample size greater than 1?,The standard error is smaller than the standard deviation because it is divided by \sqrt{n}.
+Formula: Standard error (s.e.) of the difference between two independent means from large samples,s.e. = \sqrt{\frac{s_1^2}{n_1} + \frac{s_0^2}{n_0}}
+"When comparing two small independent samples with equal variances, how are the degrees of freedom for the t distribution calculated?",n_1 + n_0 - 2
+"In the comparison of two means, what does a confidence interval that excludes zero indicate about the P-value of the corresponding hypothesis test?","The P-value is less than the significance level (e.g., P < 0.05 for a 95% CI)."
 How is a confidence interval for the difference between paired measurements calculated?,By treating the set of differences as a single sample and applying standard mean confidence interval methods.
 What effect does increasing the sample size have on the width of a 95% confidence interval?,It narrows the interval.
-"When an outcome is severely non-normal, what alternative to standard $t$ distributions is suggested to calculate a confidence interval?","Data transformation (e.g., logs) or non-parametric methods like bootstrapping."
+"When an outcome is severely non-normal, what alternative to standard t distributions is suggested to calculate a confidence interval?","Data transformation (e.g., logs) or non-parametric methods like bootstrapping."
 "To calculate a confidence interval for a geometric mean, which mathematical transformation is first applied to the data?",A logarithmic transformation.
 "After calculating a confidence interval on a log scale, how are the limits converted back to the original scale to find the geometric mean limits?",By using the antilog (exponential) function.
 Which theorem justifies using normal distribution calculations for confidence intervals even when the population distribution is not normal?,The Central Limit Theorem.
 What is the primary purpose of a confidence interval in medical research according to Chapter 8?,To provide a range of values for the population difference that is consistent with the sample data.
-Why is it vital to examine the confidence interval even when a $P$-value shows strong evidence against the null hypothesis?,To ascertain the medical or clinical importance of the range of values consistent with the data.
-"In a study with a non-significant $P$-value ($P > 0.05$), why should the confidence interval still be reported?",To show the range of possible values and protect against ignoring potentially medically important differences in small studies.
-Concept: Robustness,Definition: The property where statistical methods like $t$-tests and confidence intervals remain justified even when the population is somewhat non-normal.
+Why is it vital to examine the confidence interval even when a P-value shows strong evidence against the null hypothesis?,To ascertain the medical or clinical importance of the range of values consistent with the data.
+"In a study with a non-significant P-value (P > 0.05), why should the confidence interval still be reported?",To show the range of possible values and protect against ignoring potentially medically important differences in small studies.
+Concept: Robustness,Definition: The property where statistical methods like t-tests and confidence intervals remain justified even when the population is somewhat non-normal.
 Which technique uses repeated sampling with replacement from the data itself to derive confidence intervals for parameters like the difference between medians?,Bootstrapping.
 How many bootstrap samples are generally recommended as a minimum to derive reliable confidence intervals?,1000
 "What is the term for a Bayesian range of values that has a specified probability (e.g., 95%) of containing the true population parameter?",A credible interval.
 "In a meta-analysis, what graphical feature represents the 95% confidence interval for the summary estimate?",The width of the diamond.
-"In standard regression output, what is the formula for calculating the lower limit of a 95% CI for a regression coefficient ($eta$)?",$\beta - (t_0 \times s.e.)$
-Why should a precise $P$-value be reported alongside a 95% confidence interval?,To provide both the strength of evidence against the null hypothesis and the magnitude/precision of the effect.
+"In standard regression output, what is the formula for calculating the lower limit of a 95% CI for a regression coefficient (eta)?",\beta - (t_0 \times s.e.)
+Why should a precise P-value be reported alongside a 95% confidence interval?,To provide both the strength of evidence against the null hypothesis and the magnitude/precision of the effect.

@@ -1,35 +1,35 @@
-"In simple linear regression, what does the parameter $\beta_0$ represent?","The intercept, or the value of $y$ when $x = 0$."
-What does the slope parameter $\beta_1$ signify in a linear regression model?,The change in the outcome variable for every unit increase in the exposure variable.
+"In simple linear regression, what does the parameter \beta_0 represent?","The intercept, or the value of y when x = 0."
+What does the slope parameter \beta_1 signify in a linear regression model?,The change in the outcome variable for every unit increase in the exposure variable.
 The method of _____ is used in linear regression to find the line that minimises the sum of squared vertical distances between the points and the line.,least squares
 Term: Residual,Definition: The difference between an observed value and the value predicted by a regression model.
-How is the standard deviation of points about a regression line ($s$) related to the residuals?,It is the square root of the residual sum of squares divided by its degrees of freedom.
+How is the standard deviation of points about a regression line (s) related to the residuals?,It is the square root of the residual sum of squares divided by its degrees of freedom.
 "In a regression analysis, the variable being predicted (usually on the vertical axis) is known as the _____ variable.",outcome (or response)
 "In a regression analysis, the explanatory variable (usually on the horizontal axis) is known as the _____ variable.",exposure
 What is the primary purpose of using multiple regression instead of simple linear regression?,To estimate the effect of one exposure while controlling for the effects of others (confounders).
-The proportion of total variation in the outcome variable explained by a linear regression is measured by _____.,$r^2$ (the coefficient of determination)
-What does a correlation coefficient ($r$) of $-1$ indicate about the relationship between two variables?,A perfect negative linear association where all points lie exactly on a downward-sloping straight line.
-"If two variables have no linear association, the value of the correlation coefficient $r$ will be _____.",0
-How does centring an exposure variable (subtracting its mean) affect the intercept $\beta_0$ in linear regression?,The intercept becomes equal to the mean value of the outcome variable.
-"In a multiple regression model, the quantity $\beta_0 + \beta_1x_1 + \dots + \beta_px_p$ is known as the _____.",linear predictor
+The proportion of total variation in the outcome variable explained by a linear regression is measured by _____.,r^2 (the coefficient of determination)
+What does a correlation coefficient (r) of -1 indicate about the relationship between two variables?,A perfect negative linear association where all points lie exactly on a downward-sloping straight line.
+"If two variables have no linear association, the value of the correlation coefficient r will be _____.",0
+How does centring an exposure variable (subtracting its mean) affect the intercept \beta_0 in linear regression?,The intercept becomes equal to the mean value of the outcome variable.
+"In a multiple regression model, the quantity \beta_0 + \beta_1x_1 + \dots + \beta_px_p is known as the _____.",linear predictor
 Why might a researcher include an exposure variable in a model even if it is not the main variable of interest?,To reduce residual variation and increase the power to detect effects of other variables.
-Formula: Multiple regression equation,$y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \dots + \beta_px_p + e$
-"In regression output, how is the $t$-statistic for a specific coefficient calculated?",By dividing the estimated coefficient by its standard error.
-Which assumption regarding the distribution of the outcome variable $y$ is required for standard linear regression?,It must be normally distributed for any given value of the exposure $x$.
-The assumption that the scatter of points about the regression line is constant across all values of $x$ is called _____.,homoscedasticity (or constant variance)
+Formula: Multiple regression equation,y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \dots + \beta_px_p + e
+"In regression output, how is the t-statistic for a specific coefficient calculated?",By dividing the estimated coefficient by its standard error.
+Which assumption regarding the distribution of the outcome variable y is required for standard linear regression?,It must be normally distributed for any given value of the exposure x.
+The assumption that the scatter of points about the regression line is constant across all values of x is called _____.,homoscedasticity (or constant variance)
 Why is it risky to use a regression line for prediction outside the range of the original data?,The linear relationship may not hold true beyond the observed range.
-How is a categorical exposure variable with more than two levels incorporated into a regression model?,"By using $k-1$ indicator (dummy) variables, where $k$ is the number of categories."
+How is a categorical exposure variable with more than two levels incorporated into a regression model?,"By using k-1 indicator (dummy) variables, where k is the number of categories."
 Term: Indicator variable,Definition: A binary variable coded as 1 for a specific category and 0 for the reference category.
-"In a regression model with an indicator variable for 'Male' (coded 1 for boys, 0 for girls), what does the coefficient $\beta_1$ represent?",The difference in the mean outcome between boys and girls.
-What is the relationship between the correlation coefficient $r$ and the regression slope $\beta_1$?,They always have the same sign (both positive or both negative).
-Concept: $R^2$ in multiple regression,Definition: The proportion of total variation in the outcome explained by the combined effects of all exposure variables in the model.
-How many degrees of freedom are associated with the regression sum of squares in a multiple regression with $p$ exposure variables?,$p$
-How many degrees of freedom are associated with the residual sum of squares in a multiple regression with $n$ observations and $p$ exposure variables?,$n - (p + 1)$
+"In a regression model with an indicator variable for 'Male' (coded 1 for boys, 0 for girls), what does the coefficient \beta_1 represent?",The difference in the mean outcome between boys and girls.
+What is the relationship between the correlation coefficient r and the regression slope \beta_1?,They always have the same sign (both positive or both negative).
+Concept: R^2 in multiple regression,Definition: The proportion of total variation in the outcome explained by the combined effects of all exposure variables in the model.
+How many degrees of freedom are associated with the regression sum of squares in a multiple regression with p exposure variables?,p
+How many degrees of freedom are associated with the residual sum of squares in a multiple regression with n observations and p exposure variables?,n - (p + 1)
 What does a scatter plot of residuals against fitted values help to identify?,Departures from linearity or non-constant variance (heteroscedasticity).
 A histogram of _____ is used to check the assumption that error terms in a linear regression are normally distributed.,residuals
 Term: Cook's D,Definition: A measure used to identify individual observations that have a large influence on the estimated regression coefficients.
-How does a quadratic term ($x^2$) allow for the modelling of non-linear relationships?,It enables the regression line to curve rather than remain straight.
+How does a quadratic term (x^2) allow for the modelling of non-linear relationships?,It enables the regression line to curve rather than remain straight.
 "In the context of regression modelling, what is 'interaction' (or effect modification)?",When the effect of one exposure variable on the outcome changes depending on the level of another variable.
-"How is an interaction between two binary variables, $x_1$ and $x_2$, typically represented in a regression equation?",By including a product term ($x_1 \times x_2$) in the model.
+"How is an interaction between two binary variables, x_1 and x_2, typically represented in a regression equation?",By including a product term (x_1 \times x_2) in the model.
 "Under the null hypothesis of no interaction, the regression coefficient for the product term in a model should be _____.",0
 The 'link function' for a standard linear regression model is the _____ function.,identity
 "In generalised linear models, which link function is used for logistic regression?",logit (log odds)
@@ -37,15 +37,15 @@ The 'link function' for a standard linear regression model is the _____ function
 What is the main difference between an additive model and a multiplicative model in regression?,"Additive models relate exposures to the mean outcome, while multiplicative models relate them to a log-transformed outcome."
 Term: Collinearity,Definition: A condition where two or more exposure variables in a regression model are highly correlated with each other.
 What is a major consequence of high collinearity between exposure variables in a regression model?,"Large standard errors for the coefficients, making it difficult to identify individual effects."
-Automated procedures like _____ selection are used to decide which exposure variables to include in a predictive model based on $P$-values.,stepwise
+Automated procedures like _____ selection are used to decide which exposure variables to include in a predictive model based on P-values.,stepwise
 How does the interpretation of the intercept change when all exposure variables in a multiple regression are numerical?,It is the predicted mean outcome when every exposure variable equals zero.
 Concept: Analysis of Covariance (ANCOVA),Definition: An extension of ANOVA that adjusts for the effects of numerical exposure variables (covariates).
 What is the distinction between 'multivariable' and 'multivariate' analysis in medical statistics?,Multivariable involves multiple exposures for one outcome; multivariate involves multiple outcome variables simultaneously.
 The phenomenon where repeat measurements tend to be closer to the population mean than the initial measurement is called _____.,regression to the mean
 "When fitting regression models, why is it recommended to keep the number of variables relatively small?",To prevent overly complex interpretations and ensure the model remains stable.
 "In an ANOVA table for regression, what does the 'Total Sum of Squares' represent?",The overall variation in the outcome variable.
-"If the $F$-test for a multiple regression is significant ($P < 0.05$), what can be concluded?",At least one of the exposure variables in the model is significantly associated with the outcome.
-How is the 'multiple correlation coefficient' ($R$) related to $R^2$?,$R$ is the positive square root of $R^2$.
+"If the F-test for a multiple regression is significant (P < 0.05), what can be concluded?",At least one of the exposure variables in the model is significantly associated with the outcome.
+How is the 'multiple correlation coefficient' (R) related to R^2?,R is the positive square root of R^2.
 A 'test for trend' is essentially a test of the null hypothesis that the regression coefficient for a _____ effect is zero.,linear
 "In a logistic regression model, the linear predictor estimates the _____ of the outcome.",log odds
 "In a Poisson regression model, the linear predictor estimates the _____ of the outcome.",log rate
@@ -54,10 +54,10 @@ Which statistical test is commonly used to compare two 'nested' regression model
 "If a categorical variable has 5 levels, how many indicator variables are needed in the regression model?",4
 Why is it important to check the distribution of residuals rather than the raw outcome variable in regression?,Normality is assumed for the error terms (residuals) after accounting for the exposures.
 What is the purpose of 'Influence' statistics in regression diagnostics?,To determine if a specific data point disproportionately affects the model's parameters.
-"In simple linear regression, the standard error of the slope $\beta_1$ is inversely proportional to the square root of the _____ of the exposure variable $x$.",sum of squares
+"In simple linear regression, the standard error of the slope \beta_1 is inversely proportional to the square root of the _____ of the exposure variable x.",sum of squares
 Concept: Parsimony in modelling,"Definition: Choosing the simplest model that adequately explains the data, avoiding unnecessary variables."
 What does a 'Wald test' assess in a regression model?,Whether a single parameter estimate is significantly different from zero.
-How can a researcher test if a relationship is quadratic rather than linear?,By adding the squared term of the exposure ($x^2$) and testing its significance.
+How can a researcher test if a relationship is quadratic rather than linear?,By adding the squared term of the exposure (x^2) and testing its significance.
 "When exposure effects are expressed on a ratio scale (as in logistic regression), a linear effect implies a _____ change.",multiplicative
 "If an exposure has a 'linear effect' in linear regression, it means the mean outcome increases by a _____ amount per unit of exposure.",constant
 What happens to the sum of regression coefficients for two highly collinear variables compared to a model with only one of them?,"The sum remains approximately constant, even if the individual coefficients change dramatically."
@@ -65,18 +65,18 @@ Why is it important to examine a scatter plot before fitting a linear regression
 "In multiple regression, what is the effect of adding an exposure variable that is uncorrelated with the outcome?",It will likely increase the standard errors of other coefficients without improving the model.
 The term _____ is used in Poisson regression to account for different lengths of follow-up time.,offset
 How is the 'regression sum of squares' calculated using an ANOVA approach?,Total sum of squares minus the residual sum of squares.
-"In the simple regression equation $y = \beta_0 + \beta_1x + e$, what does $e$ represent?","The error term, representing the difference between the observed and true values."
-"For a simple linear regression, what is the formula for the $t$-statistic used to test $H_0: \beta_1 = 0$?",$t = \frac{\beta_1}{s.e.(\beta_1)}$
-"How does a change in the scale of an exposure variable (e.g., from cm to m) affect the regression coefficient $\beta_1$?",The coefficient will change inversely to the scale change to maintain the same effect size.
+"In the simple regression equation y = \beta_0 + \beta_1x + e, what does e represent?","The error term, representing the difference between the observed and true values."
+"For a simple linear regression, what is the formula for the t-statistic used to test H_0: \beta_1 = 0?",t = \frac{\beta_1}{s.e.(\beta_1)}
+"How does a change in the scale of an exposure variable (e.g., from cm to m) affect the regression coefficient \beta_1?",The coefficient will change inversely to the scale change to maintain the same effect size.
 What is the 'identity' link function in the context of generalised linear models?,A function where the linear predictor is set directly equal to the mean outcome.
 "In multiple regression, 'adjusting for age' means the coefficient for the main exposure represents its effect for individuals of the _____.",same age
 Concept: Generalised Linear Model (GLM),Definition: A flexible class of models that relate a linear predictor to an outcome via a link function and allow for non-normal error distributions.
 "When an interaction is present, is it appropriate to report a single 'summary' effect for the exposure?","No, because the effect varies across levels of the other variable."
-Term: Logit,"Definition: The natural logarithm of the odds, calculated as $\log(\frac{p}{1-p})$."
+Term: Logit,"Definition: The natural logarithm of the odds, calculated as \log(\frac{p}{1-p})."
 "In regression, why are 'fitted values' useful in diagnostics?",They represent the values of the outcome predicted by the model for each observation in the dataset.
-What does a $\chi^2$ test of heterogeneity evaluate in the context of stratification?,Whether the effect of an exposure is consistent across different strata (the presence of interaction).
+What does a \chi^2 test of heterogeneity evaluate in the context of stratification?,Whether the effect of an exposure is consistent across different strata (the presence of interaction).
 How does the inclusion of a 'confounder' in a regression model typically affect the coefficient of the main exposure?,It changes the coefficient to reflect the 'adjusted' effect after removing the confounder's influence.
-"If $r^2 = 0.64$, what percentage of the variation in the outcome is explained by the regression?",64%
+"If r^2 = 0.64, what percentage of the variation in the outcome is explained by the regression?",64%
 What is the primary graphical tool used to check the linearity assumption in simple linear regression?,A scatter plot of the outcome against the exposure.
 Term: Meta-analysis,Definition: A statistical method used to combine and integrate the quantitative results of several individual studies.
 How does a meta-analysis differ from a standard systematic review?,It uses statistical methods to provide a single quantitative summary of the pooled results.

@@ -1,26 +1,26 @@
-What is the primary purpose of the chi-squared ($\chi^2$) test of association in a contingency table?,To assess whether the distribution of individuals among categories of one variable is independent of the other.
-Formula for the chi-squared ($\chi^2$) statistic comparing observed ($O$) and expected ($E$) frequencies.,$\chi^2 = \sum \frac{(O - E)^2}{E}$
-"In a contingency table, how is the expected frequency ($E$) for a specific cell calculated?",$E = \frac{\text{column total} \times \text{row total}}{\text{overall total}}$
-How many degrees of freedom ($d.f.$) are associated with a $2 \times 2$ contingency table chi-squared test?,$d.f. = 1$
-Formula for the degrees of freedom ($d.f.$) in an $r \times c$ contingency table.,$d.f. = (r - 1) \times (c - 1)$
-"For a $2 \times 2$ table, the $\chi^2$ statistic is mathematically equivalent to the square of which other test statistic?",The $z$-statistic from a normal test for the difference between two proportions.
-What is the name of the adjustment applied to the $\chi^2$ formula for $2 \times 2$ tables to improve the approximation for discrete data?,Yates' continuity correction.
-Formula for Yates' continuity correction in a $\chi^2$ test.,$\chi^2 = \sum \frac{(|O - E| - 0.5)^2}{E}$
-"According to Cochran, a $\chi^2$ test for a $2 \times 2$ table is valid if the overall total is between 20 and 40, provided that all expected values are at least _____.",5
-"When the expected numbers in a $2 \times 2$ table are too small for a $\chi^2$ test to be valid, which alternative test should be used?",Fisher's exact test.
-What type of chi-squared test is used when there is a binary outcome and several exposure categories that have a natural order?,$\chi^2$ test for trend.
-"How many degrees of freedom are used for a $\chi^2$ test for trend, regardless of the number of exposure categories?",1
+What is the primary purpose of the chi-squared (\chi^2) test of association in a contingency table?,To assess whether the distribution of individuals among categories of one variable is independent of the other.
+Formula for the chi-squared (\chi^2) statistic comparing observed (O) and expected (E) frequencies.,\chi^2 = \sum \frac{(O - E)^2}{E}
+"In a contingency table, how is the expected frequency (E) for a specific cell calculated?",E = \frac{\text{column total} \times \text{row total}}{\text{overall total}}
+How many degrees of freedom (d.f.) are associated with a 2 \times 2 contingency table chi-squared test?,d.f. = 1
+Formula for the degrees of freedom (d.f.) in an r \times c contingency table.,d.f. = (r - 1) \times (c - 1)
+"For a 2 \times 2 table, the \chi^2 statistic is mathematically equivalent to the square of which other test statistic?",The z-statistic from a normal test for the difference between two proportions.
+What is the name of the adjustment applied to the \chi^2 formula for 2 \times 2 tables to improve the approximation for discrete data?,Yates' continuity correction.
+Formula for Yates' continuity correction in a \chi^2 test.,\chi^2 = \sum \frac{(|O - E| - 0.5)^2}{E}
+"According to Cochran, a \chi^2 test for a 2 \times 2 table is valid if the overall total is between 20 and 40, provided that all expected values are at least _____.",5
+"When the expected numbers in a 2 \times 2 table are too small for a \chi^2 test to be valid, which alternative test should be used?",Fisher's exact test.
+What type of chi-squared test is used when there is a binary outcome and several exposure categories that have a natural order?,\chi^2 test for trend.
+"How many degrees of freedom are used for a \chi^2 test for trend, regardless of the number of exposure categories?",1
 What does a chi-squared goodness of fit test evaluate?,Whether an observed frequency distribution differs significantly from a postulated theoretical model.
-Formula for degrees of freedom ($d.f.$) in a chi-squared goodness of fit test.,$d.f. = (\text{number of groups}) - (\text{number of parameters estimated}) - 1$
+Formula for degrees of freedom (d.f.) in a chi-squared goodness of fit test.,d.f. = (\text{number of groups}) - (\text{number of parameters estimated}) - 1
 Why must a chi-squared test never be applied to proportions or percentages?,It is only valid when applied to the actual counts (frequencies) in the various categories.
 Which specific chi-squared test is appropriate for comparing two proportions when using a matched-pair design?,McNemar's chi-squared test.
-Formula for McNemar's chi-squared test based on the number of discordant pairs $r$ and $s$.,$\chi^2_{\text{paired}} = \frac{(r - s)^2}{r + s}$
+Formula for McNemar's chi-squared test based on the number of discordant pairs r and s.,\chi^2_{\text{paired}} = \frac{(r - s)^2}{r + s}
 McNemar's chi-squared test is considered valid provided that the total number of discordant pairs is at least _____.,10
-Which test statistic is used to examine the association between exposure and disease across several strata while controlling for confounding?,The Mantel-Haenszel chi-squared test ($\chi^2_{MH}$).
-"In meta-analysis, what is the purpose of the $\chi^2$ test of heterogeneity ($Q$)?",To test the null hypothesis that the true log odds ratios are the same across all individual studies.
-"For an $r \times c$ table, Cochran recommends the $\chi^2$ test is valid if no expected frequency is less than 1 and less than _____% are under 5.",20%
-"In the context of likelihood-based hypothesis testing, what is the 'score variance' represented by the variable $V$ in the Mantel-Haenszel $\chi^2$ test?",The negative of the curvature of the log likelihood at the null value of the parameter.
-What happens to the $\chi^2$ value as the differences between observed and expected frequencies increase?,The $\chi^2$ value increases.
-"In a goodness of fit test, how is the expected frequency for a specific category calculated?",$\text{Total frequency} \times \text{probability that an individual falls within the category}$
-"The Mantel-Cox $\chi^2$ test, used to compare survival patterns, is more commonly known as the _____.",Log-rank test.
-What is the 'Rule of 5' regarding the validity of the Mantel-Haenszel $\chi^2$ test?,The sums of the minimum and maximum possible values in the tables must differ from the total expected values by at least 5.
+Which test statistic is used to examine the association between exposure and disease across several strata while controlling for confounding?,The Mantel-Haenszel chi-squared test (\chi^2_{MH}).
+"In meta-analysis, what is the purpose of the \chi^2 test of heterogeneity (Q)?",To test the null hypothesis that the true log odds ratios are the same across all individual studies.
+"For an r \times c table, Cochran recommends the \chi^2 test is valid if no expected frequency is less than 1 and less than _____% are under 5.",20%
+"In the context of likelihood-based hypothesis testing, what is the 'score variance' represented by the variable V in the Mantel-Haenszel \chi^2 test?",The negative of the curvature of the log likelihood at the null value of the parameter.
+What happens to the \chi^2 value as the differences between observed and expected frequencies increase?,The \chi^2 value increases.
+"In a goodness of fit test, how is the expected frequency for a specific category calculated?",\text{Total frequency} \times \text{probability that an individual falls within the category}
+"The Mantel-Cox \chi^2 test, used to compare survival patterns, is more commonly known as the _____.",Log-rank test.
+What is the 'Rule of 5' regarding the validity of the Mantel-Haenszel \chi^2 test?,The sums of the minimum and maximum possible values in the tables must differ from the total expected values by at least 5.

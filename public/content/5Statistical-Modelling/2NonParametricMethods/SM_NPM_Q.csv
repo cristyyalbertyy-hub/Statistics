@@ -1,48 +1,48 @@
 Under what specific condition are non-parametric methods based on ranks most recommended for small datasets?,When there is obvious non-normality that cannot be corrected by a suitable transformation.
 "In non-parametric rank-order methods, what value replaces each original outcome value?",Its rank after the variable has been sorted into ascending order.
-What is the non-parametric counterpart to the paired $t$-test?,The Wilcoxon signed rank test.
-What is the non-parametric counterpart to the independent samples $t$-test?,The Wilcoxon rank sum test.
+What is the non-parametric counterpart to the paired t-test?,The Wilcoxon signed rank test.
+What is the non-parametric counterpart to the independent samples t-test?,The Wilcoxon rank sum test.
 "When using non-parametric methods, why are rank-order tests considered less powerful than parametric methods?",They are generally less efficient at detecting genuine differences between groups.
 What is a primary disadvantage of traditional rank-order methods regarding modern statistical emphasis?,They focus on significance testing rather than the estimation of the size of differences.
-"Why might rank-order tests fail to produce small $P$-values in extremely small samples, regardless of the magnitude of difference?",The number of possible permutations of ranks is too limited to reach high significance levels.
+"Why might rank-order tests fail to produce small P-values in extremely small samples, regardless of the magnitude of difference?",The number of possible permutations of ranks is too limited to reach high significance levels.
 "In the Wilcoxon signed rank test, how is the rank assigned to equal differences (ties)?",The ranks of the tied values are averaged.
 What is the first step when calculating a Wilcoxon signed rank test from a set of paired differences?,Exclude any differences that are zero.
 "In the Wilcoxon signed rank test, the null hypothesis states that the median of the differences is _____.",Zero
-"In the Wilcoxon signed rank test, how is the test statistic $T$ defined?",It is the smaller of the sum of positive ranks ($T^{+}$) and the sum of negative ranks ($T^{-}$).
-How does the relationship between the test statistic $T$ and the $P$-value in a Wilcoxon signed rank test differ from usual tests?,A smaller value of $T$ results in a smaller $P$-value.
-What is the required condition for the sample size $n$ when determining the $P$-value for a Wilcoxon signed rank test?,It must be the number of non-zero differences.
+"In the Wilcoxon signed rank test, how is the test statistic T defined?",It is the smaller of the sum of positive ranks (T^{+}) and the sum of negative ranks (T^{-}).
+How does the relationship between the test statistic T and the P-value in a Wilcoxon signed rank test differ from usual tests?,A smaller value of T results in a smaller P-value.
+What is the required condition for the sample size n when determining the P-value for a Wilcoxon signed rank test?,It must be the number of non-zero differences.
 What assumption is required to conclude that a Wilcoxon rank sum test is testing for a difference in medians?,The distributions in the two groups must be identical except for a constant shift in location.
-"When performing a Wilcoxon rank sum test, which group's ranks are summed to calculate the test statistic $T$?",The group with the smaller sample size.
+"When performing a Wilcoxon rank sum test, which group's ranks are summed to calculate the test statistic T?",The group with the smaller sample size.
 What is the name of the non-parametric confidence interval for the difference between two medians?,The Hodges–Lehmann estimate of shift.
-What are the two most common rank-order measures used to assess the association between two numerical variables?,Kendall's tau ($\tau$) and Spearman's rank correlation ($r_s$).
-How is Spearman's rank correlation coefficient ($r_s$) calculated?,By calculating the Pearson correlation between the ranks of the measurements rather than the measurements themselves.
+What are the two most common rank-order measures used to assess the association between two numerical variables?,Kendall's tau (\tau) and Spearman's rank correlation (r_s).
+How is Spearman's rank correlation coefficient (r_s) calculated?,By calculating the Pearson correlation between the ranks of the measurements rather than the measurements themselves.
 "In Kendall's tau, a pair of observations is 'concordant' if the ranks of both variables move in the _____.",Same direction
-What is the formula for Kendall's tau ($\tau$) given $n_C$ concordant pairs and $n_D$ discordant pairs?,$\tau = \frac{n_C - n_D}{n(n - 1) / 2}$
+What is the formula for Kendall's tau (\tau) given n_C concordant pairs and n_D discordant pairs?,\tau = \frac{n_C - n_D}{n(n - 1) / 2}
 Why is Kendall's tau generally preferred over Spearman's rank correlation?,It has better statistical properties and a simpler probabilistic interpretation.
 Interpret Kendall's tau in terms of probability.,It is the difference between the probability of concordant pairs and the probability of discordant pairs.
-What is the mathematical relationship between the Pearson correlation ($r$) and Kendall's tau ($\tau$) when $X$ and $Y$ are normally distributed?,$r = \sin(\frac{\pi}{2} \tau)$
+What is the mathematical relationship between the Pearson correlation (r) and Kendall's tau (\tau) when X and Y are normally distributed?,r = \sin(\frac{\pi}{2} \tau)
 Which non-parametric technique involves taking repeated samples with replacement from the dataset itself to derive standard errors?,Bootstrapping
 "In bootstrapping, what does 'sampling with replacement' mean?",An observation picked at random is noted and then returned to the dataset so it can be picked again.
 Under what circumstances is bootstrapping particularly useful for health service planners?,When they require confidence intervals for the difference in mean costs for highly skewed data.
 What is the purpose of using 'robust standard errors' in statistical analysis?,To derive confidence intervals based on the actual distribution in the dataset rather than an assumed underlying probability distribution.
 How do non-parametric methods typically handle extreme observations compared to parametric methods?,They are more robust because they are less affected by outliers due to the use of ranks.
 What is the main disadvantage of rank-order methods when dealing with multiple exposure variables?,They are not easily extended to multivariable situations compared to parametric regression models.
-"In the context of the Wilcoxon rank sum test, what is the null hypothesis regarding the sum of ranks $T$?",The ranks in the smaller group would on average be similar to those in the larger group.
+"In the context of the Wilcoxon rank sum test, what is the null hypothesis regarding the sum of ranks T?",The ranks in the smaller group would on average be similar to those in the larger group.
 What is the non-parametric equivalent to the One-way Analysis of Variance (ANOVA)?,The Kruskal–Wallis test.
 What rank-order method serves as the non-parametric alternative to Two-way Analysis of Variance?,Friedman's test.
-"When calculating the Wilcoxon signed rank test, what do the values $T^{+}$ and $T^{-}$ represent?","The sums of the ranks associated with positive and negative differences, respectively."
-Concept: Kendall's tau ($\tau$),Definition: A non-parametric correlation coefficient based on the difference between concordant and discordant pairs of ranks.
+"When calculating the Wilcoxon signed rank test, what do the values T^{+} and T^{-} represent?","The sums of the ranks associated with positive and negative differences, respectively."
+Concept: Kendall's tau (\tau),Definition: A non-parametric correlation coefficient based on the difference between concordant and discordant pairs of ranks.
 Concept: Robustness,"Definition: The property of a statistical method that remains valid even when its underlying assumptions, such as normality, are violated."
 Why might a researcher choose a non-parametric test over a transformation for non-normal data?,Transforming the variable can make the interpretation of the resulting estimates more difficult.
 What happens to the power of a rank-based test as the sample size increases?,"It increases, following the central limit theorem which makes the sampling distribution of the mean tend toward normality."
-How many possible pairs are used in the calculation of Kendall's tau for $n$ observations?,$\frac{n(n - 1)}{2}$
+How many possible pairs are used in the calculation of Kendall's tau for n observations?,\frac{n(n - 1)}{2}
 "In bootstrapping, how is the standard error of a parameter estimate determined?",By calculating the standard deviation of the parameter estimates across all bootstrap samples.
 What attribute type is defined by a continuous linear scale divided into equal intervals?,Interval attribute.
 What defines an 'ordinal' attribute in clustering analysis?,"An attribute with multiple states that can be ordered in a meaningful sequence, even if intervals are not equal."
 How is a 'nominal' attribute distinguished from an 'ordinal' attribute?,Nominal attributes take multiple states but have no inherent order.
 What is a 'binary' attribute?,A nominal attribute that has only two possible states.
-How is the distance contribution ($d_{ij}^f$) calculated for a nominal attribute in clustering?,It is 0 if values are identical and 1 if they are different.
-"For interval-scaled attributes, how is the distance $d_{ij}^f$ calculated relative to the value range ($R_f$)?",$d_{ij}^f = \frac{|x_{if} - x_{jf}|}{R_f}$
+How is the distance contribution (d_{ij}^f) calculated for a nominal attribute in clustering?,It is 0 if values are identical and 1 if they are different.
+"For interval-scaled attributes, how is the distance d_{ij}^f calculated relative to the value range (R_f)?",d_{ij}^f = \frac{|x_{if} - x_{jf}|}{R_f}
 How are ordinal attributes treated when calculating distance measures in clustering algorithms?,Their measurements are replaced by their numeric ranks and processed as interval-scaled attributes.
 What is the effect of ascending a nominal attribute in a concept hierarchy on the distance between objects?,The distance remains identical or decreases.
 What occurs to the distance between objects when an interval or ordinal attribute ascends its concept hierarchy?,"The distance may be identical, decreased, or increased."
@@ -58,8 +58,8 @@ What is a major advantage of classification trees over traditional linear regres
 What technique classifies records based on a select number of their geographically or mathematically closest counterparts?,K-nearest neighbor (Nearest neighbor analysis).
 What is the goal of 'Online Analytic Processing' (OLAP)?,To generate different multidimensional views of shared data for fast analysis.
 What does 'text mining' extract from documents to perform analysis?,Key words or phrases.
-"In the calculation of $d(o_i, o_j)$, what is the value of the indicator $\delta_{ij}^f$ if a measurement is missing?",0
-"Why is the resulting distance $d(o_i, o_j)$ in clustering analysis bounded between 0 and 1?",Because each individual attribute distance contribution $d_{ij}^f$ is bounded between 0 and 1.
+"In the calculation of d(o_i, o_j), what is the value of the indicator \delta_{ij}^f if a measurement is missing?",0
+"Why is the resulting distance d(o_i, o_j) in clustering analysis bounded between 0 and 1?",Because each individual attribute distance contribution d_{ij}^f is bounded between 0 and 1.
 What is the role of 'iteration' in fitting regression models using maximum likelihood estimation?,It is a computerised process that starts with an initial guess and repeatedly improves parameter estimates.
 The standard deviation of the sampling distribution of a mean is called the _____.,Standard error
 Which test is used as a general check for the assumption of normality by comparing ordered sample values to expected values?,The Shapiro–Wilk test.

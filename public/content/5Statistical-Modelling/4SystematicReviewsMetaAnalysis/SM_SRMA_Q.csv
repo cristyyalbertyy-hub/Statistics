@@ -12,9 +12,9 @@ How does a 'random-effects' meta-analysis model differ from a fixed-effect model
 What is the standard graphical display used to present the results of a meta-analysis?,A forest plot.
 "In a forest plot, what does the area of each box represent?",The weight assigned to that individual study in the meta-analysis.
 What does the diamond at the bottom of a forest plot represent?,The combined summary estimate and its corresponding confidence interval.
-Which statistical test is commonly used to assess the presence of heterogeneity between studies in a meta-analysis?,The $\chi^2$ (Cochran's Q) test.
-What does a significant $P$-value in a $\chi^2$ test of heterogeneity indicate?,There is strong evidence that the treatment effects differ across the included studies.
-"In random-effects meta-analysis, what parameter represents the between-study variance?",$\tau^2$ (tau-squared).
+Which statistical test is commonly used to assess the presence of heterogeneity between studies in a meta-analysis?,The \chi^2 (Cochran's Q) test.
+What does a significant P-value in a \chi^2 test of heterogeneity indicate?,There is strong evidence that the treatment effects differ across the included studies.
+"In random-effects meta-analysis, what parameter represents the between-study variance?",\tau^2 (tau-squared).
 Which widely used method for estimating between-study variance was proposed in 1986?,The DerSimonian and Laird method.
 What is 'publication bias'?,The tendency for studies with positive or statistically significant results to be published more readily than those with negative or null results.
 What graphical tool is used to detect potential publication bias or 'small study effects'?,A funnel plot.
@@ -23,12 +23,12 @@ What does asymmetry in a funnel plot suggest about the studies in a meta-analysi
 What is the purpose of 'meta-regression'?,To examine associations between specific study characteristics and the observed treatment effects.
 Which statistical test for funnel plot asymmetry involves regressing the log odds ratio against its standard error?,Egger's test.
 What is a major limitation of meta-analyses based on observational studies compared to randomised trials?,They are more susceptible to bias from confounding factors that may not be adequately controlled.
-How should 'sparse data' (zero cells in a $2 \times 2$ table) be handled in meta-analysis calculations?,By adding $0.5$ to all cells in the study's table to prevent the formulae from breaking down.
+How should 'sparse data' (zero cells in a 2 \times 2 table) be handled in meta-analysis calculations?,By adding 0.5 to all cells in the study's table to prevent the formulae from breaking down.
 What does the 'TRIP' database provide to clinicians?,A comprehensive search tool that catalogues and groups evidence sources from seventy-five different sites.
-"In meta-analysis, what are 'inverse-variance weights'?","Weights calculated as $w_i = \frac{1}{v_i}$, where $v_i$ is the variance of the effect estimate in a specific study."
+"In meta-analysis, what are 'inverse-variance weights'?","Weights calculated as w_i = \frac{1}{v_i}, where v_i is the variance of the effect estimate in a specific study."
 What is the purpose of the 'QUOROM' statement?,To provide guidelines for the standardised reporting of systematic reviews and meta-analyses.
 What is 'sensitivity testing' in the context of meta-analysis?,A procedure used to determine if the combined results remain consistent when different assumptions or study inclusion criteria are applied.
-"In a forest plot, what does the unbroken vertical line represent?",The null value (typically $1$ for odds ratios or $0$ for mean differences) where there is no treatment effect.
+"In a forest plot, what does the unbroken vertical line represent?",The null value (typically 1 for odds ratios or 0 for mean differences) where there is no treatment effect.
 Why is 'searching the grey literature' important for a systematic review?,It helps reduce publication bias by identifying unpublished works such as conference abstracts and dissertations.
 What is 'meta-synthesis'?,"The process of searching, appraising, and synthesising methodologies for qualitative research studies."
 Which meta-analysis model gives relatively more weight to smaller studies?,The random-effects model.
@@ -39,12 +39,12 @@ What does 'contingency searching' mean in the SUMSearch tool?,The tool alters it
 What is a 'Critically Appraised Topic' (CAT)?,"A concise, evidence-based summary of research that addresses a specific patient-related clinical issue."
 Why is the randomised controlled trial (RCT) considered a high-quality source for systematic reviews?,Appropriate randomisation minimises the risk of systematic errors and confounding.
 What defines 'small study effects' in meta-analysis?,The tendency for smaller studies in a meta-analysis to show larger treatment effects than larger studies.
-How does meta-regression account for unexplained heterogeneity between studies?,"By incorporating an additional variance component, $\tau^2$, into the linear model."
-"In a meta-regression model, what occurs when consecutive steps in the iteration yield nearly identical values for $\tau^2$?",The model is said to have converged.
+How does meta-regression account for unexplained heterogeneity between studies?,"By incorporating an additional variance component, \tau^2, into the linear model."
+"In a meta-regression model, what occurs when consecutive steps in the iteration yield nearly identical values for \tau^2?",The model is said to have converged.
 What does the Campbell Collaboration focus on?,Producing systematic reviews of social and educational policies and practices.
 "Which resource offers succinct, structured summaries known as 'Patient Oriented Evidence that Matters'?",POEMs.
 What is the primary role of the Joanna Briggs Institute (JBI)?,Providing resources for best care practices and leading the development of evidence-based practices.
-"In a fixed-effect meta-analysis of log odds ratios, how is the standard error of the summary estimate calculated?","It is the square root of the reciprocal of the sum of the weights, $s.e.(\log(OR_F)) = \sqrt{\frac{1}{\sum w_i}}$."
+"In a fixed-effect meta-analysis of log odds ratios, how is the standard error of the summary estimate calculated?","It is the square root of the reciprocal of the sum of the weights, s.e.(\log(OR_F)) = \sqrt{\frac{1}{\sum w_i}}."
 Why might a systematic review exclude a specific study?,If the study is not considered methodologically sound or does not meet the pre-specified eligibility criteria.
 What is the goal of identifying 'evidence spin' in medical reporting?,To detect and account for bias added to the reporting of evidence that may influence health service decision-making.
 Which database is considered the clinician's 'first stop' for summaries of systematic reviews?,The Database of Abstracts of Reviews of Effects (DARE).
@@ -58,9 +58,9 @@ What is the first step in conducting a meta-analysis?,Defining the clinical prob
 Why is 'iteration' used in fitting complex regression models like meta-regression?,Because maximum likelihood estimates for parameters often depend on each other and cannot be solved with simple equations.
 What is the primary risk of using 'expert reviews' that are not systematic?,They are often idiosyncratic and can be a misleading basis for drawing conclusions due to inherent bias.
 How does 'double-blinding' in the original trials affect meta-analysis results?,Trials that are not double-blinded have been shown to yield significantly larger (and potentially biased) estimates of effect.
-What does the $I^2$ statistic (related to Cochran's Q) measure in meta-analysis?,The percentage of variation across studies that is due to heterogeneity rather than chance.
+What does the I^2 statistic (related to Cochran's Q) measure in meta-analysis?,The percentage of variation across studies that is due to heterogeneity rather than chance.
 Which model is preferred when the studies being combined have different populations or varied clinical settings?,The random-effects model.
-"In a forest plot, what is indicated if the $95\%$ confidence interval line crosses the null vertical line?",The result for that specific study is not statistically significant at the $5\%$ level.
+"In a forest plot, what is indicated if the 95\% confidence interval line crosses the null vertical line?",The result for that specific study is not statistically significant at the 5\% level.
 What does the 'systematic assembly' of literature aim to prevent?,Selection bias.
 What is 'evidence-based clinical practice guidelines'?,Recommendations published based on the analysis of systematic reviews by individuals or organisations.
 How can journals alleviate publication bias through their submission process?,"By considering studies for publication 'blind' of the results, based only on the literature review and methodology."

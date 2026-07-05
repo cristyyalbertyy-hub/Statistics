@@ -11,23 +11,23 @@ What information does a '95% confidence interval' provide regarding a population
 How is 'Positive Predictive Value' (PPV) calculated?,The proportion of individuals with a positive test result who truly have the disease.
 How is 'Negative Predictive Value' (NPV) calculated?,The proportion of individuals with a negative test result who truly do not have the disease.
 What happens to the PPV of a test if the prevalence of the disease in the population decreases?,The Positive Predictive Value (PPV) decreases.
-What is plotted on the horizontal axis of a Receiver Operating Characteristic (ROC) curve?,$1 - Specificity$ (the false positive rate).
+What is plotted on the horizontal axis of a Receiver Operating Characteristic (ROC) curve?,1 - Specificity (the false positive rate).
 What is plotted on the vertical axis of a Receiver Operating Characteristic (ROC) curve?,Sensitivity (the true positive rate).
-"In a ROC curve, an 'Area Under the Curve' (AUC) of $0.5$ indicates what level of discrimination?","No discrimination at all, equivalent to random guessing."
-What AUC value represents a diagnostic test with perfect discrimination?,$1.0$
-What is the purpose of the 'Kappa' ($\\kappa$) statistic in medical measurements?,"To measure the level of agreement between two observers or readings, beyond what is expected by chance alone."
-$\\kappa = \\frac{A_{obs} - A_{exp}}{1 - A_{exp}}$,"The formula for the Kappa statistic, where $A_{obs}$ is observed agreement and $A_{exp}$ is expected agreement."
-"According to Landis and Koch, what does a Kappa value greater than $0.75$ signify?",Excellent agreement.
-A Kappa value between $0.4$ and $0.75$ represents _____ agreement.,Fair to good
+"In a ROC curve, an 'Area Under the Curve' (AUC) of 0.5 indicates what level of discrimination?","No discrimination at all, equivalent to random guessing."
+What AUC value represents a diagnostic test with perfect discrimination?,1.0
+What is the purpose of the 'Kappa' (\\kappa) statistic in medical measurements?,"To measure the level of agreement between two observers or readings, beyond what is expected by chance alone."
+\\kappa = \\frac{A_{obs} - A_{exp}}{1 - A_{exp}},"The formula for the Kappa statistic, where A_{obs} is observed agreement and A_{exp} is expected agreement."
+"According to Landis and Koch, what does a Kappa value greater than 0.75 signify?",Excellent agreement.
+A Kappa value between 0.4 and 0.75 represents _____ agreement.,Fair to good
 What is the 'Gold Standard' in the context of diagnostic test evaluation?,The best available definitive assessment used to determine the true disease status of an individual.
 What term describes the phenomenon where an estimated regression coefficient is biased towards the null because of measurement error in the exposure variable?,Regression dilution bias.
 What is 'Regression to the Mean'?,The tendency for an extreme initial measurement to be closer to the average on a subsequent measurement due to random error.
 "In Evidence-Based Medicine (EBM), what do the letters in the 'PICO' acronym represent?","Patient/Population, Intervention, Comparison/Control, and Outcome."
 What is the difference between a systematic review and a meta-analysis?,"A systematic review is a qualitative synthesis of studies, whereas a meta-analysis uses statistical methods to quantitatively combine results."
-What does a 'Risk Ratio' (Relative Risk) of $2.0$ indicate about the exposed group compared to the unexposed group?,The risk of the outcome is twice as high in the exposed group.
-Formula: $\\frac{d_1 / h_1}{d_0 / h_0}$,"The formula for the Odds Ratio (OR), representing the odds of disease in the exposed group divided by the odds in the unexposed group."
+What does a 'Risk Ratio' (Relative Risk) of 2.0 indicate about the exposed group compared to the unexposed group?,The risk of the outcome is twice as high in the exposed group.
+Formula: \\frac{d_1 / h_1}{d_0 / h_0},"The formula for the Odds Ratio (OR), representing the odds of disease in the exposed group divided by the odds in the unexposed group."
 What is the 'Number Needed to Treat' (NNT)?,The number of patients who need to receive a treatment for one additional patient to benefit compared to the control.
-Formula: $NNT = \\frac{1}{ARR}$,"The formula for Number Needed to Treat, where $ARR$ is the Absolute Risk Reduction."
+Formula: NNT = \\frac{1}{ARR},"The formula for Number Needed to Treat, where ARR is the Absolute Risk Reduction."
 Why is 'Blinding' used in randomised controlled trials?,"To prevent bias by ensuring that patients, health workers, and study personnel do not know which treatment was assigned."
 What is an 'Intention to Treat' (ITT) analysis?,"An analysis where participants are analysed in the groups to which they were originally randomised, regardless of the treatment they actually received."
 "In e-health systems, what is the primary function of a Laboratory Information System (LIS)?","To report on biological specimens and provide clinicians with reference ranges for high, low, or normal test values."
@@ -60,12 +60,12 @@ What is 'Text Mining' in health informatics?,"The extraction of key words or phr
 How can 'Temporal Event Analysis' in an EHR improve patient outcomes?,By retrospectively examining sequences of treatments or medications to discover which patterns most impact results.
 "In diagnostic testing, what is 'Negative Predictive Value' primarily dependent on?","The sensitivity and specificity of the test, and the prevalence of the disease."
 What is a 'Receiver Operating Characteristic' (ROC) curve specifically used to determine?,The optimal cut-off value for a numerical test to achieve the best balance between sensitivity and specificity.
-What does a sensitivity of $90\%$ mean for a diagnostic test?,The test correctly identifies $90\%$ of people who actually have the disease.
-What does a specificity of $80\%$ mean for a diagnostic test?,The test correctly identifies $80\%$ of people who do not have the disease.
+What does a sensitivity of 90\% mean for a diagnostic test?,The test correctly identifies 90\% of people who actually have the disease.
+What does a specificity of 80\% mean for a diagnostic test?,The test correctly identifies 80\% of people who do not have the disease.
 "If a test has a high sensitivity but low specificity, it is most likely to produce many _____ results.",False positive
 "If a test has a high specificity but low sensitivity, it is most likely to produce many _____ results.",False negative
 What is 'Prevalence'?,The proportion of a population that has a particular disease or condition at a specific point in time.
-"In the LBP E-Diagnosis model, what are the two important prerequisites for the additive algorithm to work?",Rules must have high credibility (over $50\%$ chance of being true) and prior probabilities of diagnoses should be similar.
+"In the LBP E-Diagnosis model, what are the two important prerequisites for the additive algorithm to work?",Rules must have high credibility (over 50\% chance of being true) and prior probabilities of diagnoses should be similar.
 "In meta-analysis, what is 'Heterogeneity'?",The variation in study outcomes between different studies included in the analysis.
 What is a 'Systematic Review Protocol'?,A document produced before starting the review that defines the problem and establishes study eligibility criteria.
 Why might a clinician override an e-Diagnosis system's recommendation?,To apply clinical judgment or review the system's decision-making process via an explanatory panel.

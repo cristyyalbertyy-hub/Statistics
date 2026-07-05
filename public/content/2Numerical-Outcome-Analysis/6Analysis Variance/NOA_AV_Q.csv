@@ -1,25 +1,25 @@
 What is the primary purpose of One-way Analysis of Variance (ANOVA)?,To compare the mean of a numerical outcome variable across two or more exposure categories.
 One-way ANOVA partitions the total sum of squares into differences between the group means and the _____ sum of squares.,residual
 What does the 'residual' sum of squares represent in a One-way ANOVA?,The variation resulting from differences between observations within each individual exposure group.
-"In One-way ANOVA, how is the $F$ statistic (variance-ratio) calculated?",$F = \frac{\text{Between-groups Mean Square}}{\text{Within-groups Mean Square}}$
-"If the null hypothesis of no difference between groups is true, what is the expected approximate value of the $F$ statistic?",1
+"In One-way ANOVA, how is the F statistic (variance-ratio) calculated?",F = \frac{\text{Between-groups Mean Square}}{\text{Within-groups Mean Square}}
+"If the null hypothesis of no difference between groups is true, what is the expected approximate value of the F statistic?",1
 Which two statistical assumptions must be met for a valid Analysis of Variance?,The outcome must be normally distributed and the population standard deviation must be equal in each group.
-What are the degrees of freedom for the between-groups sum of squares in a One-way ANOVA with $k$ groups?,$k - 1$
-"In a One-way ANOVA with $n$ total observations and $k$ groups, how are the residual degrees of freedom calculated?",$n - k$
-"For a comparison of exactly two groups, what is the mathematical relationship between the $F$ statistic and the $t$ statistic?",The $F$ statistic equals the square of the $t$ statistic ($F = t^2$).
+What are the degrees of freedom for the between-groups sum of squares in a One-way ANOVA with k groups?,k - 1
+"In a One-way ANOVA with n total observations and k groups, how are the residual degrees of freedom calculated?",n - k
+"For a comparison of exactly two groups, what is the mathematical relationship between the F statistic and the t statistic?",The F statistic equals the square of the t statistic (F = t^2).
 When should Two-way Analysis of Variance be used instead of One-way ANOVA?,"When the data are classified by two separate factors, such as age-group and sex."
 "In Two-way ANOVA, what defines a 'balanced design'?",A design where there are equal numbers of observations in every group or cell.
 "In the context of Two-way ANOVA, what is meant by an 'interaction' between factors?",The differences between levels of one factor are not the same across the different levels of the second factor.
 How are the degrees of freedom for the interaction term in a Two-way ANOVA calculated?,By multiplying the degrees of freedom of the two contributing main effects.
 What characterizes a 'random effect' as opposed to a 'fixed effect' in ANOVA?,Random effect levels are a representative sample of a source of variation rather than specific values of intrinsic interest.
-How is a Mean Square (MS) derived from a Sum of Squares (SS) in an ANOVA table?,By dividing the Sum of Squares by its associated degrees of freedom ($\text{MS} = \frac{\text{SS}}{\text{df}}$).
+How is a Mean Square (MS) derived from a Sum of Squares (SS) in an ANOVA table?,By dividing the Sum of Squares by its associated degrees of freedom (\text{MS} = \frac{\text{SS}}{\text{df}}).
 What is the relationship between Analysis of Variance and multiple regression?,ANOVA is a special case of multiple regression where both approaches yield identical results.
 The technique of adjusting ANOVA to account for the effects of numerical exposure variables is called analysis of _____.,covariance
-"In a Two-way ANOVA with replication, if both effects are random, with what is their Mean Square compared to calculate the $F$ statistic?",The interaction mean square.
+"In a Two-way ANOVA with replication, if both effects are random, with what is their Mean Square compared to calculate the F statistic?",The interaction mean square.
 "In a One-way ANOVA, the _____ mean square provides the estimate for the population variance within groups.",within-groups (or residual)
 "If the assumption of equal standard deviations across groups is violated in ANOVA, what is the suggested remedy?",Transforming the data to stabilise the variance.
 Concept: Two-way ANOVA without replication,"Definition: A design with only one observation per cell, often assuming no interaction to use the interaction MS as the residual."
 What is the null hypothesis typically tested by a One-way ANOVA?,The means of the outcome variable are equal across all exposure groups in the population.
-"In the $F$ test for ANOVA, why is the resulting $P$-value identical to that of a $t$ test when only two groups exist?",Because the $F$ distribution with 1 and $(n - 2)$ degrees of freedom is the exact square of the $t$ distribution.
-How is the total sum of squares ($\text{SS}_{\text{Total}}$) related to the residual and regression sum of squares in a linear model?,$\text{SS}_{\text{Total}} = \text{SS}_{\text{Regression}} + \text{SS}_{\text{Residual}}$
+"In the F test for ANOVA, why is the resulting P-value identical to that of a t test when only two groups exist?",Because the F distribution with 1 and (n - 2) degrees of freedom is the exact square of the t distribution.
+How is the total sum of squares (\text{SS}_{\text{Total}}) related to the residual and regression sum of squares in a linear model?,\text{SS}_{\text{Total}} = \text{SS}_{\text{Regression}} + \text{SS}_{\text{Residual}}
 What determines whether a Two-way ANOVA design is described as 'with replication'?,The presence of more than one observation in each group or cell of the cross-classification.

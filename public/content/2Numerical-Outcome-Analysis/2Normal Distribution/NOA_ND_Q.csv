@@ -1,40 +1,40 @@
 What alternative name is frequently used for the Normal distribution in statistics?,Gaussian distribution
-Which two specific parameters are required to define any Normal distribution?,The mean ($\mu$) and the standard deviation ($\sigma$)
+Which two specific parameters are required to define any Normal distribution?,The mean (\mu) and the standard deviation (\sigma)
 How is the shape of a Normal distribution frequency curve best described?,Symmetrical and bell-shaped
-What is the total area under the curve of a Normal frequency distribution?,$1$ (representing $100\%$ of the population)
-What specific values define the mean and standard deviation of the Standard Normal Distribution?,The mean is $0$ and the standard deviation is $1$.
-How is the Standard Normal Deviate ($z$) calculated for a variable $x$?,$z = \frac{x - \mu}{\sigma}$
-What percentage of observations in a Normal distribution lie within one standard deviation of the mean?,Approximately $68.26\%$
-What percentage of a normally distributed population falls within two standard deviations of the mean?,Approximately $95.45\%$
-"In a Standard Normal Distribution, what $z$ value corresponds to the two-sided $5\%$ percentage point?",$1.96$
-Which $z$ value represents the two-sided $1\%$ percentage point of the Normal distribution?,$2.58$
-What is the mathematical equation defining the height of the normal curve $y$?,$y = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(\frac{-(x-\mu)^2}{2\sigma^2}\right)$
+What is the total area under the curve of a Normal frequency distribution?,1 (representing 100\% of the population)
+What specific values define the mean and standard deviation of the Standard Normal Distribution?,The mean is 0 and the standard deviation is 1.
+How is the Standard Normal Deviate (z) calculated for a variable x?,z = \frac{x - \mu}{\sigma}
+What percentage of observations in a Normal distribution lie within one standard deviation of the mean?,Approximately 68.26\%
+What percentage of a normally distributed population falls within two standard deviations of the mean?,Approximately 95.45\%
+"In a Standard Normal Distribution, what z value corresponds to the two-sided 5\% percentage point?",1.96
+Which z value represents the two-sided 1\% percentage point of the Normal distribution?,2.58
+What is the mathematical equation defining the height of the normal curve y?,y = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(\frac{-(x-\mu)^2}{2\sigma^2}\right)
 Why is the Normal distribution considered central to medical statistical analysis?,The sampling distribution of a mean is normal even when individual observations are not.
 What fundamental theorem describes the tendency of sample means to be normally distributed around the population mean?,The Central Limit Theorem
-"For most non-normal variables, what minimum sample size is typically sufficient for the Central Limit Theorem to apply?",$15$ or more
+"For most non-normal variables, what minimum sample size is typically sufficient for the Central Limit Theorem to apply?",15 or more
 What visual characteristic of an inverse normal plot indicates that data follow a Normal distribution?,The points lie along a linear line of identity.
-What is the value of the coefficient of skewness for a perfectly symmetrical Normal distribution?,$0$
-What is the coefficient of kurtosis for a standard Normal distribution?,$3$
+What is the value of the coefficient of skewness for a perfectly symmetrical Normal distribution?,0
+What is the coefficient of kurtosis for a standard Normal distribution?,3
 What does a positive coefficient of skewness indicate about the shape of a distribution's tail?,The upper tail (to the right) is longer than the lower tail.
 What is the purpose of the Shapiro–Wilk test in statistical analysis?,To formally test the assumption that a distribution is normal.
 How is a 'lognormal distribution' defined?,A distribution that becomes normal after the data are transformed using logarithms.
-"In the context of moments of a distribution, what is the 'second moment' ($m_2$) equivalent to?",The variance ($s^2$)
-Which specific moment of a distribution is used to calculate the coefficient of skewness?,The third moment ($m_3$)
-Which moment of a distribution forms the basis for calculating kurtosis?,The fourth moment ($m_4$)
-Under what conditions is the normal distribution a reasonable approximation for a binomial distribution?,When both $n\pi$ and $n(1-\pi)$ are $10$ or more.
+"In the context of moments of a distribution, what is the 'second moment' (m_2) equivalent to?",The variance (s^2)
+Which specific moment of a distribution is used to calculate the coefficient of skewness?,The third moment (m_3)
+Which moment of a distribution forms the basis for calculating kurtosis?,The fourth moment (m_4)
+Under what conditions is the normal distribution a reasonable approximation for a binomial distribution?,When both n\pi and n(1-\pi) are 10 or more.
 How does multiplying all observations by a constant affect the standard deviation of a normal distribution?,It changes the standard deviation by the same constant.
-What is the formula for the standard error of a sample mean derived from a normally distributed population?,$\frac{\sigma}{\sqrt{n}}$
-How is a reference range covering $95\%$ of a normally distributed population calculated?,$\mu \pm 1.96\sigma$
-What probability is represented by the area in the upper tail of the Standard Normal Distribution above $z = 1.96$?,$0.025$ (or $2.5\%$)
+What is the formula for the standard error of a sample mean derived from a normally distributed population?,\frac{\sigma}{\sqrt{n}}
+How is a reference range covering 95\% of a normally distributed population calculated?,\mu \pm 1.96\sigma
+What probability is represented by the area in the upper tail of the Standard Normal Distribution above z = 1.96?,0.025 (or 2.5\%)
 What happens to the shape of a Normal distribution curve if the standard deviation is decreased while the mean remains constant?,The curve becomes taller and narrower.
 Why is formal significance testing for normality often unnecessary for large sample sizes?,Statistical methods are robust against moderate departures from normality due to the Central Limit Theorem.
-"In a Normal distribution, what percentage of the population lies within $1.96$ standard deviations of the mean?",$95\%$
-How does the $t$ distribution compare visually to the Standard Normal Distribution?,It is also bell-shaped and symmetrical but has longer tails (is more spread out).
-What is the probability of a value falling below $z = -1.77$ in a Standard Normal Distribution?,The same as the probability of a value falling above $z = 1.77$ ($0.0384$).
+"In a Normal distribution, what percentage of the population lies within 1.96 standard deviations of the mean?",95\%
+How does the t distribution compare visually to the Standard Normal Distribution?,It is also bell-shaped and symmetrical but has longer tails (is more spread out).
+What is the probability of a value falling below z = -1.77 in a Standard Normal Distribution?,The same as the probability of a value falling above z = 1.77 (0.0384).
 What term is used for the value of the standard normal distribution corresponding to a specific quantile in an inverse normal plot?,The probit
-How is the 'inverse normal' calculated to construct an inverse normal plot?,$\text{mean} + (\text{probit} \times \text{s.d.})$
-Under what condition does the Poisson distribution closely approximate the Normal distribution?,When the mean value $\lambda$ is $10$ or more.
+How is the 'inverse normal' calculated to construct an inverse normal plot?,\text{mean} + (\text{probit} \times \text{s.d.})
+Under what condition does the Poisson distribution closely approximate the Normal distribution?,When the mean value \lambda is 10 or more.
 What measure indicates how spread out the values of a distribution are relative to a Normal distribution?,The coefficient of kurtosis
-What is the result of applying the Shapiro–Wilk test if the resulting $P$-value is less than $0.0001$?,There is clear evidence that the distribution is not normal.
+What is the result of applying the Shapiro–Wilk test if the resulting P-value is less than 0.0001?,There is clear evidence that the distribution is not normal.
 Which graphical technique is preferred over a histogram for checking normality when the sample size is small?,The inverse normal plot
-"In a Normal distribution, what total area lies further than three standard deviations from the mean?",Approximately $0.0027$ (or $0.27\%$)
+"In a Normal distribution, what total area lies further than three standard deviations from the mean?",Approximately 0.0027 (or 0.27\%)

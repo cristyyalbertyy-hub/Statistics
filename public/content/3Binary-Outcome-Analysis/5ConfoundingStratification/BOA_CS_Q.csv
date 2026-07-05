@@ -6,12 +6,12 @@ The method used to combine evidence from separate strata to produce a summary od
 What is the primary assumption when using Mantel-Haenszel methods to control for confounding?,The exposure-disease association is the same across all strata.
 "In stratification, what term describes a situation where the effect of an exposure varies depending on the level of a third variable?",Effect modification (or interaction).
 Term: Heterogeneity between strata,Definition: A condition where estimates of the association between exposure and disease differ significantly across different subgroups.
-Which statistical test is used to check for effect modification across different strata?,The $\chi^2$ test of heterogeneity.
+Which statistical test is used to check for effect modification across different strata?,The \chi^2 test of heterogeneity.
 How does increasing the number of confounding variables affect Mantel-Haenszel stratification?,"The number of strata increases rapidly, making stratum-specific estimates impossible due to thin data."
 "In cluster analysis, what defines an 'interval' attribute?",A continuous linear scale divided into equal intervals.
 How does an 'ordinal' attribute differ from a 'nominal' attribute?,"Ordinal states have a meaningful sequence or rank, while nominal states are unordered."
 What is a 'binary' attribute in the context of data mining?,A nominal attribute that possesses only two possible states.
-"In the $k$-means or PAM algorithm, what is a 'medoid'?",The most centrally located representative object within a specific cluster.
+"In the k-means or PAM algorithm, what is a 'medoid'?",The most centrally located representative object within a specific cluster.
 The hierarchical clustering approach that starts with as many clusters as objects and merges them is called _____ clustering.,Agglomerative
 What is 'constructive clustering analysis'?,Transforming original description spaces into higher-level concept spaces to reveal stronger data regularities.
 "In data mining, what is the purpose of 'boosting'?",To increase model power by weighting and combining predictions from multiple classifiers.
@@ -20,28 +20,28 @@ What is 'brushing' in exploratory data analysis?,A technique where a user manual
 "According to the informatics text, a data mining model consists of a mining structure plus an _____.",Algorithm
 What is the 'sampling distribution' of the mean?,The frequency distribution of sample means calculated from many samples of the same size.
 The measure of how precisely a population mean is estimated by a sample mean is called the _____.,Standard error
-"In clinical trials, what does a $P$-value typically represent?",The probability that the observed difference occurred by chance alone under the null hypothesis.
+"In clinical trials, what does a P-value typically represent?",The probability that the observed difference occurred by chance alone under the null hypothesis.
 How is 'cumulative incidence' (or risk) calculated?,The number of new cases divided by the number of persons initially at risk during a specified period.
 Term: Prevalence,Definition: The proportion of a population found to have a condition at a specific point in time.
-"In a $2 \times 2$ table, what is the 'risk ratio' ($RR$)?",The risk of the outcome in the exposed group divided by the risk in the unexposed group.
-"What is the formula for the 'odds ratio' ($OR$) in a $2 \times 2$ table with cells $d_1, h_1, d_0, h_0$?",$OR = \frac{d_1 \times h_0}{d_0 \times h_1}$
+"In a 2 \times 2 table, what is the 'risk ratio' (RR)?",The risk of the outcome in the exposed group divided by the risk in the unexposed group.
+"What is the formula for the 'odds ratio' (OR) in a 2 \times 2 table with cells d_1, h_1, d_0, h_0?",OR = \frac{d_1 \times h_0}{d_0 \times h_1}
 Why is the odds ratio used instead of the risk ratio in case-control studies?,"The total population at risk is unknown, making it impossible to calculate direct risks."
 "In matched case-control studies, what are 'concordant pairs'?",Pairs where both the case and the control have the same exposure status.
-Which statistical test is appropriate for comparing two proportions in a paired (matched) study?,McNemar's $\chi^2$ test.
+Which statistical test is appropriate for comparing two proportions in a paired (matched) study?,McNemar's \chi^2 test.
 The standard regression method used for analysing individually matched case-control studies is _____ logistic regression.,Conditional
 "In a Poisson regression model, what is the 'offset' variable used to represent?",The total exposure time or person-years at risk for each observation.
 What is 'direct standardisation'?,Applying study-specific rates to a standard population to derive an adjusted summary rate.
-Term: Standardised Mortality Ratio ($SMR$),Definition: The ratio of the number of deaths observed in the study population to the number expected if standard rates applied.
+Term: Standardised Mortality Ratio (SMR),Definition: The ratio of the number of deaths observed in the study population to the number expected if standard rates applied.
 What is the 'proportional hazards' assumption in Cox regression?,The assumption that the hazard ratio comparing two groups remains constant over time.
 "In regression modelling, what does 'collinearity' refer to?",A high correlation between two or more independent (exposure) variables.
 How does 'measurement error' in a numerical exposure variable typically affect the estimated association?,It biases the estimate towards the null value (regression dilution bias).
-What is the 'Number Needed to Treat' ($NNT$)?,The number of patients who must be treated to prevent one additional bad outcome.
-"In 'nearest neighbour analysis', how is a new record classified?",Based on the classification of a select number ($k$) of its most similar neighbours in the dataset.
+What is the 'Number Needed to Treat' (NNT)?,The number of patients who must be treated to prevent one additional bad outcome.
+"In 'nearest neighbour analysis', how is a new record classified?",Based on the classification of a select number (k) of its most similar neighbours in the dataset.
 What is the purpose of 'feature selection' in data mining?,To reduce inputs to a manageable size by choosing attributes based on their usefulness for analysis.
 "In decision tree analysis, the influential variables are used to split the data into _____ nodes.",Child
 What defines 'clustered data' in a statistical study?,"Observations that are not independent, often because they share a common environment or genetic link."
-Failure to allow for clustering in an analysis typically leads to $P$-values that are _____.,Too small.
-The approach to clustered data that uses 'population-averaged' models is known as _____.,Generalized Estimating Equations ($GEE$)
+Failure to allow for clustering in an analysis typically leads to P-values that are _____.,Too small.
+The approach to clustered data that uses 'population-averaged' models is known as _____.,Generalized Estimating Equations (GEE)
 What is a 'forest plot' used for in medical research?,To display the results of individual studies and the pooled estimate in a meta-analysis.
 "In Bayesian statistics, what is the 'prior distribution'?",The summary of existing knowledge or belief about a parameter before new data is observed.
 What is 'allocation concealment' in a randomised controlled trial?,Ensuring recruiters do not know which intervention a participant will receive before they join the study.
@@ -49,17 +49,17 @@ What is 'allocation concealment' in a randomised controlled trial?,Ensuring recr
 Why might a researcher use 'stratified sampling'?,To ensure that distinct subgroups of a population are all adequately represented in the sample.
 "In an 'intention-to-treat' analysis, how are participants analysed?","In the groups to which they were originally randomised, regardless of whether they received the treatment."
 What is 'data-dredging'?,"Searching for all possible associations in a dataset without a prior hypothesis, often leading to spurious findings."
-"In the Mantel-Haenszel test, $E_{1i}$ represents the _____ number of exposed individuals experiencing the event in stratum $i$.",Expected
+"In the Mantel-Haenszel test, E_{1i} represents the _____ number of exposed individuals experiencing the event in stratum i.",Expected
 The ratio of the odds of exposure among cases compared to controls is the _____.,Exposure odds ratio
 What is the 'null hypothesis' in a test of association?,The assumption that there is no relationship between the exposure and the outcome in the population.
 How does a 'Type I error' occur in hypothesis testing?,When a researcher incorrectly rejects a true null hypothesis (false positive).
 "In logistic regression, the dependent variable is the _____ of the outcome occurring.",Logarithm of the odds (logit)
 What does the 'standard error of the difference' between two means measure?,The precision of the estimate of the difference between the population means.
 "In the context of the medical statistics text, what is a 'rate'?",A measure of the frequency of occurrence of an event over time.
-Concept: $k$-means algorithm,Process: It iteratively partitions $n$ objects into $k$ clusters by assigning objects to the closest centroid.
+Concept: k-means algorithm,Process: It iteratively partitions n objects into k clusters by assigning objects to the closest centroid.
 What is 'text mining'?,The extraction of patterns or key phrases from unstructured text documents.
-"In a $2 \times 2$ table, if the risk of disease is the same for exposed and unexposed, the Risk Ratio is _____.",1
-Why is the 'Rule of 5' mentioned in the context of Mantel-Haenszel validity?,It is a check to ensure that the expected values in the strata are large enough for the $\chi^2$ test to be valid.
+"In a 2 \times 2 table, if the risk of disease is the same for exposed and unexposed, the Risk Ratio is _____.",1
+Why is the 'Rule of 5' mentioned in the context of Mantel-Haenszel validity?,It is a check to ensure that the expected values in the strata are large enough for the \chi^2 test to be valid.
 "In 'indirect standardisation', the standard rates are applied to the _____ population.",Study
 A 'stepwise selection' procedure in regression is used to determine which _____ to include in the model.,Exposure or confounding variables
 What does a 'confidence interval' for an odds ratio tell the researcher?,A range of values within which the true population odds ratio is likely to lie.

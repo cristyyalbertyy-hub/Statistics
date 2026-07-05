@@ -1,85 +1,85 @@
 What is a binary variable in the context of medical outcomes?,"A variable where the value for each individual is one of two alternatives, such as disease present or absent."
 How is 'risk' (cumulative incidence) defined in a medical study?,The probability that a disease event occurs during a specified period of time.
-What is the mathematical formula for estimating sample risk ($p$)?,"$p = \frac{d}{n}$, where $d$ is the number of subjects with the event and $n$ is the total sample size."
+What is the mathematical formula for estimating sample risk (p)?,"p = \frac{d}{n}, where d is the number of subjects with the event and n is the total sample size."
 Term: Frequentist Definition of Probability,The proportion of times an event occurs in a large number of similar repeated trials.
-What is the numerical range for a probability value?,A value between $0$ and $1$ (or $0\%$ and $100\%$).
-How is the 'odds' of an event $A$ defined in terms of probability?,$Odds(A) = \frac{prob(A)}{1 - prob(A)}$.
-"If the probability of an event is $0.5$, what are the odds?",The odds are $1$.
-How do you calculate probability ($p$) when the odds are known?,$p = \frac{Odds}{1 + Odds}$.
-What happens to the difference between odds and probability when the probability is less than $0.1$?,The odds and the probability become very close in value.
-What is the maximum possible value for the odds of an event?,Infinity ($\infty$).
-"In a $2 \times 2$ contingency table, what is the standard formula for 'Risk Difference'?","$p_1 - p_0$, where $p_1$ is the risk in the exposed group and $p_0$ is the risk in the unexposed group."
-Formula: Risk Ratio ($RR$),"$RR = \frac{p_1}{p_0}$, the ratio of the risk in the exposed group to the risk in the unexposed group."
-"Formula: Odds Ratio ($OR$) in a $2 \times 2$ table with cell counts $d_1, h_1, d_0, h_0$","$OR = \frac{d_1 \times h_0}{d_0 \times h_1}$, where $d$ represents cases and $h$ represents healthy individuals."
-What does a Risk Ratio of $1$ indicate regarding the association between exposure and outcome?,It indicates no association between the exposure and the disease.
-"If a Risk Ratio is less than $1$, what does this suggest about the exposure?",It suggests the exposure may be protective against the outcome.
+What is the numerical range for a probability value?,A value between 0 and 1 (or 0\% and 100\%).
+How is the 'odds' of an event A defined in terms of probability?,Odds(A) = \frac{prob(A)}{1 - prob(A)}.
+"If the probability of an event is 0.5, what are the odds?",The odds are 1.
+How do you calculate probability (p) when the odds are known?,p = \frac{Odds}{1 + Odds}.
+What happens to the difference between odds and probability when the probability is less than 0.1?,The odds and the probability become very close in value.
+What is the maximum possible value for the odds of an event?,Infinity (\infty).
+"In a 2 \times 2 contingency table, what is the standard formula for 'Risk Difference'?","p_1 - p_0, where p_1 is the risk in the exposed group and p_0 is the risk in the unexposed group."
+Formula: Risk Ratio (RR),"RR = \frac{p_1}{p_0}, the ratio of the risk in the exposed group to the risk in the unexposed group."
+"Formula: Odds Ratio (OR) in a 2 \times 2 table with cell counts d_1, h_1, d_0, h_0","OR = \frac{d_1 \times h_0}{d_0 \times h_1}, where d represents cases and h represents healthy individuals."
+What does a Risk Ratio of 1 indicate regarding the association between exposure and outcome?,It indicates no association between the exposure and the disease.
+"If a Risk Ratio is less than 1, what does this suggest about the exposure?",It suggests the exposure may be protective against the outcome.
 Why is the Risk Ratio generally preferred over the Risk Difference as a measure of the strength of association?,The factor by which an exposure multiplies risk is interpretable regardless of the baseline risk size.
-How is the Odds Ratio ($OR$) related to the Risk Ratio ($RR$) when the outcome is rare?,The Odds Ratio is approximately equal to the Risk Ratio.
-"When a Risk Ratio ($RR$) is greater than $1$, what is the typical relationship between the $RR$ and the corresponding Odds Ratio ($OR$)?",The Odds Ratio will be greater than the Risk Ratio ($OR > RR$).
-Under what condition is the Risk Ratio constrained to a maximum value?,"When the outcome is common, because a probability cannot exceed $1$."
+How is the Odds Ratio (OR) related to the Risk Ratio (RR) when the outcome is rare?,The Odds Ratio is approximately equal to the Risk Ratio.
+"When a Risk Ratio (RR) is greater than 1, what is the typical relationship between the RR and the corresponding Odds Ratio (OR)?",The Odds Ratio will be greater than the Risk Ratio (OR > RR).
+Under what condition is the Risk Ratio constrained to a maximum value?,"When the outcome is common, because a probability cannot exceed 1."
 What is the primary advantage of using the Odds Ratio for the analysis of case-control studies?,The Odds Ratio of exposure in cases versus controls is equivalent to the Odds Ratio of disease in exposed versus unexposed.
-"How is the symmetry of the Odds Ratio maintained when swapping the outcome definition (e.g., disease vs. healthy)?",The $OR$ for the occurrence of disease is the reciprocal of the $OR$ for the non-occurrence of disease ($1/OR$).
-Why are confidence intervals for ratio measures (like $RR$ or $OR$) calculated on a log scale?,"Because the sampling distribution of the ratio itself is skewed, whereas the distribution of the log ratio is more symmetric."
-Formula: Standard Error of the log Risk Ratio ($s.e. \log RR$),$s.e.(\log RR) = \sqrt{\frac{1}{d_1} - \frac{1}{n_1} + \frac{1}{d_0} - \frac{1}{n_0}}$.
-Formula: Woolf’s formula for the Standard Error of the log Odds Ratio ($s.e. \log OR$),$s.e.(\log OR) = \sqrt{\frac{1}{d_1} + \frac{1}{h_1} + \frac{1}{d_0} + \frac{1}{h_0}}$.
-How is the $95\%$ Error Factor ($EF$) for an Odds Ratio confidence interval calculated?,$EF = \exp[1.96 \times s.e.(\log OR)]$.
+"How is the symmetry of the Odds Ratio maintained when swapping the outcome definition (e.g., disease vs. healthy)?",The OR for the occurrence of disease is the reciprocal of the OR for the non-occurrence of disease (1/OR).
+Why are confidence intervals for ratio measures (like RR or OR) calculated on a log scale?,"Because the sampling distribution of the ratio itself is skewed, whereas the distribution of the log ratio is more symmetric."
+Formula: Standard Error of the log Risk Ratio (s.e. \log RR),s.e.(\log RR) = \sqrt{\frac{1}{d_1} - \frac{1}{n_1} + \frac{1}{d_0} - \frac{1}{n_0}}.
+Formula: Woolf’s formula for the Standard Error of the log Odds Ratio (s.e. \log OR),s.e.(\log OR) = \sqrt{\frac{1}{d_1} + \frac{1}{h_1} + \frac{1}{d_0} + \frac{1}{h_0}}.
+How is the 95\% Error Factor (EF) for an Odds Ratio confidence interval calculated?,EF = \exp[1.96 \times s.e.(\log OR)].
 What does a 'summary odds ratio' represent in stratified analysis?,"A weighted average of odds ratios from different strata, such as those calculated via the Mantel-Haenszel method."
 What is the primary purpose of the Mantel-Haenszel method?,To estimate a summary odds ratio across multiple strata while controlling for a confounding variable.
-"In Mantel-Haenszel notation, what does the 'Q' parameter represent?",The sum across strata of the product of exposed cases and unexposed healthy individuals divided by stratum size ($Q = \sum \frac{d_{1i} \times h_{0i}}{n_i}$).
+"In Mantel-Haenszel notation, what does the 'Q' parameter represent?",The sum across strata of the product of exposed cases and unexposed healthy individuals divided by stratum size (Q = \sum \frac{d_{1i} \times h_{0i}}{n_i}).
 What does the Chi-squared test of heterogeneity assess in stratified binary analysis?,The null hypothesis that the association (odds ratio) is the same in all strata.
 What is the dependent variable modeled in a standard logistic regression?,The log of the odds of the outcome event.
-"In a logistic regression output, what does the exponentiated coefficient ($\exp(\beta)$) represent?",The Odds Ratio associated with a one-unit increase in the exposure variable.
-What is the 'logit' function?,"The natural logarithm of the odds, $\ln\left(\frac{p}{1-p}\right)$."
-Why is logistic regression generally preferred over linear regression for binary outcomes?,It ensures predicted probabilities remain between $0$ and $1$ and handles the non-normal error distribution of binary data.
-How does 'Attributable Risk' ($AR$) differ from 'Risk Ratio' ($RR$)?,"$AR$ measures the absolute excess risk due to exposure, while $RR$ measures the relative increase in risk."
-Formula: Number Needed to Treat ($NNT$),"$NNT = \frac{1}{Risk \, Difference}$."
-What is the interpretation of an $NNT$ value of $10$?,One adverse outcome is prevented for every $10$ patients treated.
-What is the 'Number Needed to Harm' ($NNH$)?,The number of patients who need to receive a treatment for one additional person to experience an adverse side effect.
-How is 'Population Attributable Risk' ($PAR$) defined?,The difference between the overall risk in the population and the risk among the unexposed group.
+"In a logistic regression output, what does the exponentiated coefficient (\exp(\beta)) represent?",The Odds Ratio associated with a one-unit increase in the exposure variable.
+What is the 'logit' function?,"The natural logarithm of the odds, \ln\left(\frac{p}{1-p}\right)."
+Why is logistic regression generally preferred over linear regression for binary outcomes?,It ensures predicted probabilities remain between 0 and 1 and handles the non-normal error distribution of binary data.
+How does 'Attributable Risk' (AR) differ from 'Risk Ratio' (RR)?,"AR measures the absolute excess risk due to exposure, while RR measures the relative increase in risk."
+Formula: Number Needed to Treat (NNT),"NNT = \frac{1}{Risk \, Difference}."
+What is the interpretation of an NNT value of 10?,One adverse outcome is prevented for every 10 patients treated.
+What is the 'Number Needed to Harm' (NNH)?,The number of patients who need to receive a treatment for one additional person to experience an adverse side effect.
+How is 'Population Attributable Risk' (PAR) defined?,The difference between the overall risk in the population and the risk among the unexposed group.
 What is the 'Attributable Fraction' (Population)?,The proportion of the overall disease risk in a population that can be attributed to a specific exposure.
 Which measure of association is the only choice when follow-up time is incomplete or varies between individuals?,The Rate Ratio.
 How is a 'rate' calculated differently from a 'risk'?,"A rate relates the number of new events to total person-time at risk, whereas risk relates them to the number of persons at the start."
-"Formula: Rate Ratio ($Rate \, Ratio$)","$\frac{\lambda_1}{\lambda_0} = \frac{d_1 / T_1}{d_0 / T_0}$, where $d$ is events and $T$ is total person-time."
-"What is the relationship between Risk Ratio, Rate Ratio, and Odds Ratio when an outcome is rare?","$Risk \, Ratio \approx Rate \, Ratio \approx Odds \, Ratio$."
-Concept: Rare Disease Assumption,"The assumption that for diseases with low incidence (usually $< 10\%$), the Odds Ratio can be used as an accurate estimate of the Risk Ratio."
+"Formula: Rate Ratio (Rate \, Ratio)","\frac{\lambda_1}{\lambda_0} = \frac{d_1 / T_1}{d_0 / T_0}, where d is events and T is total person-time."
+"What is the relationship between Risk Ratio, Rate Ratio, and Odds Ratio when an outcome is rare?","Risk \, Ratio \approx Rate \, Ratio \approx Odds \, Ratio."
+Concept: Rare Disease Assumption,"The assumption that for diseases with low incidence (usually < 10\%), the Odds Ratio can be used as an accurate estimate of the Risk Ratio."
 "In a clinical trial, what does 'absolute mortality rate' represent compared to 'relative effect'?","Absolute rate is the actual proportion of deaths, while relative effect is the ratio of rates between groups."
 Which statistical test is commonly used to test the null hypothesis that a single risk difference is zero?,The z-test (based on the standard error of the risk difference).
 What is 'Woolf’s formula' used for in epidemiology?,Calculating the standard error of the natural logarithm of the Odds Ratio.
 What does a 'conditional probability' represent?,The probability of an event occurring given that another event has already occurred.
-Formula: Bayes' Rule for relating conditional probabilities,$prob(B | A) = \frac{prob(B) \times prob(A | B)}{prob(A)}$.
-Under what condition are two events $A$ and $B$ considered 'independent'?,When the occurrence of event $A$ does not affect the probability of the occurrence of event $B$.
-What is the 'multiplicative rule' for the probability of two independent events both occurring?,"$prob(A \, and \, B) = prob(A) \times prob(B)$."
-What is the 'additive rule' for the probability of at least one of two events occurring?,"$prob(A \, or \, B) = prob(A) + prob(B) - prob(A \, and \, B)$."
+Formula: Bayes' Rule for relating conditional probabilities,prob(B | A) = \frac{prob(B) \times prob(A | B)}{prob(A)}.
+Under what condition are two events A and B considered 'independent'?,When the occurrence of event A does not affect the probability of the occurrence of event B.
+What is the 'multiplicative rule' for the probability of two independent events both occurring?,"prob(A \, and \, B) = prob(A) \times prob(B)."
+What is the 'additive rule' for the probability of at least one of two events occurring?,"prob(A \, or \, B) = prob(A) + prob(B) - prob(A \, and \, B)."
 How is 'prevalence' distinguished from 'incidence risk'?,"Prevalence is the proportion of a population with a disease at a specific time, while incidence risk is the probability of developing it over time."
 Term: Case-Control Status,A binary outcome variable used in studies where individuals with a disease (cases) are compared to those without it (controls).
-What is the 'null hypothesis' for a Risk Ratio?,The hypothesis that the Risk Ratio in the population is equal to $1$.
-"In logistic regression, what is the 'linear predictor'?",The part of the equation $\beta_0 + \beta_1x_1 + ... + \beta_px_p$ that predicts the log odds.
-How does the 'baseline odds' in a logistic regression relate to the constant ($\beta_0$)?,The baseline odds is equal to $\exp(\beta_0)$.
-"In a logistic regression with a binary exposure, how is the log Odds Ratio ($log OR$) represented in the model coefficients?",It is the coefficient $\beta_1$ associated with the exposure variable.
+What is the 'null hypothesis' for a Risk Ratio?,The hypothesis that the Risk Ratio in the population is equal to 1.
+"In logistic regression, what is the 'linear predictor'?",The part of the equation \beta_0 + \beta_1x_1 + ... + \beta_px_p that predicts the log odds.
+How does the 'baseline odds' in a logistic regression relate to the constant (\beta_0)?,The baseline odds is equal to \exp(\beta_0).
+"In a logistic regression with a binary exposure, how is the log Odds Ratio (log OR) represented in the model coefficients?",It is the coefficient \beta_1 associated with the exposure variable.
 What is 'McNemar’s test' used for?,"Testing the association in paired binary data, such as in matched case-control studies."
 "In matched pair analysis, which type of pairs contribute to the estimate of the Odds Ratio?",Discordant pairs (where one member of the pair has the outcome/exposure and the other does not).
-Formula: Odds Ratio for paired data ($OR_{MH}$),"$OR_{MH} = \frac{r}{s}$, where $r$ and $s$ are the numbers of the two types of discordant pairs."
-Why is the Risk Ratio considered 'constrained' for common outcomes?,Because the product of the Risk Ratio and the baseline risk cannot exceed the maximum possible probability of $1$.
+Formula: Odds Ratio for paired data (OR_{MH}),"OR_{MH} = \frac{r}{s}, where r and s are the numbers of the two types of discordant pairs."
+Why is the Risk Ratio considered 'constrained' for common outcomes?,Because the product of the Risk Ratio and the baseline risk cannot exceed the maximum possible probability of 1.
 How does a 'log link function' differ from a 'logit link function' in generalized linear models?,"A log link models the log of the risk (Risk Ratio), whereas a logit link models the log of the odds (Odds Ratio)."
 What is 'regression dilution bias'?,A bias where measurement error in an exposure variable causes the estimated association with the outcome to be weakened (moved toward the null).
 Term: Sensitivity,The proportion of individuals with a disease who are correctly identified by a diagnostic test.
 Term: Specificity,The proportion of individuals without a disease who are correctly identified as negative by a diagnostic test.
-What is a 'false positive rate' in diagnostic testing?,$1 - Specificity$.
-What is a 'false negative rate' in diagnostic testing?,$1 - Sensitivity$.
-Why might a Risk Ratio be $1$ at the end of a study even if the 'time to event' was shorter in one group?,"Because risk only measures if the event occurred, not when; if everyone eventually experiences the event, the final risk is equal ($100\%$)."
-"In a $2 \times 2$ table, if any cell count is zero, what happens to the estimated Odds Ratio?","The Odds Ratio cannot be calculated (it is either $0$ or undefined), requiring small-sample adjustments."
-How is the $95\%$ confidence interval for a single proportion ($p$) estimated using the normal approximation?,$p \pm 1.96 \times \sqrt{\frac{p(1-p)}{n}}$.
+What is a 'false positive rate' in diagnostic testing?,1 - Specificity.
+What is a 'false negative rate' in diagnostic testing?,1 - Sensitivity.
+Why might a Risk Ratio be 1 at the end of a study even if the 'time to event' was shorter in one group?,"Because risk only measures if the event occurred, not when; if everyone eventually experiences the event, the final risk is equal (100\%)."
+"In a 2 \times 2 table, if any cell count is zero, what happens to the estimated Odds Ratio?","The Odds Ratio cannot be calculated (it is either 0 or undefined), requiring small-sample adjustments."
+How is the 95\% confidence interval for a single proportion (p) estimated using the normal approximation?,p \pm 1.96 \times \sqrt{\frac{p(1-p)}{n}}.
 What is the 'sampling distribution' of a proportion known as?,The Binomial Distribution.
-When is the normal distribution a good approximation for the binomial distribution?,When the sample size is large enough such that both $np$ and $n(1-p)$ are greater than approximately $5$ to $10$.
-"In the context of the additive rule, what does '$prob(A \, or \, B)$' specifically mean?","The probability that event $A$ occurs, event $B$ occurs, or both events occur."
-What is the 'cross-product ratio' another name for?,The Odds Ratio ($OR$).
-Why does a Risk Ratio of $1.239$ for nausea appear 'moderate' while an Odds Ratio of $2.995$ for the same data appears 'dramatic'?,"Because the outcome is common, causing the $OR$ to diverge significantly from the $RR$."
-"In a logistic regression, if the coefficient $\beta_1 = 0$, what is the corresponding Odds Ratio?",The Odds Ratio is $1$ ($\exp(0) = 1$).
+When is the normal distribution a good approximation for the binomial distribution?,When the sample size is large enough such that both np and n(1-p) are greater than approximately 5 to 10.
+"In the context of the additive rule, what does 'prob(A \, or \, B)' specifically mean?","The probability that event A occurs, event B occurs, or both events occur."
+What is the 'cross-product ratio' another name for?,The Odds Ratio (OR).
+Why does a Risk Ratio of 1.239 for nausea appear 'moderate' while an Odds Ratio of 2.995 for the same data appears 'dramatic'?,"Because the outcome is common, causing the OR to diverge significantly from the RR."
+"In a logistic regression, if the coefficient \beta_1 = 0, what is the corresponding Odds Ratio?",The Odds Ratio is 1 (\exp(0) = 1).
 How is the 'linear increase in log odds' tested in a table with an ordered exposure variable?,Using a Chi-squared test for trend.
 "Which measure of association provides the 'strength' of association regardless of baseline risk, but lacks information on public health 'impact'?",The Risk Ratio (or Relative Risk).
 What is the relationship between the log Odds Ratio and the log Risk Ratio for extremely rare outcomes?,They are approximately equal.
 What does the 'likelihood' of a parameter value represent in statistics?,A measure of how compatible the observed data are with that particular parameter value.
-"If the risk in the unexposed group is $0.5$, what is the maximum possible Risk Ratio?","$2$, because the risk in the exposed group cannot exceed $1$."
+"If the risk in the unexposed group is 0.5, what is the maximum possible Risk Ratio?","2, because the risk in the exposed group cannot exceed 1."
 How is 'exposure' typically defined in a clinical trial context?,The treatment group or intervention being tested.
-"In the formula for $s.e.(\log RR)$, what does $n_1$ represent?",The total number of individuals in the exposed group.
-What measure is commonly used in meta-analysis to assess the 'treatment effect' for binary outcomes?,The Odds Ratio (often calculated using inverse variance weights for the log $OR$).
+"In the formula for s.e.(\log RR), what does n_1 represent?",The total number of individuals in the exposed group.
+What measure is commonly used in meta-analysis to assess the 'treatment effect' for binary outcomes?,The Odds Ratio (often calculated using inverse variance weights for the log OR).

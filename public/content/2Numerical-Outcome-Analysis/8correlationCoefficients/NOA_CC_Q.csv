@@ -1,70 +1,70 @@
-"In medical statistics, what does the symbol $r$ represent?",The Pearson product moment correlation coefficient.
-What is the numerical range of the correlation coefficient $r$?,Between $-1$ and $+1$.
-What does a correlation coefficient of $r = 0$ indicate about the relationship between two variables?,There is no linear association between the variables.
-"If high values of the exposure variable $x$ tend to occur with high values of the outcome variable $y$, is the correlation coefficient positive or negative?",Positive.
-"When the correlation coefficient $r$ is exactly $+1$, where do the points on a scatter plot lie?",Exactly on a straight line with a positive slope.
-How is the sign of the correlation coefficient $r$ related to the sign of the regression slope $\beta_1$?,They always have the same sign.
-What can be inferred about the regression line when the correlation coefficient $r$ is zero?,The regression line is horizontal at the height of the mean of $y$.
-The proportion of the total variation in an outcome variable $y$ that is explained by its linear association with $x$ is represented by _____.,$r^2$ (the coefficient of determination).
-"In the context of the analysis of variance table, how is $r^2$ calculated?",Regression sum of squares divided by the total sum of squares.
-What is the conceptual interpretation of the correlation coefficient $r$ in terms of standard deviations?,It is the number of standard deviations the outcome $y$ changes for a one standard deviation change in the exposure $x$.
-Which transformation is used to derive confidence intervals for the correlation coefficient when the sample size is less than 100?,Fisher's transformation ($z_r$).
-What is the formula for Fisher's transformation of the correlation coefficient $r$?,$z_r = \frac{1}{2} \log_e \left( \frac{1+r}{1-r} \right)$.
-What is the approximate standard error of the transformed correlation $z_r$?,$\frac{1}{\sqrt{n - 3}}$.
-Under what condition is the null hypothesis that $r = 0$ identical to the null hypothesis for a regression coefficient?,When the null hypothesis is that the slope $\beta_1$ equals zero.
-How does the correlation coefficient change if the units of measurement for $x$ or $y$ are altered?,It remains the same as it is independent of the units of measurement.
-Which non-parametric measure of association is calculated by performing a Pearson correlation on the ranks of the data?,Spearman's rank correlation coefficient ($r_s$).
-What is the first step in calculating Spearman's rank correlation coefficient for two variables $X$ and $Y$?,Independently rank the values of $X$ and independently rank the values of $Y$.
-How does Kendall's tau ($\tau$) differ from Spearman's rank correlation in its calculation method?,It compares the ranks of $X$ and $Y$ between every possible pair of observations to count concordant and discordant pairs.
+"In medical statistics, what does the symbol r represent?",The Pearson product moment correlation coefficient.
+What is the numerical range of the correlation coefficient r?,Between -1 and +1.
+What does a correlation coefficient of r = 0 indicate about the relationship between two variables?,There is no linear association between the variables.
+"If high values of the exposure variable x tend to occur with high values of the outcome variable y, is the correlation coefficient positive or negative?",Positive.
+"When the correlation coefficient r is exactly +1, where do the points on a scatter plot lie?",Exactly on a straight line with a positive slope.
+How is the sign of the correlation coefficient r related to the sign of the regression slope \beta_1?,They always have the same sign.
+What can be inferred about the regression line when the correlation coefficient r is zero?,The regression line is horizontal at the height of the mean of y.
+The proportion of the total variation in an outcome variable y that is explained by its linear association with x is represented by _____.,r^2 (the coefficient of determination).
+"In the context of the analysis of variance table, how is r^2 calculated?",Regression sum of squares divided by the total sum of squares.
+What is the conceptual interpretation of the correlation coefficient r in terms of standard deviations?,It is the number of standard deviations the outcome y changes for a one standard deviation change in the exposure x.
+Which transformation is used to derive confidence intervals for the correlation coefficient when the sample size is less than 100?,Fisher's transformation (z_r).
+What is the formula for Fisher's transformation of the correlation coefficient r?,z_r = \frac{1}{2} \log_e \left( \frac{1+r}{1-r} \right).
+What is the approximate standard error of the transformed correlation z_r?,\frac{1}{\sqrt{n - 3}}.
+Under what condition is the null hypothesis that r = 0 identical to the null hypothesis for a regression coefficient?,When the null hypothesis is that the slope \beta_1 equals zero.
+How does the correlation coefficient change if the units of measurement for x or y are altered?,It remains the same as it is independent of the units of measurement.
+Which non-parametric measure of association is calculated by performing a Pearson correlation on the ranks of the data?,Spearman's rank correlation coefficient (r_s).
+What is the first step in calculating Spearman's rank correlation coefficient for two variables X and Y?,Independently rank the values of X and independently rank the values of Y.
+How does Kendall's tau (\tau) differ from Spearman's rank correlation in its calculation method?,It compares the ranks of X and Y between every possible pair of observations to count concordant and discordant pairs.
 "In Kendall's tau, when are a pair of ranks for two subjects defined as 'concordant'?",When the ranks for both variables differ in the same direction between the two subjects.
-What is the formula for Kendall's tau ($\tau$) given $n_C$ concordant pairs and $n_D$ discordant pairs?,$\tau = \frac{n_C - n_D}{n(n-1)/2}$.
+What is the formula for Kendall's tau (\tau) given n_C concordant pairs and n_D discordant pairs?,\tau = \frac{n_C - n_D}{n(n-1)/2}.
 Why is Kendall's tau generally preferred over Spearman's rank correlation despite being harder to calculate by hand?,It has better statistical properties and a clearer interpretation in terms of probabilities.
-"According to the relationship in normal distributions, what is the Pearson correlation $r$ if Kendall's tau is $\tau$?",$r = \sin \left( \frac{\pi}{2} \tau \right)$.
-What is the range of values for both Spearman's rank correlation and Kendall's tau?,From $-1$ to $+1$.
-What does a Kendall's tau value of $+1$ indicate?,All pairs of observations are concordant.
+"According to the relationship in normal distributions, what is the Pearson correlation r if Kendall's tau is \tau?",r = \sin \left( \frac{\pi}{2} \tau \right).
+What is the range of values for both Spearman's rank correlation and Kendall's tau?,From -1 to +1.
+What does a Kendall's tau value of +1 indicate?,All pairs of observations are concordant.
 The measure used to quantify the amount of measurement error in a numerical variable by comparing replicate measurements is the _____.,Intraclass correlation coefficient (ICC).
-What is the formula for the Intraclass Correlation Coefficient (ICC) in terms of variance components?,$ICC = \frac{\sigma^2_u}{\sigma^2_u + \sigma^2_e}$.
-"In the ICC formula, what does $\sigma^2_u$ represent?",The variance of the 'true' underlying values between individuals (between-subject variance).
-"In the ICC formula, what does $\sigma^2_e$ represent?",The measurement error variance (within-subject variance).
-What is the reliability of a measurement if the intraclass correlation coefficient (ICC) is 1?,"Complete reliability, meaning there is no measurement error ($\sigma^2_e = 0$)."
+What is the formula for the Intraclass Correlation Coefficient (ICC) in terms of variance components?,ICC = \frac{\sigma^2_u}{\sigma^2_u + \sigma^2_e}.
+"In the ICC formula, what does \sigma^2_u represent?",The variance of the 'true' underlying values between individuals (between-subject variance).
+"In the ICC formula, what does \sigma^2_e represent?",The measurement error variance (within-subject variance).
+What is the reliability of a measurement if the intraclass correlation coefficient (ICC) is 1?,"Complete reliability, meaning there is no measurement error (\sigma^2_e = 0)."
 "If all individuals in a sample have the same 'true' value for a variable, what will be the value of the ICC?","Zero, because all observed variation is due to measurement error."
 How can the ICC be estimated using a standard statistical test for comparing means?,By using a one-way analysis of variance (ANOVA).
 What is the main conceptual difference between 'correlation' and 'agreement' in measurement studies?,"Correlation measures the strength of linear association, whereas agreement measures how close the values actually are to each other."
 Why might two methods have a correlation of 1 even if they are in total disagreement?,"Correlation only requires a perfect linear relationship (e.g. one method is exactly twice the other), not identical values."
 How does the range of the 'true' quantity in a sample affect the observed correlation coefficient?,The correlation will be greater if the range of the true quantity is wider.
 What is the 'attenuation' effect of measurement error on the estimated regression coefficient of a numerical exposure variable?,The estimated coefficient will be biased toward zero (underestimated).
-What is the mathematical relationship between the estimated regression coefficient and the correct coefficient using the ICC?,$\text{Estimated coefficient} = \text{Correct coefficient} \times ICC$.
+What is the mathematical relationship between the estimated regression coefficient and the correct coefficient using the ICC?,\text{Estimated coefficient} = \text{Correct coefficient} \times ICC.
 The phenomenon where repeat measurements subject to error tend to be closer to the overall mean than the initial measurements is called _____.,Regression to the mean.
 "In a study of blood pressure reduction, why is regression to the mean a problem for subjects with high initial readings?",Their second measurement will likely be lower even without any true treatment effect.
 How did Oldham suggest correcting for regression to the mean when plotting changes in measurements?,By plotting the difference between readings against the average of the two readings.
-"In multiple regression, what does the 'multiple correlation coefficient' ($R$) measure?",The strength of the association between the outcome and the linear combination of all exposure variables.
-"Unlike the simple correlation $r$, what is always true about the sign of the multiple correlation coefficient $R$?",It is always positive because no single direction can be attached to multiple variables.
+"In multiple regression, what does the 'multiple correlation coefficient' (R) measure?",The strength of the association between the outcome and the linear combination of all exposure variables.
+"Unlike the simple correlation r, what is always true about the sign of the multiple correlation coefficient R?",It is always positive because no single direction can be attached to multiple variables.
 What term describes the situation where two exposure variables in a regression model are highly correlated with each other?,Collinearity.
 What is a major problem caused by high collinearity when fitting a regression model?,"Dramatic increases in the standard errors of the regression coefficients, making them appear non-significant."
 "If two variables are perfectly collinear, what happens to the regression coefficients for each?",They cannot be estimated simultaneously because they contain identical information.
 What happens to the sum of regression coefficients for two variables as the collinearity between them increases?,The sum remains approximately constant and equal to the coefficient of either variable alone.
 Which correlation structure in a Generalized Estimating Equation (GEE) assumes the correlation between any pair of observations in a cluster is the same?,Exchangeable correlation structure.
-What is the relationship between the Pearson correlation $r$ and $r^2$ in terms of variance?,$r^2$ is the proportion of total variation in the outcome explained by the regression.
-"In a simple linear regression $y = \beta_0 + \beta_1 x$, what is the correlation coefficient $r$ equal to if both $x$ and $y$ are divided by their standard deviations?",The regression coefficient $\beta_1$ of the standardised variables.
+What is the relationship between the Pearson correlation r and r^2 in terms of variance?,r^2 is the proportion of total variation in the outcome explained by the regression.
+"In a simple linear regression y = \beta_0 + \beta_1 x, what is the correlation coefficient r equal to if both x and y are divided by their standard deviations?",The regression coefficient \beta_1 of the standardised variables.
 "For a symmetrical distribution, what is the expected value of the coefficient of skewness?",Zero.
 What does the coefficient of kurtosis measure in a distribution?,"How spread out the values are, or the 'peakedness' of the distribution."
 What is the coefficient of kurtosis for a normal distribution?,3.
-How does the kurtosis of a $t$ distribution with 5 degrees of freedom compare to a normal distribution?,"It is higher (approximately 7.6), indicating the $t$ distribution is more spread out."
-"If the correlation coefficient $r$ is $-0.8$, what is the value of the coefficient of determination?",$0.64$ (or 64%).
+How does the kurtosis of a t distribution with 5 degrees of freedom compare to a normal distribution?,"It is higher (approximately 7.6), indicating the t distribution is more spread out."
+"If the correlation coefficient r is -0.8, what is the value of the coefficient of determination?",0.64 (or 64%).
 "In large studies, what simple method can be used to derive a confidence interval for the correlation coefficient?",Standard linear regression after dividing variables by their standard deviations.
 "When interpreting a funnel plot in meta-analysis, what does asymmetry suggest?","A relationship between study size and effect size, often due to publication bias."
 What is the parametric counterpart to Kendall's tau and Spearman's rank correlation?,The Pearson (product moment) correlation coefficient.
-"If all pairs of observations are discordant, what is the value of Kendall's tau?",$-1$.
-Which rank correlation measure is conceptually the difference between the probability of a 'bigger $X$ with a bigger $Y$' and a 'bigger $X$ with a smaller $Y$'?,Kendall's tau ($\tau$).
-What is the formula for the back-transformation from $z_r$ to the correlation $r$?,$r = \frac{\exp(2z_r) - 1}{\exp(2z_r) + 1}$.
-How does measurement error in the outcome variable $y$ affect the estimated regression coefficient $\beta_1$ in linear regression?,"It does not bias the estimate of $\beta_1$, but it does increase its standard error."
-What determines the standard error of the Spearman rank correlation coefficient?,The sample size $n$ (specifically $\frac{1}{\sqrt{n-1}}$ for large samples).
+"If all pairs of observations are discordant, what is the value of Kendall's tau?",-1.
+Which rank correlation measure is conceptually the difference between the probability of a 'bigger X with a bigger Y' and a 'bigger X with a smaller Y'?,Kendall's tau (\tau).
+What is the formula for the back-transformation from z_r to the correlation r?,r = \frac{\exp(2z_r) - 1}{\exp(2z_r) + 1}.
+How does measurement error in the outcome variable y affect the estimated regression coefficient \beta_1 in linear regression?,"It does not bias the estimate of \beta_1, but it does increase its standard error."
+What determines the standard error of the Spearman rank correlation coefficient?,The sample size n (specifically \frac{1}{\sqrt{n-1}} for large samples).
 Is the Pearson correlation coefficient appropriate for describing non-linear associations?,"No, it specifically measures the strength of linear association."
 "In a scatter plot, what is 'jittering'?",A process of scattering points randomly along an axis to prevent overlapping and clarify the display.
-How is the correlation coefficient $r$ related to the regression sum of squares ($SS_{reg}$) and total sum of squares ($SS_{total}$)?,$r = \sqrt{\frac{SS_{reg}}{SS_{total}}}$ (taking the sign of $\beta_1$).
-What is the primary advantage of using a rank correlation over Pearson's $r$?,It does not assume the variables follow a normal distribution.
-What does a correlation of $r = -1$ signify?,A perfect negative linear relationship where all points lie on a line with a negative slope.
+How is the correlation coefficient r related to the regression sum of squares (SS_{reg}) and total sum of squares (SS_{total})?,r = \sqrt{\frac{SS_{reg}}{SS_{total}}} (taking the sign of \beta_1).
+What is the primary advantage of using a rank correlation over Pearson's r?,It does not assume the variables follow a normal distribution.
+What does a correlation of r = -1 signify?,A perfect negative linear relationship where all points lie on a line with a negative slope.
 Why is it necessary to have a control group when assessing treatments for variables subject to regression to the mean?,To differentiate the true treatment effect from the natural tendency of extreme values to return toward the mean.
-"In the context of the ICC, what happens to reliability as the measurement error variance $\sigma^2_e$ increases?",Reliability decreases and the ICC moves closer to zero.
-"If the Pearson correlation is 0.7071 in a bivariate normal distribution, what is the expected Kendall's tau value?",$0.5$ (or $1/2$).
-What is the standard error of a correlation coefficient calculated from ranks called?,"The standard error of the rank correlation (e.g., $s.e.(r_s)$)."
+"In the context of the ICC, what happens to reliability as the measurement error variance \sigma^2_e increases?",Reliability decreases and the ICC moves closer to zero.
+"If the Pearson correlation is 0.7071 in a bivariate normal distribution, what is the expected Kendall's tau value?",0.5 (or 1/2).
+What is the standard error of a correlation coefficient calculated from ranks called?,"The standard error of the rank correlation (e.g., s.e.(r_s))."
