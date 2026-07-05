@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { syllabus, SYLLABUS_TITLE } from './data/syllabus'
 import { ChapterAccordion } from './components/AccordionMenu'
 import { ContentPanel } from './components/ContentPanel'
-import { ProgressLink } from './components/ProgressLink'
 import type { LeafSelection } from './types'
 import './App.css'
 
@@ -101,9 +100,6 @@ export default function App() {
       <p className="overview-hint muted">
         Open a coloured chapter below, then choose a topic to start.
       </p>
-      <p className="overview-progress muted">
-        Already enrolled? <ProgressLink className="progress-link--inline" />
-      </p>
       <button type="button" className="mobile-browse-btn" onClick={() => setMobileMenuOpen(true)}>
         Browse chapters →
       </button>
@@ -134,7 +130,6 @@ export default function App() {
           <span className="home-overview-btn__label">Course overview</span>
         </button>
         <h1>{SYLLABUS_TITLE}</h1>
-        <ProgressLink className="progress-link--header" compact />
       </header>
 
       {showMobileLessonBar && mobileLessonContext ? (
@@ -170,7 +165,6 @@ export default function App() {
               ))}
             </nav>
           </aside>
-          <ProgressLink className="progress-link--sidebar" />
         </div>
 
         <main
