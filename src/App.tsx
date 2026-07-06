@@ -40,7 +40,7 @@ export default function App() {
 
   const showMobileLessonBar = !mobileMenuOpen && !atHome && mobileLessonContext !== null
   const shellMode = mobileMenuOpen ? 'is-mobile-menu' : 'is-mobile-content'
-  const overviewImage = '/M_S_I.png'
+  const overviewImage = '/StatisticsA.png'
 
   const selectLeaf = (sel: LeafSelection) => {
     setAtHome(false)
