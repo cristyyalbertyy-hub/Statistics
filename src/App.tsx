@@ -3,6 +3,7 @@ import { syllabus, SYLLABUS_TITLE } from './data/syllabus'
 import { ChapterAccordion } from './components/AccordionMenu'
 import { ContentPanel } from './components/ContentPanel'
 import type { LeafSelection } from './types'
+import { useAuth } from './context/AuthContext'
 import './App.css'
 
 function collapsedChapters(): Record<string, boolean> {
@@ -17,6 +18,7 @@ function countTopics(chapterId: string): number {
 }
 
 export default function App() {
+  const { userEmail, logout } = useAuth()
   const [openChapters, setOpenChapters] = useState(() => collapsedChapters())
   const [selection, setSelection] = useState<LeafSelection | null>(null)
   const [atHome, setAtHome] = useState(true)
@@ -130,6 +132,18 @@ export default function App() {
           <span className="home-overview-btn__label">Course overview</span>
         </button>
         <h1>{SYLLABUS_TITLE}</h1>
+        {userEmail ? (
+          <div className="app-header__actions">
+            <div className="auth-account">
+              <span className="auth-account__email" title={userEmail}>
+                {userEmail}
+              </span>
+              <button type="button" className="btn-ghost" onClick={() => void logout()}>
+                Sair
+              </button>
+            </div>
+          </div>
+        ) : null}
       </header>
 
       {showMobileLessonBar && mobileLessonContext ? (
