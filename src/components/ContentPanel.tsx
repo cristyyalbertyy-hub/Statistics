@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { ContentTab, LeafSelection } from '../types'
 import { getExtraVideoPath } from '../data/syllabus'
 import { remapContentPath } from '../publicAsset'
+import { useMediaProgress } from '../hooks/useMediaProgress'
+import { bindPlaybackProgress } from '../lib/playbackProgress'
 import {
   checkAssetExists,
   getInfographicCompanionPdfPaths,
@@ -104,7 +106,12 @@ export function ContentPanel({ selection, onBackToHome }: ContentPanelProps) {
           />
         )}
         {activeTab === 'podcast' && (
-          <PodcastContent path={resolvedPath ?? ''} exists={assetExists} title={selection.title} />
+          <PodcastContent
+            path={resolvedPath ?? ''}
+            exists={assetExists}
+            title={selection.title}
+            leafId={selection.leafId}
+          />
         )}
         {activeTab === 'infographic' && (
           <InfographicContent
@@ -145,6 +152,21 @@ function VideoContent({
   title: string
 }) {
   const [extraPath, setExtraPath] = useState<string | null>(null)
+  const { trackWatchComplete } = useMediaProgress(leafId)
+  const primaryVideoRef = useRef<HTMLVideoElement>(null)
+  const extraVideoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const el = primaryVideoRef.current
+    if (!el || !path) return
+    return bindPlaybackProgress(el, () => void trackWatchComplete('V'))
+  }, [path, trackWatchComplete])
+
+  useEffect(() => {
+    const el = extraVideoRef.current
+    if (!el || !extraPath) return
+    return bindPlaybackProgress(el, () => void trackWatchComplete('V'))
+  }, [extraPath, trackWatchComplete])
 
   useEffect(() => {
     if (!path) {
@@ -176,11 +198,11 @@ function VideoContent({
 
   return (
     <div className={`media-wrapper${extraPath ? ' video-stack' : ''}`} onContextMenu={(event) => event.preventDefault()}>
-      <video controls controlsList="nodownload" playsInline src={path} className="video-player">
+      <video ref={primaryVideoRef} controls controlsList="nodownload" playsInline src={path} className="video-player">
         Your browser does not support the video tag.
       </video>
       {extraPath && (
-        <video controls controlsList="nodownload" playsInline src={extraPath} className="video-player">
+        <video ref={extraVideoRef} controls controlsList="nodownload" playsInline src={extraPath} className="video-player">
           Your browser does not support the video tag.
         </video>
       )}
@@ -192,11 +214,21 @@ function PodcastContent({
   path,
   exists,
   title,
+  leafId,
 }: {
   path: string
   exists: boolean | null
   title: string
+  leafId: string
 }) {
+  const { trackWatchComplete } = useMediaProgress(leafId)
+  const audioRef = useRef<HTMLAudioElement>(null)
+
+  useEffect(() => {
+    const el = audioRef.current
+    if (!el || !path) return
+    return bindPlaybackProgress(el, () => void trackWatchComplete('P'))
+  }, [path, trackWatchComplete])
   if (exists === false) return <Placeholder type="Podcast" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
 
@@ -205,7 +237,7 @@ function PodcastContent({
       <div className="podcast-art" aria-hidden="true">
         ♫
       </div>
-      <audio controls controlsList="nodownload" src={path} className="audio-player">
+      <audio ref={audioRef} controls controlsList="nodownload" src={path} className="audio-player">
         Your browser does not support the audio element.
       </audio>
     </div>
