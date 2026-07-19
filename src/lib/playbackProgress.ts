@@ -12,28 +12,57 @@ function completionThreshold(duration: number): number {
   return Math.max(0, duration - COMPLETION_LEAD_SECONDS)
 }
 
+export type PlaybackCompleteHandler = () => void | boolean | Promise<void | boolean>
+
+async function invokeComplete(onComplete: PlaybackCompleteHandler): Promise<boolean> {
+  try {
+    const result = await onComplete()
+    return result !== false
+  } catch {
+    return false
+  }
+}
+
+function isPastThreshold(element: HTMLMediaElement): boolean {
+  const duration = element.duration
+  if (!Number.isFinite(duration) || duration <= 0) return false
+  return element.currentTime >= completionThreshold(duration)
+}
+
+/** Re-check threshold and attempt completion (e.g. after Firebase auth becomes ready). */
+export function catchUpPlaybackProgress(
+  element: HTMLMediaElement,
+  onComplete: PlaybackCompleteHandler,
+): void {
+  if (!isPastThreshold(element) && element.ended !== true) return
+  void invokeComplete(onComplete)
+}
+
 /** Fire once per play-through when media reaches the completion threshold. */
 export function bindPlaybackProgress(
   element: HTMLMediaElement,
-  onComplete: () => void,
+  onComplete: PlaybackCompleteHandler,
 ): () => void {
   let tracked = false
+  let pending = false
 
   const reset = () => {
     tracked = false
+    pending = false
   }
 
   const completeOnce = () => {
-    if (tracked) return
-    tracked = true
-    onComplete()
+    if (tracked || pending) return
+    pending = true
+    void invokeComplete(onComplete).then((ok) => {
+      pending = false
+      if (ok) tracked = true
+    })
   }
 
   const maybeNearEnd = () => {
-    if (tracked) return
-    const duration = element.duration
-    if (!Number.isFinite(duration) || duration <= 0) return
-    if (element.currentTime >= completionThreshold(duration)) {
+    if (tracked || pending) return
+    if (isPastThreshold(element)) {
       completeOnce()
     }
   }
@@ -45,7 +74,6 @@ export function bindPlaybackProgress(
   element.addEventListener('loadedmetadata', maybeNearEnd)
   element.addEventListener('durationchange', maybeNearEnd)
 
-  // Catch up when duration/auth becomes ready mid-playback or listeners rebind.
   maybeNearEnd()
 
   return () => {

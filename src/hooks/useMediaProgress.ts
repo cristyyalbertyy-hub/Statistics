@@ -15,8 +15,12 @@ export function useMediaProgress(leafKey: string | undefined) {
   const itemKey = progressItemKeyForFirebase(leafKey)
 
   const saveWatchComplete = useCallback(
-    async (resource: AutoResource) => {
-      if (!user || !itemKey) return
+    async (resource: AutoResource): Promise<boolean> => {
+      if (!itemKey) return false
+      if (!user) {
+        console.warn('Progress not saved — sign in via My account to sync video progress.')
+        return false
+      }
       try {
         const level = await recordWatchComplete(
           getFirestoreDb(),
@@ -26,9 +30,11 @@ export function useMediaProgress(leafKey: string | undefined) {
           resource,
         )
         console.info('Progress saved:', { packageId: PACKAGE_ID, itemKey, resource, level })
+        return true
       } catch (err) {
         const id = progressDocId(user.uid, PACKAGE_ID, itemKey, resource)
         console.warn('Could not save watch progress:', { id, packageId: PACKAGE_ID, itemKey, resource, err })
+        return false
       }
     },
     [user, itemKey],
@@ -37,12 +43,12 @@ export function useMediaProgress(leafKey: string | undefined) {
   const saveRef = useRef(saveWatchComplete)
   saveRef.current = saveWatchComplete
 
-  const onVideoComplete = useCallback(() => {
-    void saveRef.current('V')
+  const onVideoComplete = useCallback((): Promise<boolean> => {
+    return saveRef.current('V')
   }, [])
 
-  const onPodcastComplete = useCallback(() => {
-    void saveRef.current('P')
+  const onPodcastComplete = useCallback((): Promise<boolean> => {
+    return saveRef.current('P')
   }, [])
 
   return { onVideoComplete, onPodcastComplete, trackWatchComplete: saveWatchComplete }
