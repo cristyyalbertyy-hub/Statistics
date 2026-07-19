@@ -114,63 +114,64 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     let mounted = true
 
     async function bootstrap() {
-      try {
-        const auth = getFirebaseAuth()
-        await setPersistence(auth, browserLocalPersistence)
+      const auth = getFirebaseAuth()
+      await setPersistence(auth, browserLocalPersistence)
 
-        const params = new URLSearchParams(window.location.search)
-        persistStudio9LaunchEmail(params.get('studio9_email'))
-        const handoff = params.get('studio9_handoff')
-        if (handoff) {
-          sessionStorage.setItem('studio9_from_conta', '1')
-          await signInWithCustomToken(auth, handoff)
-          params.delete('studio9_handoff')
-          params.delete('studio9_email')
-          params.delete('studio9_open')
-          const rest = params.toString()
-          window.history.replaceState(
-            null,
-            '',
-            `${window.location.pathname}${rest ? `?${rest}` : ''}${window.location.hash}`,
-          )
-        } else if (params.has('studio9_email')) {
-          params.delete('studio9_email')
-          const rest = params.toString()
-          window.history.replaceState(
-            null,
-            '',
-            `${window.location.pathname}${rest ? `?${rest}` : ''}${window.location.hash}`,
-          )
-        }
+      const params = new URLSearchParams(window.location.search)
+      persistStudio9LaunchEmail(params.get('studio9_email'))
+      const handoff = params.get('studio9_handoff')
+      if (handoff) {
+        sessionStorage.setItem('studio9_from_conta', '1')
+        await signInWithCustomToken(auth, handoff)
+        params.delete('studio9_handoff')
+        params.delete('studio9_email')
+        params.delete('studio9_open')
+        const rest = params.toString()
+        window.history.replaceState(
+          null,
+          '',
+          `${window.location.pathname}${rest ? `?${rest}` : ''}${window.location.hash}`,
+        )
+      } else if (params.has('studio9_email')) {
+        params.delete('studio9_email')
+        const rest = params.toString()
+        window.history.replaceState(
+          null,
+          '',
+          `${window.location.pathname}${rest ? `?${rest}` : ''}${window.location.hash}`,
+        )
+      }
 
-        if (isSignInWithEmailLink(auth, window.location.href)) {
-          let email = window.localStorage.getItem(EMAIL_FOR_SIGN_IN_KEY)
-          if (!email) {
-            email = window.prompt(
-              'Confirme o email usado para pedir o link de acesso',
-            )
-          }
-          if (email) {
-            await signInWithEmailLink(auth, email, window.location.href)
-            window.localStorage.removeItem(EMAIL_FOR_SIGN_IN_KEY)
-            cleanEmailLinkFromUrl()
-          }
+      if (isSignInWithEmailLink(auth, window.location.href)) {
+        let email = window.localStorage.getItem(EMAIL_FOR_SIGN_IN_KEY)
+        if (!email) {
+          email = window.prompt('Confirme o email usado para pedir o link de acesso')
         }
-      } catch (err) {
-        const hadHandoff = new URLSearchParams(window.location.search).has('studio9_handoff')
-        if (hadHandoff) {
-          console.warn('Session handoff failed — open this app again from My account.', err)
+        if (email) {
+          await signInWithEmailLink(auth, email, window.location.href)
+          window.localStorage.removeItem(EMAIL_FOR_SIGN_IN_KEY)
+          cleanEmailLinkFromUrl()
         }
       }
     }
 
-    void bootstrap()
+    let unsubscribe = () => {}
 
-    const unsubscribe = onAuthStateChanged(auth, (nextUser) => {
+    void (async () => {
+      try {
+        await bootstrap()
+      } catch (err) {
+        console.warn('Session handoff failed — open this app again from My account.', err)
+      }
+
       if (!mounted) return
-      setUser(nextUser)
-      setLoading(false)
-    })
+
+      unsubscribe = onAuthStateChanged(auth, (nextUser) => {
+        if (!mounted) return
+        setUser(nextUser)
+        setLoading(false)
+      })
+    })()
 
     return () => {
       mounted = false
