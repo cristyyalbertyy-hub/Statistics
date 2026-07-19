@@ -3,12 +3,20 @@ import { useAuth } from '../context/AuthContext'
 import { getFirestoreDb, PACKAGE_ID } from '../lib/firebase'
 import { progressDocId, recordWatchComplete, type AutoResource } from '../lib/progress-client'
 
-export function useMediaProgress(itemKey: string | undefined) {
-  const { user, hasAccess } = useAuth()
+/** Progress dashboard item ids omit the chapter prefix (e.g. populations-and-samples). */
+export function progressItemKeyForFirebase(leafKey: string | undefined): string | undefined {
+  if (!leafKey) return undefined
+  const slash = leafKey.indexOf('/')
+  return slash >= 0 ? leafKey.slice(slash + 1) : leafKey
+}
+
+export function useMediaProgress(leafKey: string | undefined) {
+  const { user } = useAuth()
+  const itemKey = progressItemKeyForFirebase(leafKey)
 
   const trackWatchComplete = useCallback(
     async (resource: AutoResource) => {
-      if (!user || !hasAccess || !itemKey) return
+      if (!user || !itemKey) return
       try {
         const level = await recordWatchComplete(
           getFirestoreDb(),
@@ -23,7 +31,7 @@ export function useMediaProgress(itemKey: string | undefined) {
         console.warn('Could not save watch progress:', { id, packageId: PACKAGE_ID, itemKey, resource, err })
       }
     },
-    [user, hasAccess, itemKey],
+    [user, itemKey],
   )
 
   return { trackWatchComplete }

@@ -6,12 +6,14 @@ export async function checkAssetExists(path: string): Promise<boolean> {
   try {
     const head = await fetch(path, { method: 'HEAD' })
     if (head.ok) return true
+    if (head.status === 404) return false
   } catch {
     // Some static hosts reject HEAD; fall back to a tiny ranged GET.
   }
 
   try {
     const ranged = await fetch(path, { headers: { Range: 'bytes=0-0' } })
+    if (ranged.status === 404) return false
     return ranged.ok || ranged.status === 206
   } catch {
     return false
