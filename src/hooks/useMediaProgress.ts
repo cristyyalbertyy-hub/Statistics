@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useRef } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { getFirestoreDb, PACKAGE_ID } from '../lib/firebase'
 import { progressDocId, recordWatchComplete, type AutoResource } from '../lib/progress-client'
@@ -14,7 +14,7 @@ export function useMediaProgress(leafKey: string | undefined) {
   const { user } = useAuth()
   const itemKey = progressItemKeyForFirebase(leafKey)
 
-  const trackWatchComplete = useCallback(
+  const saveWatchComplete = useCallback(
     async (resource: AutoResource) => {
       if (!user || !itemKey) return
       try {
@@ -34,5 +34,16 @@ export function useMediaProgress(leafKey: string | undefined) {
     [user, itemKey],
   )
 
-  return { trackWatchComplete }
+  const saveRef = useRef(saveWatchComplete)
+  saveRef.current = saveWatchComplete
+
+  const onVideoComplete = useCallback(() => {
+    void saveRef.current('V')
+  }, [])
+
+  const onPodcastComplete = useCallback(() => {
+    void saveRef.current('P')
+  }, [])
+
+  return { onVideoComplete, onPodcastComplete, trackWatchComplete: saveWatchComplete }
 }

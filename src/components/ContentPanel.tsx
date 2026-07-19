@@ -152,21 +152,21 @@ function VideoContent({
   title: string
 }) {
   const [extraPath, setExtraPath] = useState<string | null>(null)
-  const { trackWatchComplete } = useMediaProgress(leafId)
+  const { onVideoComplete } = useMediaProgress(leafId)
   const primaryVideoRef = useRef<HTMLVideoElement>(null)
   const extraVideoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const el = primaryVideoRef.current
     if (!el || !path) return
-    return bindPlaybackProgress(el, () => void trackWatchComplete('V'))
-  }, [path, trackWatchComplete])
+    return bindPlaybackProgress(el, onVideoComplete)
+  }, [path, onVideoComplete])
 
   useEffect(() => {
     const el = extraVideoRef.current
     if (!el || !extraPath) return
-    return bindPlaybackProgress(el, () => void trackWatchComplete('V'))
-  }, [extraPath, trackWatchComplete])
+    return bindPlaybackProgress(el, onVideoComplete)
+  }, [extraPath, onVideoComplete])
 
   useEffect(() => {
     if (!path) {
@@ -221,14 +221,14 @@ function PodcastContent({
   title: string
   leafId: string
 }) {
-  const { trackWatchComplete } = useMediaProgress(leafId)
+  const { onPodcastComplete } = useMediaProgress(leafId)
   const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
     const el = audioRef.current
     if (!el || !path) return
-    return bindPlaybackProgress(el, () => void trackWatchComplete('P'))
-  }, [path, trackWatchComplete])
+    return bindPlaybackProgress(el, onPodcastComplete)
+  }, [path, onPodcastComplete])
   if (exists === false) return <Placeholder type="Podcast" title={title} />
   if (exists === null) return <div className="loading">Loading…</div>
 
