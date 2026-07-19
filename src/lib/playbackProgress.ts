@@ -45,23 +45,30 @@ export function bindPlaybackProgress(
 ): () => void {
   let tracked = false
   let pending = false
+  let deferred = false
 
   const reset = () => {
     tracked = false
     pending = false
+    deferred = false
   }
 
   const completeOnce = () => {
-    if (tracked || pending) return
+    if (tracked || pending || deferred) return
     pending = true
     void invokeComplete(onComplete).then((ok) => {
       pending = false
-      if (ok) tracked = true
+      if (ok) {
+        tracked = true
+        return
+      }
+      // Avoid spamming the console on every timeupdate when auth is missing.
+      deferred = true
     })
   }
 
   const maybeNearEnd = () => {
-    if (tracked || pending) return
+    if (tracked || pending || deferred) return
     if (isPastThreshold(element)) {
       completeOnce()
     }

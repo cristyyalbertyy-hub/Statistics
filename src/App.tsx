@@ -3,6 +3,7 @@ import { syllabus, SYLLABUS_TITLE } from './data/syllabus'
 import { ChapterAccordion } from './components/AccordionMenu'
 import { ContentPanel } from './components/ContentPanel'
 import type { LeafSelection } from './types'
+import { ProgressSessionBanner } from './components/ProgressSessionBanner'
 import { useAuth } from './context/AuthContext'
 import './App.css'
 
@@ -18,7 +19,7 @@ function countTopics(chapterId: string): number {
 }
 
 export default function App() {
-  const { userEmail, logout } = useAuth()
+  const { userEmail, needsReauth, logout } = useAuth()
   const [openChapters, setOpenChapters] = useState(() => collapsedChapters())
   const [selection, setSelection] = useState<LeafSelection | null>(null)
   const [atHome, setAtHome] = useState(true)
@@ -145,6 +146,8 @@ export default function App() {
           </div>
         ) : null}
       </header>
+
+      <ProgressSessionBanner visible={needsReauth} />
 
       {showMobileLessonBar && mobileLessonContext ? (
         <div

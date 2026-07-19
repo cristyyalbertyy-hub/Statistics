@@ -34,6 +34,7 @@ type AuthContextValue = {
   loading: boolean
   user: User | null
   userEmail: string | null
+  needsReauth: boolean
   entitlement: Entitlement | null
   entitlementLoading: boolean
   entitlementError: string | null
@@ -155,8 +156,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             cleanEmailLinkFromUrl()
           }
         }
-      } catch {
-        // Mantém fluxo de login normal se o link expirou ou falhou.
+      } catch (err) {
+        const hadHandoff = new URLSearchParams(window.location.search).has('studio9_handoff')
+        if (hadHandoff) {
+          console.warn('Session handoff failed — open this app again from My account.', err)
+        }
       }
     }
 
@@ -217,11 +221,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     window.location.assign(ACCOUNT_URL)
   }, [])
 
+  const needsReauth =
+    isFirebaseConfigured &&
+    !loading &&
+    !user &&
+    Boolean(launchEmail || (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('studio9_from_conta') === '1'))
+
   const value = useMemo<AuthContextValue>(
     () => ({
       loading,
       user,
-      userEmail: user?.email ?? launchEmail,
+      userEmail: user?.email ?? null,
+      needsReauth,
       entitlement,
       entitlementLoading,
       entitlementError,
@@ -234,7 +245,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     [
       loading,
       user,
-      launchEmail,
+      needsReauth,
       entitlement,
       entitlementLoading,
       entitlementError,

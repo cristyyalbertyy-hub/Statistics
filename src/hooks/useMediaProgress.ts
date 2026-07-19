@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { getFirestoreDb, PACKAGE_ID } from '../lib/firebase'
 import { progressDocId, recordWatchComplete, type AutoResource } from '../lib/progress-client'
@@ -10,6 +10,8 @@ export function progressItemKeyForFirebase(leafKey: string | undefined): string 
   return slash >= 0 ? leafKey.slice(slash + 1) : leafKey
 }
 
+let warnedMissingAuth = false
+
 export function useMediaProgress(leafKey: string | undefined) {
   const { user } = useAuth()
   const itemKey = progressItemKeyForFirebase(leafKey)
@@ -18,7 +20,10 @@ export function useMediaProgress(leafKey: string | undefined) {
     async (resource: AutoResource): Promise<boolean> => {
       if (!itemKey) return false
       if (!user) {
-        console.warn('Progress not saved — sign in via My account to sync video progress.')
+        if (!warnedMissingAuth) {
+          warnedMissingAuth = true
+          console.warn('Progress not saved — open Statistics from My account to sync video progress.')
+        }
         return false
       }
       try {
@@ -42,6 +47,10 @@ export function useMediaProgress(leafKey: string | undefined) {
 
   const saveRef = useRef(saveWatchComplete)
   saveRef.current = saveWatchComplete
+
+  useEffect(() => {
+    if (user) warnedMissingAuth = false
+  }, [user])
 
   const onVideoComplete = useCallback((): Promise<boolean> => {
     return saveRef.current('V')

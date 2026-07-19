@@ -3,7 +3,7 @@ import type { ContentTab, LeafSelection } from '../types'
 import { getExtraVideoPath } from '../data/syllabus'
 import { remapContentPath } from '../publicAsset'
 import { useMediaProgress } from '../hooks/useMediaProgress'
-import { bindPlaybackProgress, catchUpPlaybackProgress } from '../lib/playbackProgress'
+import { bindPlaybackProgress } from '../lib/playbackProgress'
 import { useAuth } from '../context/AuthContext'
 import {
   checkAssetExists,
@@ -162,20 +162,13 @@ function VideoContent({
     const el = primaryVideoRef.current
     if (!el || !path) return
     return bindPlaybackProgress(el, onVideoComplete)
-  }, [path, onVideoComplete])
+  }, [path, onVideoComplete, user])
 
   useEffect(() => {
     const el = extraVideoRef.current
     if (!el || !extraPath) return
     return bindPlaybackProgress(el, onVideoComplete)
-  }, [extraPath, onVideoComplete])
-
-  useEffect(() => {
-    if (!user) return
-    for (const el of [primaryVideoRef.current, extraVideoRef.current]) {
-      if (el) catchUpPlaybackProgress(el, onVideoComplete)
-    }
-  }, [user, onVideoComplete, path, extraPath])
+  }, [extraPath, onVideoComplete, user])
 
   useEffect(() => {
     if (!path) {
