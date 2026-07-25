@@ -5,6 +5,7 @@ import { ContentPanel } from './components/ContentPanel'
 import type { LeafSelection } from './types'
 import { ProgressSessionBanner } from './components/ProgressSessionBanner'
 import { useAuth } from './context/AuthContext'
+import { publicAsset } from './publicAsset'
 import './App.css'
 
 function collapsedChapters(): Record<string, boolean> {
@@ -43,7 +44,7 @@ export default function App() {
 
   const showMobileLessonBar = !mobileMenuOpen && !atHome && mobileLessonContext !== null
   const shellMode = mobileMenuOpen ? 'is-mobile-menu' : 'is-mobile-content'
-  const overviewImage = '/StatisticsA.png'
+  const overviewImage = publicAsset('StatisticsA.png')
 
   const selectLeaf = (sel: LeafSelection) => {
     setAtHome(false)
